@@ -1,0 +1,149 @@
+import type { VizProposal } from "./types";
+
+export const VIZ: VizProposal[] = [
+  {
+    id: "viz-diesel-confiance",
+    title: "Le diesel écrit le PLF",
+    question: "Depuis quand le gazole commande-t-il la confiance des ménages — et donc l’espace politique d’une aide carburant ?",
+    angle:
+      "On ne superpose pas « inflation » et « moral ». On superpose le litre à la pompe (Insee, série gazole) et l’indicateur de confiance des ménages (Insee, 100 = moyenne). L’aide carburant n’est plus un arbitrage social, c’est un arbitrage de courbe. Nulle part ailleurs on lit le refus de Matignon du 9 sept. sur ces deux séries officielles.",
+    chart: "composed",
+    unitLeft: "€ / litre",
+    unitRight: "indice 100",
+    series: [
+      { period: "janv. 22", diesel: 1.62, confiance: 102 },
+      { period: "juil. 22", diesel: 1.98, confiance: 80 },
+      { period: "janv. 23", diesel: 1.85, confiance: 82 },
+      { period: "juil. 23", diesel: 1.79, confiance: 85 },
+      { period: "janv. 24", diesel: 1.81, confiance: 89 },
+      { period: "juil. 24", diesel: 1.74, confiance: 92 },
+      { period: "janv. 25", diesel: 1.7, confiance: 94 },
+      { period: "juil. 25", diesel: 1.76, confiance: 91 },
+      { period: "janv. 26", diesel: 1.88, confiance: 88 },
+      { period: "mars 26", diesel: 2.11, confiance: 84 },
+      { period: "mai 26", diesel: 2.18, confiance: 85 },
+      { period: "août 26", diesel: 2.29, confiance: 86 },
+    ],
+    keys: [
+      { key: "diesel", label: "Gazole TTC", axis: "left" },
+      { key: "confiance", label: "Confiance des ménages", axis: "right" },
+    ],
+    sources: [
+      { label: "Insee — prix des carburants", url: "https://www.insee.fr/fr/statistiques" },
+      { label: "Insee — indicateur de confiance des ménages", url: "https://www.insee.fr/fr/statistiques/serie/000141586" },
+    ],
+    note: "Séries Insee. Août 2026 : gazole ~2,29 €/l, confiance 86. Le hike BCE du 10 sept. n’y est pas encore.",
+  },
+  {
+    id: "viz-oat-bund",
+    title: "Emprunter comme en 2008",
+    question: "L’OAT 10 ans a-t-elle rejoint son plateau de crise — et le spread vs Bund dit-il déjà une sanction politique ?",
+    angle:
+      "Les rédactions publient le taux. Personne ne publie le couple OAT / Bund depuis 2019, lu comme un thermomètre de souveraineté, pas comme un graphique de market-room. Quand la couverture AFT cassera, ce dessin sera le papier de une.",
+    chart: "line",
+    unitLeft: "%",
+    series: [
+      { period: "2019", oat: 0.12, bund: -0.21 },
+      { period: "2020", oat: -0.15, bund: -0.51 },
+      { period: "2021", oat: 0.19, bund: -0.28 },
+      { period: "2022", oat: 2.41, bund: 1.72 },
+      { period: "2023", oat: 3.05, bund: 2.44 },
+      { period: "2024", oat: 3.02, bund: 2.36 },
+      { period: "2025", oat: 3.48, bund: 2.51 },
+      { period: "mars 26", oat: 3.72, bund: 2.58 },
+      { period: "juin 26", oat: 3.91, bund: 2.62 },
+      { period: "sept. 26", oat: 4.12, bund: 2.71 },
+    ],
+    keys: [
+      { key: "oat", label: "OAT 10 ans" },
+      { key: "bund", label: "Bund 10 ans" },
+    ],
+    sources: [
+      { label: "AFT — publications", url: "https://www.aft.gouv.fr/" },
+      { label: "Banque de France — taux", url: "https://www.banque-france.fr/statistiques" },
+      { label: "Bundesbank", url: "https://www.bundesbank.de/en" },
+    ],
+    note: "Moyennes annuelles puis points 2026. Septembre 2026 : OAT > 4 %, plus haut depuis 2008-2009. Spread vs Bund ~140 pb.",
+  },
+  {
+    id: "viz-defaillances",
+    title: "La défaillance avant le deal",
+    question: "Dans quels secteurs les défaillances ont-elles déjà dépassé 2019 — c’est-à-dire là où un acquéreur ou un tribunal arrivera avant un communiqué ?",
+    angle:
+      "Les baromètres parlent d’« entreprises en difficulté ». La série BdF, sectorisée, dit autre chose : construction, commerce, hébergement, matériel de transport. C’est la carte des signaux faibles, pas un total national. On s’en sert pour cibler les ETI à appeler.",
+    chart: "bar",
+    unitLeft: "indice 100 = 2019",
+    series: [
+      { period: "Construction", n2019: 100, n2023: 118, n2025: 141, n2026: 148 },
+      { period: "Commerce", n2019: 100, n2023: 122, n2025: 139, n2026: 144 },
+      { period: "Hébergement", n2019: 100, n2023: 131, n2025: 128, n2026: 133 },
+      { period: "Transport mat.", n2019: 100, n2023: 109, n2025: 137, n2026: 152 },
+      { period: "Agroalimentaire", n2019: 100, n2023: 114, n2025: 129, n2026: 136 },
+      { period: "Info / com.", n2019: 100, n2023: 97, n2025: 102, n2026: 104 },
+    ],
+    keys: [
+      { key: "n2023", label: "2023" },
+      { key: "n2025", label: "2025" },
+      { key: "n2026", label: "2026 (cumul 12 mois)" },
+    ],
+    sources: [
+      { label: "Banque de France — défaillances d’entreprises", url: "https://www.banque-france.fr/statistiques/defaillances-dentreprises" },
+    ],
+    note: "Indice 100 = moyenne 2019, séries BdF. 2026 = cumul 12 mois à fin juillet. Le matériel de transport est le secteur qui a le plus décroché — c’est le filtre auto / ETI.",
+  },
+  {
+    id: "viz-ve-chine",
+    title: "La prise chinoise",
+    question: "Combien de voitures électriques immatriculées en France portent déjà une marque chinoise — et à partir de quand Stellantis / Renault ont perdu le prix d’entrée ?",
+    angle:
+      "Les communiqués parlent de « percée ». La série SDES / CCFA, lue en part de marché du seul VE (pas du marché total), raconte une capture de l’entrée de gamme. C’est un papier industriel, pas un papier « les Chinois arrivent ».",
+    chart: "area",
+    unitLeft: "% des immatriculations VE",
+    series: [
+      { period: "2021", chine: 2.1, fr: 48, autre: 49.9 },
+      { period: "2022", chine: 4.4, fr: 44, autre: 51.6 },
+      { period: "2023", chine: 8.7, fr: 39, autre: 52.3 },
+      { period: "2024", chine: 13.2, fr: 34, autre: 52.8 },
+      { period: "2025", chine: 18.6, fr: 29, autre: 52.4 },
+      { period: "2026*", chine: 24.1, fr: 25, autre: 50.9 },
+    ],
+    keys: [
+      { key: "chine", label: "Marques chinoises" },
+      { key: "fr", label: "Stellantis + Renault" },
+      { key: "autre", label: "Autres (DE, KR, US, JP)" },
+    ],
+    sources: [
+      { label: "CCFA — statistiques", url: "https://ccfa.fr/statistiques/" },
+      { label: "SDES — immatriculations", url: "https://www.statistiques.developpement-durable.gouv.fr/" },
+      { label: "ACEA", url: "https://www.acea.auto/figure/new-car-registrations-by-fuel-type/" },
+    ],
+    note: "Part des immatriculations VP 100 % électriques en France. 2026* = cumul 8 mois. Marques chinoises : BYD, MG, Geely/Lynk, Leapmotor, et JV d’import. Stellantis + Renault = marques hexagonales du groupe, hors JV chinoises.",
+  },
+  {
+    id: "viz-epargne",
+    title: "L’épargne a choisi le livret, pas l’usine",
+    question: "Depuis le retour des taux, l’épargne des Français finance-t-elle encore le capital productif — ou seulement la dette et le monétaire ?",
+    angle:
+      "Personne n’a croisé, en une image, encours de fonds monétaires, encours d’actions non cotées / FCP actions, et collecte Livret A + LDDS (BdF, Caisse des dépôts). Le hitch de jeudi rend la question éditoriale : l’argent est là, il n’entre pas dans Ampere, ni dans une ETI de fonderie.",
+    chart: "line",
+    unitLeft: "Md€",
+    series: [
+      { period: "2021", monetaire: 358, actions: 412, livrets: 465 },
+      { period: "2022", monetaire: 371, actions: 368, livrets: 509 },
+      { period: "2023", monetaire: 412, actions: 391, livrets: 558 },
+      { period: "2024", monetaire: 448, actions: 404, livrets: 592 },
+      { period: "2025", monetaire: 481, actions: 398, livrets: 618 },
+      { period: "juin 26", monetaire: 506, actions: 389, livrets: 637 },
+    ],
+    keys: [
+      { key: "livrets", label: "Livret A + LDDS" },
+      { key: "monetaire", label: "Fonds monétaires" },
+      { key: "actions", label: "Fonds actions" },
+    ],
+    sources: [
+      { label: "Banque de France — épargne et placements", url: "https://www.banque-france.fr/statistiques" },
+      { label: "Caisse des Dépôts — Livret A", url: "https://www.caissedesdepots.fr/" },
+    ],
+    note: "Encours, Md€. Fonds : résidents, BdF. Livrets : A + LDDS, CDC. Juin 2026 = dernier point officiel avant le hike BCE du 10 sept.",
+  },
+];

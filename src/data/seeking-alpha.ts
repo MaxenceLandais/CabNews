@@ -1,0 +1,149 @@
+import type { SaHeadline } from "./types";
+
+/** Titres publics Seeking Alpha (France). Corps payant — on déduit sur le titre. */
+export const SA_HEADLINES: SaHeadline[] = [
+  {
+    id: "sa-exail",
+    date: "2026-09-09",
+    title: "Exail Technologies: The €380 Million Problem That Changed Everything",
+    ticker: "EXALF",
+    company: "Exail",
+    sector: "defense",
+    url: "https://seekingalpha.com/symbol/EXALF",
+    deduction:
+      "Le titre parle d’un trou de 380 M€ au moment où Thales a signé pour tout racheter (closing 2028, 3,9 Md€). Ce n’est pas un papier boursier : c’est le risque d’earn-out / complément de prix, et le motif pour lequel Safran a décroché.",
+    watch: "Documentation AdC, clause de complément, social Exail. Recouper La Lettre / Usine Nouvelle.",
+  },
+  {
+    id: "sa-thales-discount",
+    date: "2026-09-08",
+    title: "Thales: A Defense Powerhouse Trading At A Deep Discount",
+    ticker: "THLLY",
+    company: "Thales",
+    sector: "defense",
+    url: "https://seekingalpha.com/symbol/THLLY",
+    deduction:
+      "Deux titres Thales en 48 h (discount, puis « rearmament trade cooled »). Le marché US doute du multiple, pas du carnet. Angle Tribune : le multiple baisse pendant que la DGA notifie le F5 — divergence à écrire, pas à relayer.",
+    watch: "Carnet civil vs. défense, closing Exail, contrat Singapour IA.",
+  },
+  {
+    id: "sa-thales-rearm",
+    date: "2026-09-04",
+    title: "Thales: The Rearmament Trade Cooled Before The Orders Did — Hold",
+    ticker: "THLEF",
+    company: "Thales",
+    sector: "defense",
+    url: "https://seekingalpha.com/symbol/THLEF",
+    deduction:
+      "Le sell-side US dit Hold pendant que Paris orchestre le Monopoly (Exail, TRS, KNDS). Utile comme contrepoint : le titre a déjà pris la LPM, pas encore les consolidations.",
+    watch: "Tout mandat sur SAAB / Rheinmetall / KNDS relayé par un desk US.",
+  },
+  {
+    id: "sa-renault-niagara",
+    date: "2026-09-10",
+    title: "Renault SA Discusses Launch of Niagara Pickup and Strategic Growth in Latin America",
+    ticker: "RNLSY",
+    company: "Renault",
+    sector: "auto",
+    url: "https://seekingalpha.com/symbol/RNLSY",
+    deduction:
+      "Call investisseur sur un pick-up latino le jour où Ampere est sous revue à Douai. Le titre dit la géographie de survie : l’Amérique latine, pas le logiciel. À coller aux volumes CCFA d’août.",
+    watch: "Cadences Douai, mix VE, part Nissan dans le narratif.",
+  },
+  {
+    id: "sa-airliquide-elliott",
+    date: "2026-09-09",
+    title: "L'Air Liquide: Elliott Adds Capital Return Upside To The Margin Expansion Story",
+    ticker: "AIQUF",
+    company: "Air Liquide",
+    sector: "industry",
+    url: "https://seekingalpha.com/symbol/AIQUF",
+    deduction:
+      "Elliott au cap table = pression sur le retour à l’actionnaire, pas sur l’hydrogène. Papier ETI / industrie : le fonds US entre dans un nom souverain français. Qui d’autre dans le CAC est « sous-returné » selon le même écran ?",
+    watch: "Lettre Elliott si elle fuit, AG, cessions de niches.",
+  },
+  {
+    id: "sa-capgemini-ai",
+    date: "2026-08-12",
+    title: "Capgemini SE: AI Deflation Risk Could Cap Growth",
+    ticker: "CAPMF",
+    company: "Capgemini",
+    sector: "tech",
+    url: "https://seekingalpha.com/symbol/CAPMF",
+    deduction:
+      "Le titre US dit l’inverse du communiqué de nomination : l’IA comprime les prix du body shopping au lieu de les doper. À lire avec le passage de témoin opérationnel de samedi. C’est LE papier tech de la semaine, pas Mistral.",
+    watch: "Croissance organique T3, taux d’utilisation, mix « offre IA » vs. volume.",
+  },
+  {
+    id: "sa-soitec",
+    date: "2026-08-13",
+    title: "Soitec: AI's Optical Bottleneck Is Becoming Its Earnings Engine",
+    ticker: "SLOIF",
+    company: "Soitec",
+    sector: "ia",
+    url: "https://seekingalpha.com/symbol/SLOIF",
+    deduction:
+      "Seul nom français que le sell-side US accroche vraiment à la chaîne IA (substrats SOI / photonique). Pas une puces « tech services ». Bureau IA, pas bureau logiciels.",
+    watch: "Commandes photonique, guide T3, exposition Chine.",
+  },
+  {
+    id: "sa-teleperformance",
+    date: "2026-09-02",
+    title: "Teleperformance: The AI Discount Is Starting To Fade",
+    ticker: "TLPFF",
+    company: "Teleperformance",
+    sector: "tech",
+    url: "https://seekingalpha.com/symbol/TLPFF",
+    deduction:
+      "Le marché arrête de vendre TP comme une victime de l’IA. Si le discount se referme, c’est que l’IA est un outil de marge, pas un substitut d’effectif. Angle social + bourse.",
+    watch: "Effectifs France, grands contrats, tout profit warning inverse.",
+  },
+  {
+    id: "sa-total-conflict",
+    date: "2026-08-27",
+    title: "TotalEnergies: Winning The Conflict Quarter, Questioning The Ratio",
+    ticker: "TTE",
+    company: "TotalEnergies",
+    sector: "energy",
+    url: "https://seekingalpha.com/symbol/TTE",
+    deduction:
+      "Le titre dit le trading de guerre (Ormuz) et doute du multiple. Recouper avec le flash tanker UKMTO du 12 (affrété TotalEnergies, ~2 Mbbl). Le papier n’est pas « le pétrole monte » : c’est l’exposition flotte / trading.",
+    watch: "Pavillon du tanker, book trading T3, tout sinistre Golfe.",
+  },
+  {
+    id: "sa-nexans",
+    date: "2026-08-31",
+    title: "Nexans: The Market Is Pricing A Plateau Before The Payoff",
+    ticker: "NXPRF",
+    company: "Nexans",
+    sector: "energy",
+    url: "https://seekingalpha.com/symbol/NXPRF",
+    deduction:
+      "Câbles = goulet de la PPE et des data centers (Mistral 1 GW). Le titre US voit un plateau ; l’angle Tribune est le carnet RTE / éolien offshore, pas le multiple.",
+    watch: "Notifications RTE, usine française, tout retard de raccordement.",
+  },
+  {
+    id: "sa-afklm",
+    date: "2026-09-08",
+    title: "Air France-KLM: Valuation Is Appealing, But H2 Visibility Keeps Us Neutral",
+    ticker: "AFLYY",
+    company: "Air France-KLM",
+    sector: "aero",
+    url: "https://seekingalpha.com/symbol/AFLYY",
+    deduction:
+      "Neutral sur le H2 = kérosène cher (Ormuz) dans le compte. Bureau aéro, pas énergie. Question à poser : surcharge fuel et slots Orly / CDG cet hiver.",
+    watch: "Guidance H2, grèves, commande Airbus en vis-à-vis.",
+  },
+  {
+    id: "sa-voltalia",
+    date: "2026-09-03",
+    title: "Voltalia SA Q2 2026 Earnings Call Transcript",
+    ticker: "VLTAF",
+    company: "Voltalia",
+    sector: "energy",
+    url: "https://seekingalpha.com/symbol/VLTAF",
+    deduction:
+      "Transcript Q2 d’un producteur ENR français : utile pour le papier PPE / raccordement, pas pour un « palmarès vert ». Lire les questions sur le working capital et le Brésil.",
+    watch: "Mise en service, levier, exposition LatAm.",
+  },
+];
