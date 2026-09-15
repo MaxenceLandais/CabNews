@@ -6,6 +6,13 @@ Construit pour une journaliste et un ingénieur. 26 bureaux. Un filtre = un bure
 
 Repo : [MaxenceLandais/CabNews](https://github.com/MaxenceLandais/CabNews)
 
+## Documentation
+
+- [Pour Jeanne — liens & mode d’emploi](docs/POUR-JEANNE.md)
+- [Fonctionnalités détaillées](docs/FONCTIONNALITES.md)
+
+Site live : https://cabnews.grok.me/
+
 ## Lancer en local
 
 ```bash
