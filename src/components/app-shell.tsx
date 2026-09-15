@@ -40,8 +40,10 @@ export function AppShell({ children }: { children: ReactNode }) {
                 <span className="hidden h-px flex-1 bg-accent sm:block sm:w-16 sm:flex-none" aria-hidden />
               </div>
               <p className="mt-2 max-w-xl font-mono text-xs text-muted tabular-nums">
-                {formatWeekRange()} · crawl n°4 · {LAST_CRAWL.date.slice(8)} sept. {LAST_CRAWL.time} · 26
-                bureaux
+                {formatWeekRange()} · 26 bureaux
+              </p>
+              <p className="mt-1 max-w-xl font-mono text-xs text-accent tabular-nums">
+                Dernière mise à jour · {LAST_CRAWL.date} · {LAST_CRAWL.time} (Paris) · {LAST_CRAWL.id}
               </p>
             </div>
             <label className="relative w-full sm:w-72">
