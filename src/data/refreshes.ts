@@ -2,6 +2,32 @@ import type { CrawlRefresh } from "./types";
 
 export const CRAWLS: CrawlRefresh[] = [
   {
+    id: "crawl-7",
+    date: "2026-09-16",
+    time: "16:40",
+    summary:
+      "Septième passe, mercredi après-midi. Post-CDM Macron « mobilisation totale » carburants, porte ouverte aux aides ; Fed à 20h Paris (+ retail US +1,2 %) ; marchés en pause ; El Gaia remorqué (2 disparus) ; audience Dati–Ghosn ouverte.",
+    sourcesCrawled: 72,
+    added: [
+      "evt-fed-fomc-0916",
+      "evt-marches-mercredi-0916",
+    ],
+    revised: [
+      "evt-carburant-ruptures-0916",
+      "evt-cdm-0916",
+      "evt-gilets-jaunes-spectre-0916",
+      "evt-dati-ghosn-0916",
+      "evt-elgaia-0913",
+    ],
+    highlights: [
+      "CDM / carburants : Macron exige une mobilisation totale (volumes internationaux + flexibilité UE raffineries) ; ~10 % des stations en difficulté ; porte ouverte à de nouveaux dispositifs.",
+      "Fed 20h Paris : +25 pb (>90 %) vers 3,75–4,00 % ; retail US août +1,2 % renforce le biais ; conf. Warsh 20h30.",
+      "Marchés : CAC prudent ~8 100 ; Brent en pause ~107–108 $ après 108,82 $ mardi — verdict monétaire ce soir.",
+      "Ormuz : El Gaia remorqué vers Oman, 23 évacués, 2 marins recherchés.",
+      "Procès Dati–Ghosn : audience ouverte 13h30, renvoi Ghosn examiné en premier.",
+    ],
+  },
+  {
     id: "crawl-6",
     date: "2026-09-16",
     time: "13:35",
