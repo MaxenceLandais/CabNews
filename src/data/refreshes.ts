@@ -2,6 +2,33 @@ import type { CrawlRefresh } from "./types";
 
 export const CRAWLS: CrawlRefresh[] = [
   {
+    id: "crawl-6",
+    date: "2026-09-16",
+    time: "13:35",
+    summary:
+      "Sixième passe, mercredi midi. Choc carburants (ruptures TotalEnergies, pêcheurs Frontignan), spectre gilets jaunes, ouverture procès Dati–Ghosn, Liban après-FINUL, clôture marchés mardi (L’Oréal > LVMH). Révision Lecornu plafonds (choc énergie / 30 Md€) et CDM Bregeon.",
+    sourcesCrawled: 68,
+    added: [
+      "evt-carburant-ruptures-0916",
+      "evt-gilets-jaunes-spectre-0916",
+      "evt-dati-ghosn-0916",
+      "evt-liban-finul-0916",
+      "evt-marches-mardi-0915",
+    ],
+    revised: [
+      "evt-lecornu-plafonds-0915",
+      "evt-cdm-0916",
+      "evt-lvmh-t3-0915",
+      "evt-hcsf-0915",
+    ],
+    highlights: [
+      "Carburants : gazole ~2,34 €/l ; Bregeon écarte la pénurie ; ~86 % des stations TotalEnergies en rupture ; pêcheurs à Frontignan (J3).",
+      "Spectre gilets jaunes : Bayrou/Hollande + LFI/PS ; intersyndicale FP le 29 sept.",
+      "Procès Dati–Ghosn ouvert à Paris (13h30) ; Ghosn demande le renvoi depuis Beyrouth.",
+      "Marchés mardi : CAC 8 090 (−0,34 %), Brent 108,8 $, OAT ~4,50 % ; L’Oréal passe devant LVMH — Fed mercredi.",
+    ],
+  },
+  {
     id: "crawl-5",
     date: "2026-09-16",
     time: "06:12",
