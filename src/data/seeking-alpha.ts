@@ -3,6 +3,18 @@ import type { SaHeadline } from "./types";
 /** Titres publics Seeking Alpha (France). Corps payant — on déduit sur le titre. */
 export const SA_HEADLINES: SaHeadline[] = [
   {
+    id: "sa-total-mistral",
+    date: "2026-09-15",
+    title: "TotalEnergies, Mistral team up on frontier AI for reservoir exploration",
+    ticker: "TTE",
+    company: "TotalEnergies",
+    sector: "energy",
+    url: "https://seekingalpha.com/news/4642736-totalenergies-mistral-team-up-on-frontier-ai-for-reservoir-exploration",
+    deduction:
+      "Titre SA : programme 3 ans >100 M€ pour modèles frontier AI en géosciences. Bureau énergie (pas tech services). À coller au choc Ormuz / trading et aux ruptures stations — Mistral comme brique sous-sol, pas cloud.",
+    watch: "Communiqué TotalEnergies, périmètre data réservoirs, tout lien trading Golfe.",
+  },
+  {
     id: "sa-exail",
     date: "2026-09-09",
     title: "Exail Technologies: The €380 Million Problem That Changed Everything",
