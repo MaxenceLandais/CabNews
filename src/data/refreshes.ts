@@ -2,6 +2,33 @@ import type { CrawlRefresh } from "./types";
 
 export const CRAWLS: CrawlRefresh[] = [
   {
+    id: "crawl-9",
+    date: "2026-09-17",
+    time: "12:15",
+    summary:
+      "Neuvième passe, jeudi midi. Digestion Fed : CAC vert (+0,4–0,6 %), Brent ~104 $ (espoirs oléoduc saoudien) ; Amundi×ICG 9,9 % ; Exosens guidance ; Macron–Aoun–Abdallah II / après-FINUL ; Dati jour 2 ; séminaire budget Matignon cet après-midi ; AFT indexés en fenêtre.",
+    sourcesCrawled: 84,
+    added: [
+      "evt-amundi-icg-0917",
+      "evt-exosens-guidance-0917",
+      "evt-lecornu-seminaire-0917",
+    ],
+    revised: [
+      "evt-marches-jeudi-0917",
+      "evt-liban-finul-0916",
+      "evt-dati-ghosn-0916",
+      "evt-aft-jeu-0917",
+      "evt-elgaia-0913",
+    ],
+    highlights: [
+      "Marchés midi : CAC ~8 172–8 189 (+0,4–0,6 %) ; Brent ~104,11 $ (−1,6 %) — hike Warsh absorbé.",
+      "Deals : Amundi 9,9 % ICG (~620 M€) ; Exosens CA 558–570 M€, titre +10–12 %.",
+      "Liban : Macron reçoit Aoun + Abdallah II ; réunion militaire après-FINUL (retrait dès janvier).",
+      "Dati jour 2 : interrogatoire ; séminaire Lecornu budget 2027 à Matignon (puis Figaro).",
+      "AFT : fenêtre 10h50/11h50 — résultats à coller dès publication (pas de chiffres inventés).",
+    ],
+  },
+  {
     id: "crawl-8",
     date: "2026-09-17",
     time: "06:10",
