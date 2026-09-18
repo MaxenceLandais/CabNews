@@ -80,3 +80,26 @@ Assemblée / Sénat **calendar** feeds and Vie publique / service-public are uns
 ## Anti-loop
 
 Commits touch **only** `inbox/` with message `… [skip ci]`. Push path filters ignore inbox-only noise for this workflow’s `push` trigger (schedule + dispatch + script/workflow changes only).
+
+
+## Activer le workflow GitHub Actions (one-shot)
+
+Le fichier runtime attendu est `.github/workflows/cabnews-inbox.yml`.
+
+Le PAT `gh` actuel n’a **pas** le scope **`workflow`**, donc impossible de pousser ce chemin via API/git depuis Bot.
+Copie officielle versionnée : [`docs/cabnews-inbox.workflow.yml`](./cabnews-inbox.workflow.yml).
+
+**Activation (une fois), en local avec un token `workflow` :**
+
+```bash
+mkdir -p .github/workflows
+cp docs/cabnews-inbox.workflow.yml .github/workflows/cabnews-inbox.yml
+git add .github/workflows/cabnews-inbox.yml
+git commit -m "ci(inbox): enable cabnews-inbox Action"
+git push origin main
+```
+
+Ou GitHub UI → Add file → créer `.github/workflows/cabnews-inbox.yml` (compte MaxenceLandais) en collant le contenu du template.
+
+Ensuite : Actions → **cabnews-inbox** → **Run workflow**.
+

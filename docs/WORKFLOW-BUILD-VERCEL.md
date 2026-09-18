@@ -67,3 +67,5 @@ Avant chaque MAJ Paris (**06 / 12 / 16**), l’Action [`cabnews-inbox`](../.gith
 
 Local : `npm run inbox:fetch`.
 
+> Template Action : `docs/cabnews-inbox.workflow.yml` → à placer sous `.github/workflows/` (scope GitHub `workflow` requis). Voir `docs/INBOX-SOURCES.md`.
+
