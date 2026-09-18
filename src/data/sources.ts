@@ -1,12 +1,12 @@
 import type { SourceEntry } from "./types";
 
 export const SOURCES: SourceEntry[] = [
-  { id: "s-insee", name: "Insee — calendrier et statistiques", url: "https://www.insee.fr/fr/information/2830163", kind: "officiel", country: "France", usedFor: "Note de conjoncture, IPC, ICT, créations, confiance, logements, loyers, BTP", lastCrawl: "2026-09-12" },
+  { id: "s-insee", name: "Insee — calendrier et statistiques", url: "https://www.insee.fr/fr/information/2830163", kind: "officiel", country: "France", usedFor: "Note de conjoncture, IPC, ICT, créations, confiance, logements, loyers, BTP", lastCrawl: "2026-09-18" },
   { id: "s-bdf", name: "Banque de France — statistiques", url: "https://www.banque-france.fr/statistiques", kind: "officiel", country: "France", usedFor: "MBS, fonds, anticipations d’inflation, crédit habitat, défaillances, enquête de conjoncture", lastCrawl: "2026-09-18" },
   { id: "s-bdf-def", name: "Banque de France — défaillances", url: "https://www.banque-france.fr/statistiques/defaillances-dentreprises", kind: "officiel", country: "France", usedFor: "Signaux faibles ETI / auto / commerce ; dataviz n°3", lastCrawl: "2026-09-12" },
   { id: "s-aft", name: "Agence France Trésor", url: "https://www.aft.gouv.fr/", kind: "officiel", country: "France", usedFor: "Calendrier d’émissions, résultats d’adjudications, OAT 10 ans", lastCrawl: "2026-09-18" },
   { id: "s-aft-cal", name: "AFT — calendrier indicatif", url: "https://www.aft.gouv.fr/fr/calendrier-indicatif-emissions", kind: "agenda", country: "France", usedFor: "Chaque jeudi d’adjudication", lastCrawl: "2026-09-18" },
-  { id: "s-bce", name: "BCE — décisions de politique monétaire", url: "https://www.ecb.europa.eu/press/govcdec/mopo/html/index.fr.html", kind: "officiel", country: "UE", usedFor: "Décision du 10 sept., corridor, projections", lastCrawl: "2026-09-10" },
+  { id: "s-bce", name: "BCE — décisions de politique monétaire", url: "https://www.ecb.europa.eu/press/govcdec/mopo/html/index.fr.html", kind: "officiel", country: "UE", usedFor: "Décision du 10 sept., corridor, projections", lastCrawl: "2026-09-18" },
   { id: "s-bce-cal", name: "BCE — calendrier Conseil des gouverneurs", url: "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html", kind: "agenda", country: "UE", usedFor: "Récurrence des réunions", lastCrawl: "2026-09-10" },
   { id: "s-bercy", name: "Ministère de l’Économie", url: "https://www.economie.gouv.fr/", kind: "officiel", country: "France", usedFor: "PLF, carburant, HCSF, discours Lescure", lastCrawl: "2026-09-18" },
   { id: "s-hcsf", name: "Haut Conseil de stabilité financière", url: "https://www.economie.gouv.fr/hcsf", kind: "officiel", country: "France", usedFor: "Normes crédit immo 35 % / 25 ans", lastCrawl: "2026-09-16" },
@@ -14,7 +14,7 @@ export const SOURCES: SourceEntry[] = [
   { id: "s-gouv", name: "Gouvernement — Conseil des ministres", url: "https://www.gouvernement.fr/conseil-des-ministres", kind: "agenda", country: "France", usedFor: "CDM mercredi 16 — sortie carburants Bregeon", lastCrawl: "2026-09-18" },
   { id: "s-viepub", name: "Vie publique", url: "https://www.vie-publique.fr/", kind: "officiel", country: "France", usedFor: "Discours Lecornu, DPG, textes", lastCrawl: "2026-09-18" },
   { id: "s-assemblee", name: "Assemblée nationale", url: "https://www.assemblee-nationale.fr/", kind: "agenda", country: "France", usedFor: "Calendrier PLF, commissions", lastCrawl: "2026-09-18" },
-  { id: "s-senat", name: "Sénat", url: "https://www.senat.fr/", kind: "agenda", country: "France", usedFor: "Calendrier budgétaire", lastCrawl: "2026-09-11" },
+  { id: "s-senat", name: "Sénat", url: "https://www.senat.fr/", kind: "agenda", country: "France", usedFor: "Calendrier budgétaire", lastCrawl: "2026-09-18" },
   { id: "s-ccomptes", name: "Cour des comptes", url: "https://www.ccomptes.fr/", kind: "officiel", country: "France", usedFor: "Rapport sur le budget de l’État, fenêtre d’automne", lastCrawl: "2026-09-11" },
   { id: "s-france-strat", name: "France Stratégie", url: "https://www.strategie.gouv.fr/", kind: "institut", country: "France", usedFor: "Notes de rentrée", lastCrawl: "2026-09-11" },
   { id: "s-defense", name: "Ministère des Armées", url: "https://www.defense.gouv.fr/", kind: "officiel", country: "France", usedFor: "LPM, 155 mm, Ukraine", lastCrawl: "2026-09-16" },
