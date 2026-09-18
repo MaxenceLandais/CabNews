@@ -94,6 +94,25 @@ export const SOURCES: SourceEntry[] = [
   { id: "s-lsa", name: "LSA", url: "https://www.lsa-conso.fr/", kind: "presse", country: "France", usedFor: "Grande distribution, prospectus", lastCrawl: "2026-09-11" },
   { id: "s-lloyds", name: "Lloyd's List", url: "https://www.lloydslist.com/", kind: "presse", country: "International", usedFor: "El Gaia remorqué Oman, 2 disparus", lastCrawl: "2026-09-17" },
   { id: "s-publicsenat", name: "Public Sénat", url: "https://www.publicsenat.fr/", kind: "presse", country: "France", usedFor: "Anniversaire Lecornu", lastCrawl: "2026-09-12" },
+  { id: "s-an-dossiers", name: "Assemblée nationale — dossiers", url: "https://www.assemblee-nationale.fr/dyn/17/dossiers", kind: "agenda", country: "France", usedFor: "Textes en cours d’étude, PLF, commissions", lastCrawl: "2026-09-18" },
+  { id: "s-senat-agenda", name: "Sénat — agenda", url: "https://www.senat.fr/agenda.html", kind: "agenda", country: "France", usedFor: "Ordre du jour, séances", lastCrawl: "2026-09-18" },
+  { id: "s-senat-textes", name: "Sénat — textes en cours", url: "https://www.senat.fr/travaux-parlementaires/textes.html", kind: "agenda", country: "France", usedFor: "Navettes, propositions, projets", lastCrawl: "2026-09-18" },
+  { id: "s-bercy-presse", name: "Bercy — salle de presse", url: "https://presse.economie.gouv.fr/", kind: "officiel", country: "France", usedFor: "Made in Europe 22/09, PAC, industrie", lastCrawl: "2026-09-18" },
+  { id: "s-francegaz", name: "France gaz", url: "https://www.francegaz.fr/evenement-congres-du-gaz-2026/", kind: "agenda", country: "France", usedFor: "Congrès 22 sept. ASIEM, prix du gaz", lastCrawl: "2026-09-18" },
+  { id: "s-bodacc", name: "BODACC", url: "https://www.bodacc.fr/", kind: "officiel", country: "France", usedFor: "Nominations, cessions, liquidations ETI", lastCrawl: "2026-09-18" },
+  { id: "s-jorf", name: "Journal officiel", url: "https://www.journal-officiel.gouv.fr/", kind: "officiel", country: "France", usedFor: "Nominations, décrets, ARS", lastCrawl: "2026-09-18" },
+  { id: "s-wsj", name: "Wall Street Journal", url: "https://www.wsj.com/", kind: "presse", country: "États-Unis", usedFor: "Traduit. Une corporate et macro US", lastCrawl: "2026-09-18" },
+  { id: "s-cnbc", name: "CNBC", url: "https://www.cnbc.com/", kind: "presse", country: "États-Unis", usedFor: "Traduit. Futures, Fed, énergie", lastCrawl: "2026-09-18" },
+  { id: "s-caixin", name: "Caixin Global", url: "https://www.caixinglobal.com/", kind: "presse", country: "Chine", usedFor: "Traduit du mandarin. Industrie, VE, PBOC", lastCrawl: "2026-09-18" },
+  { id: "s-tass", name: "TASS", url: "https://tass.com/", kind: "presse", country: "Russie", usedFor: "Traduit du russe. Énergie, mer Noire", lastCrawl: "2026-09-18" },
+  { id: "s-cbr", name: "Banque de Russie", url: "https://www.cbr.ru/eng/", kind: "officiel", country: "Russie", usedFor: "Taux, rouble", lastCrawl: "2026-09-18" },
+  { id: "s-et", name: "Economic Times", url: "https://economictimes.indiatimes.com/", kind: "presse", country: "Inde", usedFor: "Traduit. IT, énergie, RBI", lastCrawl: "2026-09-18" },
+  { id: "s-rbi", name: "Reserve Bank of India", url: "https://www.rbi.org.in/", kind: "officiel", country: "Inde", usedFor: "Taux, rupee", lastCrawl: "2026-09-18" },
+  { id: "s-nikkei", name: "Nikkei Asia", url: "https://asia.nikkei.com/", kind: "presse", country: "Japon", usedFor: "Traduit du japonais. BOJ, auto, semi, aéro", lastCrawl: "2026-09-18" },
+  { id: "s-boj", name: "Bank of Japan", url: "https://www.boj.or.jp/en/", kind: "officiel", country: "Japon", usedFor: "Politique monétaire", lastCrawl: "2026-09-18" },
+  { id: "s-valeo", name: "Valeo", url: "https://www.valeo.com/", kind: "corporate", country: "France", usedFor: "Usine drones AuRA, Harmattan, actionnariat salarié", lastCrawl: "2026-09-18" },
+  { id: "s-chaps", name: "ChapsVision", url: "https://www.chapsvision.com/", kind: "corporate", country: "France", usedFor: "ArgonOS, DGSI, souveraineté data", lastCrawl: "2026-09-18" },
+
 ];
 
 export const SOURCE_KIND_LABEL: Record<SourceEntry["kind"], string> = {

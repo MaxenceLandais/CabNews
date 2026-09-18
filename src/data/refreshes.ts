@@ -2,6 +2,29 @@ import type { CrawlRefresh } from "./types";
 
 export const CRAWLS: CrawlRefresh[] = [
   {
+    id: "crawl-12",
+    date: "2026-09-18",
+    time: "09:20",
+    summary:
+      "Douzième passe. Horizon glissant 18–25 sept. (8 jours). Manqués rattrapés : Bercy Made in Europe 22/09, France gaz ASIEM, visite ArcelorMittal, Valeo drones AuRA 24/09, leasing PAC, ChapsVision. Agendas AN/Sénat. Crawl US/CN/RU/IN/JP traduit. Sources cliquables. Mes Notes.",
+    sourcesCrawled: 128,
+    added: [
+      "evt-bercy-made-in-europe-0922",
+      "evt-francegaz-0922",
+      "evt-arcelor-visite-0922",
+      "evt-valeo-usine-aura-0924",
+      "evt-pac-leasing-signal-0918",
+      "evt-chapsvision-suivi-0918",
+    ],
+    revised: ["evt-insee-creations-0918", "evt-sfr-greve-0924"],
+    highlights: [
+      "Mardi 22 : France gaz 8h30 ASIEM · ArcelorMittal · Bercy Made in Europe 14h (Périllat dans la salle).",
+      "Jeudi 24 : Valeo usine drones AuRA · Conseil compétitivité Bruxelles · SFR + Insee confiance.",
+      "Signal : leasing PAC encore ouvert à Matignon. Entreprise a suivre : ChapsVision.",
+      "Fenêtre 18 / 09 / 2026 — 25 / 09 / 2026. Jours passés évacués.",
+    ],
+  },
+  {
     id: "crawl-11",
     date: "2026-09-18",
     time: "06:15",

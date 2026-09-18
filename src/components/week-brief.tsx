@@ -28,23 +28,25 @@ export function WeekBrief() {
   const isos = days.map(toIsoDate);
   const sectors = useCabinet((s) => s.sectors);
   const query = useCabinet((s) => s.query);
+  const forecasts = useCabinet((s) => s.forecasts);
   const selectEvent = useCabinet((s) => s.selectEvent);
   const selected = useCabinet((s) => s.selectedEventId);
+  const pool = useMemo(() => [...EVENTS, ...forecasts], [forecasts]);
   const [activeDay, setActiveDay] = useState<string | "all">("all");
   const [kind, setKind] = useState<WeekKindFilter>("all");
   const [weekAi, setWeekAi] = useState<string | null>(null);
 
   const grouped = useMemo(
-    () => eventsByDate(isos, { sectors, query, kind }),
-    [isos, sectors, query, kind],
+    () => eventsByDate(isos, { sectors, query, kind }, pool),
+    [isos, sectors, query, kind, pool],
   );
   const filtered = useMemo(
-    () => filterEvents(EVENTS, { sectors, query, kind }),
-    [sectors, query, kind],
+    () => filterEvents(pool, { sectors, query, kind }),
+    [pool, sectors, query, kind],
   );
   const sectorFiltered = useMemo(
-    () => filterEvents(EVENTS, { sectors, query, kind: "all" }),
-    [sectors, query],
+    () => filterEvents(pool, { sectors, query, kind: "all" }),
+    [pool, sectors, query],
   );
 
   const kindsWithCount = useMemo(() => {
@@ -93,7 +95,7 @@ export function WeekBrief() {
     const lines: string[] = [
       `Cabinet — brief ${start ? format(start, "d MMM", { locale: fr }) : ""} → ${end ? format(end, "d MMM yyyy", { locale: fr }) : ""}`,
       desk ? `Bureau : ${desk}` : "Tous les bureaux",
-      `Crawl n°4 · ${LAST_CRAWL.date} ${LAST_CRAWL.time}`,
+      `${LAST_CRAWL.id} · ${LAST_CRAWL.date} ${LAST_CRAWL.time}`,
       "",
     ];
     for (const iso of isos) {
@@ -141,7 +143,7 @@ export function WeekBrief() {
         <div className="no-print flex flex-wrap items-center justify-between gap-3">
           <div className="flex gap-1 overflow-x-auto pb-1">
             <DayChip
-              label="Semaine"
+              label="Prévisions"
               count={inWeek.length}
               active={activeDay === "all"}
               onClick={() => setActiveDay("all")}
@@ -335,6 +337,24 @@ function DaySection({
                       {extra.length ? `Aussi : ${extra.map(sectorLabel).join(" · ")} · ` : ""}
                       {e.entities.slice(0, 2).join(", ")}
                     </p>
+                    {e.sources?.length ? (
+                      <p className="mt-2 flex flex-wrap gap-x-3 gap-y-1">
+                        {e.sources.map((s) => (
+                          <a
+                            key={s.url}
+                            href={s.url}
+                            target="_blank"
+                            rel="noreferrer"
+                            onClick={(ev) => ev.stopPropagation()}
+                            className="text-xs text-muted underline-offset-4 hover:text-fg hover:underline"
+                          >
+                            {s.label}
+                          </a>
+                        ))}
+                      </p>
+                    ) : e.source ? (
+                      <p className="mt-2 text-xs text-subtle">Source : {e.source}</p>
+                    ) : null}
                   </div>
                 </button>
               </li>
@@ -348,7 +368,8 @@ function DaySection({
 
 function FlashRail({ onOpen }: { onOpen: (id: string) => void }) {
   const sectors = useCabinet((s) => s.sectors);
-  const flashes = EVENTS.filter((e) => e.flash && inSelection(primarySector(e.sectors), sectors)).slice(
+  const forecasts = useCabinet((s) => s.forecasts);
+  const flashes = [...forecasts, ...EVENTS].filter((e) => e.flash && inSelection(primarySector(e.sectors), sectors)).slice(
     0,
     4,
   );
@@ -418,8 +439,9 @@ function HorizonRail() {
   const sectors = useCabinet((s) => s.sectors);
   const today = startOfDay(new Date());
   const horizon = addDays(today, 21);
-  const weekEnd = addDays(today, 5);
-  const upcoming = EVENTS.filter((e) => {
+  const weekEnd = addDays(today, 7);
+  const forecasts = useCabinet((s) => s.forecasts);
+  const upcoming = [...EVENTS, ...forecasts].filter((e) => {
     if (!inSelection(primarySector(e.sectors), sectors)) return false;
     const d = startOfDay(new Date(`${e.date}T12:00:00`));
     return d > weekEnd && d <= horizon;
@@ -428,8 +450,8 @@ function HorizonRail() {
 
   return (
     <section className="rounded-xl bg-surface p-5 shadow-[var(--shadow-border)]">
-      <h2 className="font-serif text-lg tracking-tight">Horizon 21 jours</h2>
-      <p className="mt-1 text-xs text-muted">Au-delà de cette semaine, déjà dans le viseur.</p>
+      <h2 className="font-serif text-lg tracking-tight">À venir</h2>
+      <p className="mt-1 text-xs text-muted">Au-delà des 8 jours, déjà dans le viseur.</p>
       <ul className="mt-4 space-y-3">
         {upcoming.map((e) => (
           <li key={e.id} className="text-sm">

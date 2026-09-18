@@ -37,8 +37,8 @@ export function NominationsView() {
   return (
     <div className="flex flex-col gap-6">
       <PageHeader title="Nominations">
-        Grandes et moyennes entreprises, multinationales. Un n°2, un CFO, un architecte de programme
-        disent la stratégie plus tôt qu’un communiqué de résultats.
+        Les paywalls ratent les nominations. BODACC, JORF, annuaires, communiqués. Un n°2, un CFO,
+        un gérant d’ETI disent la stratégie plus tôt qu’un paper RH.
       </PageHeader>
       <SectorBar />
       <div className="no-print flex gap-1 overflow-x-auto pb-1">

@@ -39,10 +39,9 @@ export function CarnetView() {
 
   return (
     <div className="flex flex-col gap-8">
-      <PageHeader title="Carnet de veille">
-        Tu détectes, tu colles, j’imite la semaine suivante. Une détection = un fait + le site
-        référence + le bureau + l’angle. C’est comme ça qu’on rattrape les angles morts du silicium.
-        Pas de nom, pas de note personnelle — seulement le geste éditorial.
+      <PageHeader title="Fuites">
+        Espace mutualisé rédacteurs / lecteurs. Une fuite = un fait + le site référence + le bureau
+        + l’angle. Les angles morts du silicium se rattrapent ici.
       </PageHeader>
 
       <form

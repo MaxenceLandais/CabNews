@@ -13,7 +13,9 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AnniversairesRouteImport } from './routes/anniversaires'
 import { Route as CarnetRouteImport } from './routes/carnet'
 import { Route as DatavizRouteImport } from './routes/dataviz'
+import { Route as FuitesRouteImport } from './routes/fuites'
 import { Route as NominationsRouteImport } from './routes/nominations'
+import { Route as NotesRouteImport } from './routes/notes'
 import { Route as PromessesRouteImport } from './routes/promesses'
 import { Route as PublicationsRouteImport } from './routes/publications'
 import { Route as SignauxRouteImport } from './routes/signaux'
@@ -39,9 +41,19 @@ const DatavizRoute = DatavizRouteImport.update({
   path: '/dataviz',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FuitesRoute = FuitesRouteImport.update({
+  id: '/fuites',
+  path: '/fuites',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const NominationsRoute = NominationsRouteImport.update({
   id: '/nominations',
   path: '/nominations',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NotesRoute = NotesRouteImport.update({
+  id: '/notes',
+  path: '/notes',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PromessesRoute = PromessesRouteImport.update({
@@ -70,7 +82,9 @@ export interface FileRoutesByFullPath {
   '/anniversaires': typeof AnniversairesRoute
   '/carnet': typeof CarnetRoute
   '/dataviz': typeof DatavizRoute
+  '/fuites': typeof FuitesRoute
   '/nominations': typeof NominationsRoute
+  '/notes': typeof NotesRoute
   '/promesses': typeof PromessesRoute
   '/publications': typeof PublicationsRoute
   '/signaux': typeof SignauxRoute
@@ -81,7 +95,9 @@ export interface FileRoutesByTo {
   '/anniversaires': typeof AnniversairesRoute
   '/carnet': typeof CarnetRoute
   '/dataviz': typeof DatavizRoute
+  '/fuites': typeof FuitesRoute
   '/nominations': typeof NominationsRoute
+  '/notes': typeof NotesRoute
   '/promesses': typeof PromessesRoute
   '/publications': typeof PublicationsRoute
   '/signaux': typeof SignauxRoute
@@ -93,7 +109,9 @@ export interface FileRoutesById {
   '/anniversaires': typeof AnniversairesRoute
   '/carnet': typeof CarnetRoute
   '/dataviz': typeof DatavizRoute
+  '/fuites': typeof FuitesRoute
   '/nominations': typeof NominationsRoute
+  '/notes': typeof NotesRoute
   '/promesses': typeof PromessesRoute
   '/publications': typeof PublicationsRoute
   '/signaux': typeof SignauxRoute
@@ -106,7 +124,9 @@ export interface FileRouteTypes {
     | '/anniversaires'
     | '/carnet'
     | '/dataviz'
+    | '/fuites'
     | '/nominations'
+    | '/notes'
     | '/promesses'
     | '/publications'
     | '/signaux'
@@ -117,7 +137,9 @@ export interface FileRouteTypes {
     | '/anniversaires'
     | '/carnet'
     | '/dataviz'
+    | '/fuites'
     | '/nominations'
+    | '/notes'
     | '/promesses'
     | '/publications'
     | '/signaux'
@@ -128,7 +150,9 @@ export interface FileRouteTypes {
     | '/anniversaires'
     | '/carnet'
     | '/dataviz'
+    | '/fuites'
     | '/nominations'
+    | '/notes'
     | '/promesses'
     | '/publications'
     | '/signaux'
@@ -140,7 +164,9 @@ export interface RootRouteChildren {
   AnniversairesRoute: typeof AnniversairesRoute
   CarnetRoute: typeof CarnetRoute
   DatavizRoute: typeof DatavizRoute
+  FuitesRoute: typeof FuitesRoute
   NominationsRoute: typeof NominationsRoute
+  NotesRoute: typeof NotesRoute
   PromessesRoute: typeof PromessesRoute
   PublicationsRoute: typeof PublicationsRoute
   SignauxRoute: typeof SignauxRoute
@@ -177,11 +203,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DatavizRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/fuites': {
+      id: '/fuites'
+      path: '/fuites'
+      fullPath: '/fuites'
+      preLoaderRoute: typeof FuitesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/nominations': {
       id: '/nominations'
       path: '/nominations'
       fullPath: '/nominations'
       preLoaderRoute: typeof NominationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/notes': {
+      id: '/notes'
+      path: '/notes'
+      fullPath: '/notes'
+      preLoaderRoute: typeof NotesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/promesses': {
@@ -220,7 +260,9 @@ const rootRouteChildren: RootRouteChildren = {
   AnniversairesRoute: AnniversairesRoute,
   CarnetRoute: CarnetRoute,
   DatavizRoute: DatavizRoute,
+  FuitesRoute: FuitesRoute,
   NominationsRoute: NominationsRoute,
+  NotesRoute: NotesRoute,
   PromessesRoute: PromessesRoute,
   PublicationsRoute: PublicationsRoute,
   SignauxRoute: SignauxRoute,

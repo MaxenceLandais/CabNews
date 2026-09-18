@@ -28,10 +28,9 @@ const STROKES = [
 export function DatavizView() {
   return (
     <div className="flex flex-col gap-8">
-      <PageHeader title="Cinq propositions de la semaine">
-        Données officielles uniquement — Insee, Banque de France, AFT, CCFA / SDES, Caisse des Dépôts,
-        Bundesbank. L’originalité est l’angle, pas la source. Cinq images pour la conférence de
-        rédaction, pas un dashboard.
+      <PageHeader title="Dix propositions de datavisualisation">
+        Mêmes données, mêmes signaux faibles. Insee, BdF, AFT, CCFA, CDC, CRE, EIA, FAO, RTE.
+        Dix images pour la conférence de rédaction, pas un dashboard.
       </PageHeader>
       {VIZ.map((v, i) => (
         <VizCard key={v.id} viz={v} index={i + 1} />

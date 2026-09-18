@@ -1,4 +1,5 @@
 import { EVENTS } from "@/data/catalog";
+import { padSectorDay } from "@/data/sector-watches";
 import type { EventItem, KindId, SectorId, WeekKindFilter } from "@/data/types";
 
 function matchesQuery(haystack: string, q: string): boolean {
@@ -32,6 +33,7 @@ export function filterEvents(
       e.whyItMatters,
       e.source ?? "",
       e.location ?? "",
+      ...(e.sources ?? []).map((s) => s.label),
     ].join(" ");
     return matchesQuery(hay, q);
   });
@@ -59,13 +61,20 @@ function byAgenda(a: EventItem, b: EventItem): number {
 export function eventsByDate(
   dates: string[],
   opts: { sectors: SectorId[]; query: string; kind?: WeekKindFilter },
+  pool: EventItem[] = EVENTS,
 ): Map<string, EventItem[]> {
-  const filtered = filterEvents(EVENTS, opts).slice().sort(byAgenda);
+  const filtered = filterEvents(pool, opts).slice().sort(byAgenda);
   const map = new Map<string, EventItem[]>();
   for (const d of dates) map.set(d, []);
   for (const e of filtered) {
     const list = map.get(e.date);
     if (list) list.push(e);
+  }
+  if (opts.sectors.length === 1 && (!opts.kind || opts.kind === "all") && !opts.query.trim()) {
+    const sector = opts.sectors[0]!;
+    for (const d of dates) {
+      map.set(d, padSectorDay(map.get(d) ?? [], sector, d));
+    }
   }
   return map;
 }
@@ -75,3 +84,5 @@ export function textMatch(parts: string[], query: string): boolean {
   if (!q) return true;
   return matchesQuery(parts.join(" "), q);
 }
+
+export { EVENTS };

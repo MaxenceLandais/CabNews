@@ -1,4 +1,7 @@
-export { EVENTS } from "./events";
+import { EVENTS as BASE_EVENTS } from "./events";
+import { HORIZON } from "./horizon";
+
+export const EVENTS = [...BASE_EVENTS, ...HORIZON];
 export { PROMISES } from "./promises";
 export { ANNIVERSARIES } from "./anniversaries";
 export { PUBLICATIONS } from "./publications";

@@ -192,4 +192,33 @@ export const NOMINATIONS: NominationItem[] = [
     ],
     scope: "international",
   },
+  {
+    id: "nom-bodacc-veille",
+    date: "2026-09-18",
+    person: "Dirigeants à paraître BODACC / JORF",
+    role: "Gérants, DG, liquidateurs — ETI",
+    organization: "Annonces légales",
+    sector: "eti",
+    whyItMatters: "Les paywalls ratent les nominations. BODACC et JORF sont la source. À crawler chaque jour ouvré.",
+    source: "BODACC",
+    sources: [
+      { label: "BODACC", url: "https://www.bodacc.fr/" },
+      { label: "Journal officiel", url: "https://www.journal-officiel.gouv.fr/" },
+    ],
+    scope: "eti",
+  },
+  {
+    id: "nom-chapsvision-sansoni",
+    date: "2026-06-17",
+    person: "Silvano Sansoni",
+    role: "Directeur général",
+    organization: "ChapsVision",
+    previous: "Olivier Dellenbach, fondateur, reste l’actionnaire de référence",
+    sector: "ia",
+    whyItMatters: "Le visage commercial de l’alternative Palantir. Ses phrases à VivaTech (« tous les États européens ») sont des promesses.",
+    source: "Boursorama / VivaTech, 17 juin 2026",
+    sources: [{ label: "Boursorama", url: "https://www.boursorama.com/" }],
+    scope: "france",
+  },
+
 ];

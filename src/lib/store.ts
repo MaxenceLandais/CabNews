@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import type { SectorId } from "@/data/types";
+import type { EventItem, SectorId } from "@/data/types";
 
 interface CabinetState {
   sectors: SectorId[];
@@ -8,6 +8,8 @@ interface CabinetState {
   selectedEventId: string | null;
   starred: string[];
   notes: Record<string, string>;
+  forecasts: EventItem[];
+  learnedNames: string[];
   /** Toggle a single desk. Does not drag neighbouring sectors. */
   toggleSector: (id: SectorId) => void;
   /** Jump to exactly one desk (dropdown). */
@@ -17,6 +19,7 @@ interface CabinetState {
   selectEvent: (id: string | null) => void;
   toggleStar: (id: string) => void;
   setNote: (id: string, note: string) => void;
+  addForecast: (event: EventItem) => void;
 }
 
 export const useCabinet = create<CabinetState>()(
@@ -27,6 +30,8 @@ export const useCabinet = create<CabinetState>()(
       selectedEventId: null,
       starred: [],
       notes: {},
+      forecasts: [],
+      learnedNames: [],
       toggleSector: (id) => {
         const cur = get().sectors;
         set({ sectors: cur.includes(id) ? cur.filter((s) => s !== id) : [...cur, id] });
@@ -37,9 +42,16 @@ export const useCabinet = create<CabinetState>()(
       selectEvent: (selectedEventId) => set({ selectedEventId }),
       toggleStar: (id) => {
         const cur = get().starred;
-        set({ starred: cur.includes(id) ? cur.filter((s) => s !== id) : [...cur, id] });
+        set({ starred: cur.includes(id) ? cur.filter((x) => x !== id) : [...cur, id] });
       },
       setNote: (id, note) => set({ notes: { ...get().notes, [id]: note } }),
+      addForecast: (event) => {
+        const names = event.entities.filter(Boolean);
+        set({
+          forecasts: [event, ...get().forecasts].slice(0, 200),
+          learnedNames: [...new Set([...names, ...get().learnedNames])].slice(0, 80),
+        });
+      },
     }),
     {
       name: "cabinet-editorial",
@@ -47,6 +59,8 @@ export const useCabinet = create<CabinetState>()(
       partialize: (s) => ({
         starred: s.starred,
         notes: s.notes,
+        forecasts: s.forecasts,
+        learnedNames: s.learnedNames,
       }),
     },
   ),

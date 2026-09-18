@@ -25,9 +25,8 @@ export function SignalsView() {
   return (
     <div className="flex flex-col gap-6">
       <PageHeader title="Signaux faibles">
-        Résultats, déclarations de dirigeants, benchmark de marché. On anticipe l’entreprise en
-        mauvaise posture, le deal qui arrive à échéance, le secteur où l’acquéreur passera avant le
-        communiqué.
+        Esprit de déduction : données économiques + actualités de bureau. On anticipe l’entreprise
+        en mauvaise posture, le deal, le décret. Pas un fil d’actu — une thèse + des preuves.
       </PageHeader>
       <SectorBar />
       {list.length === 0 ? (

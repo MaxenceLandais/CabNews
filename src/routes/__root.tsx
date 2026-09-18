@@ -25,7 +25,7 @@ export const Route = createRootRoute({
       {
         name: "description",
         content:
-          "Prévision éditoriale jeudi → jeudi. Événements, résultats, visites, promesses, signaux faibles, nominations, dataviz officielles.",
+          "Prévision éditoriale, horizon glissant 8 jours. Promesses, signaux, nominations, dataviz, fuites, notes.",
       },
       { name: "theme-color", content: "#0c0b0a" },
     ],

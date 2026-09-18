@@ -1,21 +1,33 @@
-import { addDays, format, startOfDay } from "date-fns";
+import { addDays, format, parseISO, startOfDay } from "date-fns";
 import { fr } from "date-fns/locale";
 
-/** Editorial week starts Thursday. If `from` is Thursday, that day is day 1. */
-export function editorialWeekStart(from: Date = new Date()): Date {
-  const d = startOfDay(from);
-  const sinceThursday = (d.getDay() - 4 + 7) % 7;
-  return addDays(d, -sinceThursday);
+/** Rolling 8-day forecast window: today → today+7. Past days drop off. */
+export function forecastWindowStart(from: Date = new Date()): Date {
+  return startOfDay(from);
 }
 
-/** Thursday → next Thursday inclusive (8 days). */
-export function editorialWeekDays(from: Date = new Date()): Date[] {
-  const start = editorialWeekStart(from);
+export function forecastWindowDays(from: Date = new Date()): Date[] {
+  const start = forecastWindowStart(from);
   return Array.from({ length: 8 }, (_, i) => addDays(start, i));
+}
+
+/** @deprecated Rolling window replaced Thursday→Thursday. Kept for any leftover import. */
+export function editorialWeekStart(from: Date = new Date()): Date {
+  return forecastWindowStart(from);
+}
+
+export function editorialWeekDays(from: Date = new Date()): Date[] {
+  return forecastWindowDays(from);
 }
 
 export function toIsoDate(d: Date): string {
   return format(d, "yyyy-MM-dd");
+}
+
+/** 18 / 09 / 2026 */
+export function formatFrSlash(input: Date | string): string {
+  const d = typeof input === "string" ? parseISO(input) : input;
+  return format(d, "dd / MM / yyyy");
 }
 
 export function formatDayHeading(d: Date): string {
@@ -27,14 +39,11 @@ export function formatDayShort(d: Date): string {
 }
 
 export function formatWeekRange(from: Date = new Date()): string {
-  const days = editorialWeekDays(from);
+  const days = forecastWindowDays(from);
   const a = days[0];
   const b = days[days.length - 1];
   if (!a || !b) return "";
-  if (a.getMonth() === b.getMonth()) {
-    return `${format(a, "d", { locale: fr })} – ${format(b, "d MMMM yyyy", { locale: fr })}`;
-  }
-  return `${format(a, "d MMM", { locale: fr })} – ${format(b, "d MMM yyyy", { locale: fr })}`;
+  return `${formatFrSlash(a)} — ${formatFrSlash(b)}`;
 }
 
 export function daysUntil(iso: string, from: Date = new Date()): number {

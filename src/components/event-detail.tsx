@@ -23,9 +23,10 @@ export function EventDetail() {
   const toggleStar = useCabinet((s) => s.toggleStar);
   const notes = useCabinet((s) => s.notes);
   const setNote = useCabinet((s) => s.setNote);
+  const forecasts = useCabinet((s) => s.forecasts);
   const [ai, setAi] = useState<string | null>(null);
 
-  const event = EVENTS.find((e) => e.id === id);
+  const event = EVENTS.find((e) => e.id === id) ?? forecasts.find((e) => e.id === id);
 
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
@@ -158,9 +159,9 @@ export function EventDetail() {
             <p className="text-xs text-muted">Acteurs : {event.entities.join(" · ")}</p>
           ) : null}
 
-          {event.sources?.length ? (
-            <section>
-              <h3 className="text-xs font-medium tracking-wider text-muted uppercase">Sources</h3>
+          <section>
+            <h3 className="text-xs font-medium tracking-wider text-muted uppercase">Sources</h3>
+            {event.sources?.length ? (
               <ul className="mt-2 space-y-1">
                 {event.sources.map((s) => (
                   <li key={s.url}>
@@ -175,10 +176,12 @@ export function EventDetail() {
                   </li>
                 ))}
               </ul>
-            </section>
-          ) : event.source ? (
-            <p className="text-xs text-subtle">Source : {event.source}</p>
-          ) : null}
+            ) : event.source ? (
+              <p className="mt-2 text-sm text-muted">Source : {event.source}</p>
+            ) : (
+              <p className="mt-2 text-sm text-subtle">Source à recouper — pas de lien officiel daté.</p>
+            )}
+          </section>
 
           {related.length ? (
             <section className="rounded-lg bg-elevated p-4">

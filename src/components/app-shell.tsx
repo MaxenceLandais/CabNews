@@ -2,20 +2,21 @@ import { Link, useRouterState } from "@tanstack/react-router";
 import { Search } from "lucide-react";
 import type { ReactNode } from "react";
 import { LAST_CRAWL } from "@/data/catalog";
-import { formatWeekRange } from "@/lib/week";
+import { formatFrSlash, formatWeekRange } from "@/lib/week";
 import { useCabinet } from "@/lib/store";
 import { cn } from "@/lib/utils";
 import { Input } from "@/components/ui/input";
 
 const NAV = [
-  { to: "/", label: "Semaine" },
+  { to: "/", label: "Prévisions" },
   { to: "/promesses", label: "Promesses" },
   { to: "/signaux", label: "Signaux" },
   { to: "/nominations", label: "Nominations" },
   { to: "/anniversaires", label: "Anniversaires" },
   { to: "/publications", label: "Publications" },
   { to: "/dataviz", label: "Dataviz" },
-  { to: "/carnet", label: "Carnet" },
+  { to: "/fuites", label: "Fuites" },
+  { to: "/notes", label: "Mes Notes" },
   { to: "/sources", label: "Sources" },
 ] as const;
 
@@ -31,7 +32,7 @@ export function AppShell({ children }: { children: ReactNode }) {
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
               <p className="font-mono text-xs tracking-widest text-muted uppercase">
-                Prévision éditoriale · jeudi → jeudi
+                Horizon glissant · 8 jours · 3 mises à jour / jour
               </p>
               <div className="mt-1 flex items-baseline gap-3">
                 <Link to="/" className="font-serif text-4xl leading-none tracking-tight text-fg sm:text-5xl">
@@ -39,11 +40,11 @@ export function AppShell({ children }: { children: ReactNode }) {
                 </Link>
                 <span className="hidden h-px flex-1 bg-accent sm:block sm:w-16 sm:flex-none" aria-hidden />
               </div>
-              <p className="mt-2 max-w-xl font-mono text-xs text-muted tabular-nums">
+              <p className="mt-2 max-w-xl font-mono text-xs text-fg tabular-nums">
                 {formatWeekRange()} · 26 bureaux
               </p>
               <p className="mt-1 max-w-xl font-mono text-xs text-accent tabular-nums">
-                Dernière mise à jour · {LAST_CRAWL.date} · {LAST_CRAWL.time} (Paris) · {LAST_CRAWL.id}
+                Dernière mise à jour · {formatFrSlash(LAST_CRAWL.date)} · {LAST_CRAWL.time} (Paris) · {LAST_CRAWL.id}
               </p>
             </div>
             <label className="relative w-full sm:w-72">
@@ -59,7 +60,10 @@ export function AppShell({ children }: { children: ReactNode }) {
           </div>
           <nav className="flex flex-nowrap gap-1 overflow-x-auto pb-1" aria-label="Rubriques">
             {NAV.map((item) => {
-              const active = item.to === "/" ? pathname === "/" : pathname.startsWith(item.to);
+              const active =
+                item.to === "/"
+                  ? pathname === "/"
+                  : pathname === item.to || pathname.startsWith(`${item.to}/`) || (item.to === "/notes" && pathname === "/carnet");
               return (
                 <Link
                   key={item.to}

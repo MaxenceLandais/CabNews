@@ -30,8 +30,9 @@ export function PromisesBoard() {
   return (
     <div className="flex flex-col gap-6">
       <PageHeader title="Promesses & feuilles de route">
-        Élus, dirigeants, tribunaux, deals. On compare l’engagement, l’échéance, et l’état réel. Une
-        promesse non tenue à date est un papier. Une feuille de route d’entreprise aussi.
+        Linguistique de l’engagement : « je m’engage », « nous garantirons », « pas touche à »,
+        horizon court ou long. X, médias, discours, congrès. Une promesse non tenue à date est un
+        papier.
       </PageHeader>
       <SectorBar />
       {list.length === 0 ? (
