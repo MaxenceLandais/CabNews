@@ -1,0 +1,1110 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-18T09:59:56.063Z",
+  "generatedAtParis": "2026-09-18T11-59-Paris",
+  "timezone": "Europe/Paris",
+  "sources": [
+    {
+      "id": "insee-flux-national",
+      "label": "Insee — flux nationaux",
+      "url": "https://www.insee.fr/fr/flux/1",
+      "type": "rss",
+      "ok": true,
+      "itemCount": 40
+    },
+    {
+      "id": "insee-publications",
+      "label": "Insee — publications nationales",
+      "url": "https://www.insee.fr/fr/flux/2",
+      "type": "rss",
+      "ok": true,
+      "itemCount": 40
+    },
+    {
+      "id": "senat-presse",
+      "label": "Sénat — communiqués de presse",
+      "url": "https://www.senat.fr/rss/presse.rss",
+      "type": "rss",
+      "ok": true,
+      "itemCount": 5
+    },
+    {
+      "id": "info-gouv",
+      "label": "info.gouv.fr — actualités",
+      "url": "https://www.info.gouv.fr/rss/actualites.xml",
+      "type": "rss",
+      "ok": true,
+      "itemCount": 20
+    },
+    {
+      "id": "ecb-press",
+      "label": "BCE / ECB — press",
+      "url": "https://www.ecb.europa.eu/rss/press.html",
+      "type": "rss",
+      "ok": true,
+      "itemCount": 15
+    },
+    {
+      "id": "economie-presse",
+      "label": "presse.economie.gouv.fr — listing HTML",
+      "url": "https://presse.economie.gouv.fr/",
+      "type": "html-links",
+      "ok": true,
+      "itemCount": 14
+    },
+    {
+      "id": "bdf-actualites",
+      "label": "Banque de France — actualités (data-href)",
+      "url": "https://www.banque-france.fr/fr/actualites",
+      "type": "html-data-href",
+      "ok": true,
+      "itemCount": 12
+    },
+    {
+      "id": "vie-publique-rss",
+      "label": "Vie publique — RSS (often bot-gated)",
+      "url": "https://www.vie-publique.fr/rss.xml",
+      "type": "rss",
+      "ok": false,
+      "itemCount": 0,
+      "error": "Response is HTML/bot-gate, not RSS/Atom"
+    },
+    {
+      "id": "assemblee-rss",
+      "label": "Assemblée nationale — RSS (often 404)",
+      "url": "https://www.assemblee-nationale.fr/dyn/rss",
+      "type": "rss",
+      "ok": false,
+      "itemCount": 0,
+      "error": "HTTP 404"
+    }
+  ],
+  "itemCount": 138,
+  "items": [
+    {
+      "id": "insee-flux-national:361eb0e0300e4072",
+      "title": "Forte accélération des créations d'entreprises en août 2026",
+      "url": "https://www.insee.fr/fr/statistiques/9052433",
+      "source": "insee-flux-national",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "En août 2026, le nombre total de créations d’entreprises, tous types d’entreprises confondus et en données corrigées des variations saisonnières et des effets des jours ouvrables, accélère fortement (+6,5 % après +0,9 % en juillet). Les immatriculations de micro-entrepreneurs accélèrent nettement (+7,3 % après +0,9 %). Les créations d’entreprises individuelles classiques augmentent de nouveau fortement (+7,9 % après +7,8 %) et les créations de sociétés rebondissent (+3,8 % après -1,3 %). En donn"
+    },
+    {
+      "id": "insee-flux-national:214d99b1a8396140",
+      "title": "Approche statistique de l'économie maritime en France",
+      "url": "https://www.insee.fr/fr/statistiques/9052231",
+      "source": "insee-flux-national",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "insee-flux-national:d03b798b55f25232",
+      "title": "Sur un an, plus de 9 000 actifs des pays voisins s’installent dans le nord et l’est de la France, souvent en conservant un emploi à l’étranger",
+      "url": "https://www.insee.fr/fr/statistiques/9039503",
+      "source": "insee-flux-national",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "Au cours de l’année 2021, plus de 140 000 actifs ont emménagé en France métropolitaine en provenance d’un pays étranger. Parmi eux, 10 000 se sont installés en zone frontalière depuis le pays directement voisin, dont plus de 9 000 aux frontières belge, luxembourgeoise, allemande ou suisse.Beaucoup de ces nouveaux arrivants habitaient à moins de 20 km de la frontière. Le plus souvent, ils emménagent à proximité de la frontière et travaillent dans leur pays de provenance, particulièrement au voisi"
+    },
+    {
+      "id": "insee-flux-national:228aba866a8494eb",
+      "title": "Les index Bâtiment, Travaux publics et divers de la construction en juillet 2026",
+      "url": "https://www.insee.fr/fr/statistiques/9052342",
+      "source": "insee-flux-national",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "insee-flux-national:f476de8818062a8f",
+      "title": "Entre avril et juillet 2026, les loyers augmentent de 0,2 %",
+      "url": "https://www.insee.fr/fr/statistiques/9050041",
+      "source": "insee-flux-national",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "En France métropolitaine, les loyers (hors charges) pour les résidences principales (louées vides) augmentent de 0,2 % entre avril et juillet 2026, comme entre janvier et avril 2026. Sur un an, les loyers augmentent de 1,6 % en juillet 2026, comme en avril 2026. Ils sont en hausse de 0,9 % dans le secteur libre et de 2,9 % dans le secteur social."
+    },
+    {
+      "id": "insee-flux-national:e24a7c1b0bbde0cc",
+      "title": "Évolution du coût du travail selon le secteur d’activité",
+      "url": "https://www.insee.fr/fr/statistiques/5236290",
+      "source": "insee-flux-national",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "insee-flux-national:528bb09e08ef7095",
+      "title": "En août 2026, les prix à la consommation augmentent de 2,4 % sur un an",
+      "url": "https://www.insee.fr/fr/statistiques/9051406",
+      "source": "insee-flux-national",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "insee-flux-national:cde5a3a7008da003",
+      "title": "Au deuxième trimestre 2026, les salaires horaires augmentent de 2,4 % sur un an, le coût horaire du travail de 2,5 %",
+      "url": "https://www.insee.fr/fr/statistiques/9050412",
+      "source": "insee-flux-national",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "insee-flux-national:658cf729baba4b56",
+      "title": "Résultats du diplôme national du brevet 2025",
+      "url": "https://www.insee.fr/fr/statistiques/9026323",
+      "source": "insee-flux-national",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "insee-flux-national:a7cd5b9f84843e4c",
+      "title": "Résultats du diplôme national du brevet 2025",
+      "url": "https://www.insee.fr/fr/statistiques/9026325",
+      "source": "insee-flux-national",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "insee-flux-national:806efa3ced2eed11",
+      "title": "Vigilance orange sur la croissance",
+      "url": "https://www.insee.fr/fr/statistiques/9050757",
+      "source": "insee-flux-national",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "insee-flux-national:a3ddf3b237d732d4",
+      "title": "Prestations de la Caf en 2024 en France hexagonale",
+      "url": "https://www.insee.fr/fr/statistiques/9039040",
+      "source": "insee-flux-national",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "En 2024 en France hexagonale, les habitants des quartiers prioritaires de la politique de la ville (QPV) sont plus souvent couverts par les prestations versées par les caisses d’allocations familiales (Caf) que ceux résidant hors des QPV. Les foyers des QPV cumulent également davantage de prestations, avec une plus forte part de foyers allocataires percevant au moins deux prestations dans ces quartiers plutôt qu’ailleurs (51 % en QPV contre 35 % hors QPV). De plus, les montants par prestation et"
+    },
+    {
+      "id": "insee-flux-national:5b09105da194269a",
+      "title": "Prestations de la Caf en 2024 dans les DROM",
+      "url": "https://www.insee.fr/fr/statistiques/9039072",
+      "source": "insee-flux-national",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "À La Réunion, en Martinique, en Guyane et en Guadeloupe, les habitants des quartiers prioritaires de la politique de la ville (QPV) sont plus fréquemment couverts en 2024 par les différentes prestations légales des caisses d’allocations familiales (Caf) que le reste des habitants de ces départements. Les foyers vivant en QPV cumulent plus souvent plusieurs prestations (53 % en QPV contre 40 % hors QPV), et les montants qu’ils perçoivent pour ces prestations sont également plus élevés, de 174 eur"
+    },
+    {
+      "id": "insee-flux-national:9a04e302a806e155",
+      "title": "Salaire minimum interprofessionnel de croissance (Smic)",
+      "url": "https://www.insee.fr/fr/statistiques/1375188",
+      "source": "insee-flux-national",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "insee-flux-national:fa4e6555914577a5",
+      "title": "En juillet 2026, la production manufacturière baisse de nouveau nettement (‑0,8 % après ‑1,0 %)",
+      "url": "https://www.insee.fr/fr/statistiques/9050397",
+      "source": "insee-flux-national",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "En juillet 2026, la production baisse de nouveau dans l’industrie manufacturière (‑0,8 % après ‑1,0 % en juin 2026). Dans l’ensemble de l’industrie, elle baisse également (‑0,4 % après ‑0,1 %)."
+    },
+    {
+      "id": "insee-flux-national:bbaebef59923f2d5",
+      "title": "Mobilités professionnelles, salaires et fin de carrière",
+      "url": "https://www.insee.fr/fr/statistiques/9041706",
+      "source": "insee-flux-national",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "insee-flux-national:2d7bbffafa3885b6",
+      "title": "Les déchets non dangereux en 2022",
+      "url": "https://www.insee.fr/fr/statistiques/9035472",
+      "source": "insee-flux-national",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "insee-flux-national:c125cec7ad16e794",
+      "title": "Les dépenses de carburant pèsent davantage sur le budget des ménages ruraux",
+      "url": "https://www.insee.fr/fr/statistiques/9037833",
+      "source": "insee-flux-national",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "En 2021, 2,2 millions de ménages, soit 10,6 % des ménages propriétaires d’une voiture, ont dépensé plus d’un mois de leurs revenus annuels en carburant. Le nombre de ces ménages au budget grevé par l’achat de carburant varie fortement au gré des prix à la pompe. Ainsi, ils auraient été plus de deux fois plus nombreux s’ils avaient dû faire face à une envolée des prix des carburants comparable à celle du printemps 2026. En revanche, les territoires les plus exposés seraient restés les mêmes.En 20"
+    },
+    {
+      "id": "insee-flux-national:f53876c105aec7d7",
+      "title": "Équipements géolocalisés (commerce, services, sport, santé...) en 2025",
+      "url": "https://www.insee.fr/fr/statistiques/8217525",
+      "source": "insee-flux-national",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "insee-flux-national:3da7eb0ceb92d8a4",
+      "title": "Au deuxième trimestre 2026, les prix des logements anciens reculent de 1,0 %",
+      "url": "https://www.insee.fr/fr/statistiques/9040119",
+      "source": "insee-flux-national",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "Au deuxième trimestre 2026, les prix des logements anciens en France (hors Mayotte) sont en baisse : -1,0 % (données provisoires corrigées des variations saisonnières), après -0,2 % au premier trimestre 2026 et +0,4 % au quatrième trimestre 2025. Sur un an, les prix des logements anciens baissent : -0,8 % au deuxième trimestre 2026, après une stabilité au premier trimestre 2026 et +1,0 % au quatrième trimestre 2025. Les prix sont quasi stables pour les appartements (-0,1 %) et reculent de 1,3 % "
+    },
+    {
+      "id": "insee-flux-national:2173b29349b00fba",
+      "title": "Environnement – tableau de bord de l’économie française",
+      "url": "https://www.insee.fr/fr/statistiques/5368201",
+      "source": "insee-flux-national",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "insee-flux-national:ccce61d7b2d7d8ba",
+      "title": "Mobilités déplacements – tableau de bord de l’économie française",
+      "url": "https://www.insee.fr/fr/statistiques/5435508",
+      "source": "insee-flux-national",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "insee-flux-national:f4e905d3ad9fae7c",
+      "title": "Sécurité – justice – tableau de bord de l’économie française",
+      "url": "https://www.insee.fr/fr/statistiques/5368137",
+      "source": "insee-flux-national",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "insee-flux-national:40d3c55ea2c43dc4",
+      "title": "Âge de la population selon le zonage en aires d'attraction des villes",
+      "url": "https://www.insee.fr/fr/statistiques/5357628",
+      "source": "insee-flux-national",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "insee-flux-national:5ddbba63453e8879",
+      "title": "Mode de transport pour aller travailler selon le zonage en aires d'attraction des villes",
+      "url": "https://www.insee.fr/fr/statistiques/5430864",
+      "source": "insee-flux-national",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "insee-flux-national:83d5dd1af8a25fda",
+      "title": "Personnes ne résidant pas dans leur département de naissance",
+      "url": "https://www.insee.fr/fr/statistiques/5431020",
+      "source": "insee-flux-national",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "insee-flux-national:c96fb089f5afdf91",
+      "title": "Investissements des entreprises pour protéger l’environnement",
+      "url": "https://www.insee.fr/fr/statistiques/2015793",
+      "source": "insee-flux-national",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "insee-flux-national:ca4027a68de0be44",
+      "title": "Population selon la taille des aires d'attraction des villes",
+      "url": "https://www.insee.fr/fr/statistiques/5417078",
+      "source": "insee-flux-national",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "insee-flux-national:75344746ca753411",
+      "title": "Mode de transport pour aller travailler selon la catégorie socioprofessionnelle",
+      "url": "https://www.insee.fr/fr/statistiques/5430829",
+      "source": "insee-flux-national",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "insee-flux-national:2f8196b6a06116d2",
+      "title": "Personnes mises en cause pour des crimes ou délits non routiers",
+      "url": "https://www.insee.fr/fr/statistiques/5232504",
+      "source": "insee-flux-national",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "insee-flux-national:76d81ebf093811fe",
+      "title": "Lieu de résidence un an auparavant selon l'âge",
+      "url": "https://www.insee.fr/fr/statistiques/5431018",
+      "source": "insee-flux-national",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "insee-flux-national:08c284c9f1ba2962",
+      "title": "Dépenses en faveur de l’environnement dans l’industrie",
+      "url": "https://www.insee.fr/fr/statistiques/2015785",
+      "source": "insee-flux-national",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "insee-flux-national:39eb0627b1af174c",
+      "title": "Les études et investissements dans l'industrie pour protéger l'environnement en 2024",
+      "url": "https://www.insee.fr/fr/statistiques/9025136",
+      "source": "insee-flux-national",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "insee-flux-national:99fcb461e4c6565e",
+      "title": "Les dépenses antipollution dans l’industrie en 2024",
+      "url": "https://www.insee.fr/fr/statistiques/9036739",
+      "source": "insee-flux-national",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "En 2024, 54 % des établissements industriels de 20 salariés ou plus ont réalisé des dépenses pour réduire l’impact environnemental de leur activité, pour un montant total de 3,5 milliards d’euros.Les investissements en constituent l’essentiel (3,1 milliards d’euros) et augmentent de plus de 10 % pour la troisième année consécutive. Depuis 2021, leur croissance augmente de moitié en valeur. La hausse est particulièrement forte pour les établissements du secteur de la chimie. Les autres dépenses p"
+    },
+    {
+      "id": "insee-flux-national:cc71d56dd21ce1a0",
+      "title": "Mode de cohabitation des ménages selon la catégorie des communes dans le zonage en aires d’attraction des villes",
+      "url": "https://www.insee.fr/fr/statistiques/5357637",
+      "source": "insee-flux-national",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "insee-flux-national:93a31fec90234424",
+      "title": "Taux d’épargne des ménages : les enseignements des données bancaires",
+      "url": "https://www.insee.fr/fr/statistiques/9041404",
+      "source": "insee-flux-national",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "insee-flux-national:6bcc14428286ae47",
+      "title": "Diplôme des sortants d’études initiales selon le sexe et l’origine sociale",
+      "url": "https://www.insee.fr/fr/statistiques/2850737",
+      "source": "insee-flux-national",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "insee-flux-national:25fb73dcdcaf2909",
+      "title": "Finances publiques – tableau de bord de l’économie française",
+      "url": "https://www.insee.fr/fr/statistiques/5368054",
+      "source": "insee-flux-national",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "insee-flux-national:cd2fa4c561a1c6c2",
+      "title": "Dépenses et recettes publiques",
+      "url": "https://www.insee.fr/fr/statistiques/2381414",
+      "source": "insee-flux-national",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "insee-flux-national:348b6c8ab0f62e15",
+      "title": "Taux de prélèvements obligatoires rapportés au produit intérieur brut",
+      "url": "https://www.insee.fr/fr/statistiques/2381412",
+      "source": "insee-flux-national",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "insee-publications:26aebba03aedea05",
+      "title": "L’impact des zones à faibles émissions sur le parc automobile en France",
+      "url": "https://www.insee.fr/fr/statistiques/9039123",
+      "source": "insee-publications",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "insee-publications:979a5ddfee373664",
+      "title": "Les ZFE renforcent le verdissement du parc automobile et contribuent au recul de ses émissions polluantes",
+      "url": "https://www.insee.fr/fr/statistiques/9031856",
+      "source": "insee-publications",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "La mise en place de neuf zones à faibles émissions (ZFE) dans les grandes métropoles régionales jusqu'en 2023 encourage le renouvellement du parc automobile, en faveur de voitures moins polluantes. L’effet des ZFE reste toutefois faible par rapport au renouvellement tendanciel du parc, lié à l’obsolescence progressive des véhicules anciens et leur remplacement par des véhicules neufs. Sur cinq ans, le parc des voitures les moins polluantes (Crit’Air 1 et électriques) augmente de 88,4 % dans les "
+    },
+    {
+      "id": "insee-publications:7e43d8ca0fcd28a5",
+      "title": "En 2023, l’économie maritime emploie près de 375 000 salariés, concentrés sur les façades maritimes",
+      "url": "https://www.insee.fr/fr/statistiques/9022577",
+      "source": "insee-publications",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "En 2023, 374 600 salariés en équivalent temps plein (ETP) travaillent dans l’économie maritime, dont presque la moitié pour le tourisme littoral. L’économie maritime représente 1,6 % de l’emploi salarié en France (hors Mayotte). Du fait de la proximité immédiate de la mer, les effectifs sont concentrés dans les départements littoraux (neuf salariés sur dix). Le tourisme littoral emploie davantage de jeunes et de femmes, avec des salaires moins élevés que dans le reste de l’économie maritime. Hor"
+    },
+    {
+      "id": "insee-publications:23cd3edfad84434c",
+      "title": "Les entreprises en France",
+      "url": "https://www.insee.fr/fr/statistiques/7667330",
+      "source": "insee-publications",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "Cet espace recense les analyses structurelles sur les entreprises en France, leurs caractéristiques, leur diversité, leur dynamique de croissance et de renouvellement, leurs performances, l’emploi qu’elles génèrent. Les analyses traitent également des grands enjeux de l’économie française (mondialisation, transformation numérique et innovation, énergie et impact environnemental), des secteurs d’activité et filières économiques. Cet espace offre un accès aux chiffres clés sur les entreprises, don"
+    },
+    {
+      "id": "insee-publications:3c0629d688ad26f7",
+      "title": "Les débits de boissons de 2016 à 2023 : davantage d’emplois, dans des établissements un peu plus grands",
+      "url": "https://www.insee.fr/fr/statistiques/9032715",
+      "source": "insee-publications",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "En 2023, le secteur des débits de boissons est composé d’environ 35 100 unités légales, pour la plupart de très petite taille. Elles emploient 69 000 salariés en équivalent temps plein et 24 300 non-salariés. Le secteur des débits de boissons gagne des emplois depuis le milieu des années 2010 : l’emploi salarié progresse ainsi de 66 % entre 2016 et 2023 en équivalent temps plein, alors que l’emploi non salarié baisse légèrement. Cet essor de l’emploi salarié est principalement porté par le renou"
+    },
+    {
+      "id": "insee-publications:d9af5b11e3ec7d87",
+      "title": "Les entreprises de l’imprimerie depuis 2010 : la production recule, les usages se modifient",
+      "url": "https://www.insee.fr/fr/statistiques/9025306",
+      "source": "insee-publications",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "En France, quelque 16 000 entreprises de l’imprimerie emploient 38 000 salariés en équivalent temps plein en 2023. Le secteur est très peu concentré et a perdu environ 2 000 entreprises en l’espace de huit ans. Il ne compte aucune grande entreprise et est composé d’une majorité de PME et de microentreprises, qui emploient respectivement 53 % et 23 % des salariés.Les imprimés commerciaux comme les affiches, catalogues ou étiquettes représentent 45 % de la production en valeur. De 2010 à 2023, le "
+    },
+    {
+      "id": "insee-publications:c5a12d74cf6f3cdc",
+      "title": "Baisse des naissances depuis 2010 : les périphéries des grandes villes résistent mieux",
+      "url": "https://www.insee.fr/fr/statistiques/9026605",
+      "source": "insee-publications",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "Entre 2010 et 2022, le nombre de naissances a chuté de 14 % en France hors Mayotte et recule encore de 11 % entre 2022 et 2025, sous l’effet d’une fécondité à son plus bas niveau depuis un siècle. L’ampleur de cette baisse varie fortement selon les territoires.Dans près de quatre départements sur dix, situés principalement dans la moitié nord et le centre de la France, la natalité diminue sous un triple effet : recul de la fécondité et baisse du nombre de femmes en âge d’avoir des enfants liée d"
+    },
+    {
+      "id": "insee-publications:2dff43f5f63ac5bb",
+      "title": "Au moins trois quarts des hausses de coûts agricoles sont répercutées sur les prix de production des industriels de l’agroalimentaire sur le marché français",
+      "url": "https://www.insee.fr/fr/statistiques/9027653",
+      "source": "insee-publications",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "Entre janvier 2021 et janvier 2023, les prix des produits agricoles à la production augmentent de 30,7 %, dans un contexte de reprise post-Covid, d’événements climatiques extrêmes et de tensions géopolitiques. Sur la même période, les prix de vente des industriels de l’agroalimentaire sur le marché français croissent de 29,5 %.Le comportement de fixation des prix des industriels de l’agroalimentaire joue un rôle déterminant dans la transmission des hausses de coûts agricoles aux prix de vente. E"
+    },
+    {
+      "id": "insee-publications:4d9d1ca18efe578c",
+      "title": "Les technologies de l’information et de la communication dans les entreprises en 2025",
+      "url": "https://www.insee.fr/fr/statistiques/9025878",
+      "source": "insee-publications",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "En 2025, 18 % des entreprises implantées en France déclarent utiliser au moins une technologie d’intelligence artificielle (IA), soit 8 points de plus qu’en 2024. Cette proportion se rapproche de celle de l’ensemble de l’Union européenne (20 %).L’adoption de ces technologies reste très liée à la taille de l’entreprise et à son secteur d’activité. Le taux d’usage atteint ainsi 58 % pour les entreprises de 250 salariés ou plus et 59 % pour celles du secteur de l’information‑communication. Plus d’u"
+    },
+    {
+      "id": "insee-publications:7edf0b2fc1fb314e",
+      "title": "En 2025, 15 % des nouveau‑nés portent les noms de leurs deux parents",
+      "url": "https://www.insee.fr/fr/statistiques/9022610",
+      "source": "insee-publications",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "En 2025, 78 % des nouveau-nés portent uniquement le nom de leur père, 15 % ont reçu les noms de leurs deux parents et 7 % ont reçu uniquement le nom de leur mère, la plupart de ces derniers n’étant reconnus que par leur mère. La part des nouveau‑nés portant les noms de leurs deux parents a augmenté de 5 points depuis 2014.Les parents non mariés choisissent de donner un double nom à leur enfant près de trois fois plus souvent que les parents mariés (22 %, contre 8 %). La majorité des enfants d’un"
+    },
+    {
+      "id": "insee-publications:89369361d1f466d5",
+      "title": "Micro-entrepreneurs immatriculés en 2018 : profils et destins divers sous un régime peu rémunérateur et peu pérenne",
+      "url": "https://www.insee.fr/fr/statistiques/9022618",
+      "source": "insee-publications",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "Parmi les 400 000 micro-entrepreneurs immatriculés en 2018, six profils se dessinent : les « salariés en activité de complément » (27 % des créations), les « chômeurs » (26 %), les « étudiants » (18 %), les « créateurs hors du marché de l’emploi » (13 %), les « créateurs de la construction » (9 %) et les « entrepreneurs expérimentés » (7 %). Les noms retenus pour désigner chaque profil s’appuient sur les caractéristiques des créateurs qui y sont fortement représentés, sans pour autant que ce pro"
+    },
+    {
+      "id": "insee-publications:c531cbbfdb4a8d73",
+      "title": "Niveau de vie et pauvreté en 2024",
+      "url": "https://www.insee.fr/fr/statistiques/9019316",
+      "source": "insee-publications",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "En 2024, les niveaux de vie augmentent dans un contexte de net reflux de l’inflation. Cette hausse concerne toute l’échelle des niveaux de vie. Le niveau de vie médian des personnes vivant dans un logement ordinaire en France métropolitaine atteint 2 228 euros par mois et croît de 1,8 % en euros constants. Le niveau de vie des plus modestes augmente de 1,7 % et celui des plus aisés de 1,4 %. Ils sont principalement soutenus par la revalorisation des retraites et la hausse des salaires, supérieur"
+    },
+    {
+      "id": "insee-publications:59718f73f1124ca2",
+      "title": "Parmi les personnes en emploi, 3 % sont au sommet de l’échelle socioprofessionnelle",
+      "url": "https://www.insee.fr/fr/statistiques/9019799",
+      "source": "insee-publications",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "En France métropolitaine, 3 % des personnes en emploi sont au sommet de l’échelle socioprofessionnelle, défini comme la fraction des professions avec le plus haut niveau de responsabilité ou d’expertise dans chaque domaine. Ces dirigeants et professionnels de haut niveau sont pour plus d’un tiers d’entre eux des indépendants, avec une forte surreprésentation des professions libérales. Ce sont aussi plus souvent des hommes, des personnes plus âgées et plus souvent issues de milieux favorisés que "
+    },
+    {
+      "id": "insee-publications:bcd9d0899aaf6b20",
+      "title": "L’agriculture en 2025",
+      "url": "https://www.insee.fr/fr/statistiques/9019175",
+      "source": "insee-publications",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "insee-publications:2e80a066a039ad91",
+      "title": "Le compte provisoire de l’agriculture en 2025",
+      "url": "https://www.insee.fr/fr/statistiques/9018334",
+      "source": "insee-publications",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "En 2025, d’après les estimations du compte provisoire de l’agriculture, la production agricole augmente de 4,7 % en euros courants, portée par le rebond simultané des volumes et des prix, sans cependant effacer la baisse de l’année précédente.La production végétale augmente de 3,9 % en volume. Après la très mauvaise année 2024, les productions de vin et de céréales sont notamment en net rebond. Les prix des végétaux reculent en revanche de 2,3 %, atténuant la hausse en valeur (+1,6 %). Par contr"
+    },
+    {
+      "id": "insee-publications:cae579ccf5292a4f",
+      "title": "Les naissances en 2025",
+      "url": "https://www.insee.fr/fr/statistiques/9017867",
+      "source": "insee-publications",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "En 2025, 643 905 bébés sont nés en France, soit une baisse de 2,3 % par rapport à 2024. Ainsi le recul des naissances observé depuis 15 ans continue ; au total, le nombre de bébés nés en 2025 est inférieur de 24 % à celui de 2010. La baisse des naissances se poursuit sur les cinq premiers mois de 2026.En 2025, les naissances continuent de diminuer pour les femmes de moins de 35 ans ; celles des femmes de 35 ans ou plus n’augmentent plus. Le nombre de naissances recule dans quasi toutes les régio"
+    },
+    {
+      "id": "insee-publications:5500c6bdd45b7204",
+      "title": "Emploi, chômage, revenus du travail",
+      "url": "https://www.insee.fr/fr/statistiques/8733125",
+      "source": "insee-publications",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "L’Insee et la Dares présentent dans cet ouvrage un ensemble d’analyses et d’indicateurs portant sur le marché du travail."
+    },
+    {
+      "id": "insee-publications:aa25767cda3b9d9b",
+      "title": "Entre 2021 et 2023, deux tiers des entreprises qui délocalisent se tournent vers l’Europe",
+      "url": "https://www.insee.fr/fr/statistiques/9015211",
+      "source": "insee-publications",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "Entre 2021 et 2023, seules 2,0 % des entreprises de 50 salariés ou plus des secteurs principalement marchands, soit quelque 500 entreprises, ont délocalisé au moins une activité à l’étranger. Ce taux atteint 6,5 % pour les entreprises de 500 salariés ou plus. Les transferts d’activité à l’étranger concernent essentiellement les multinationales, en particulier celles sous contrôle étranger, les entreprises industrielles et celles du secteur de l’information-communication. Pour huit multinationale"
+    },
+    {
+      "id": "insee-publications:49b587cc3ae084da",
+      "title": "Les revenus d’activité des non-salariés en 2024",
+      "url": "https://www.insee.fr/fr/statistiques/9013403",
+      "source": "insee-publications",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "Fin 2024, 4,3 millions de personnes exercent une activité non salariée en France. Hors agriculture, le nombre de non-salariés « classiques » augmente de 0,7 % en 2024, soit la quatrième année successive de hausse. Le nombre de micro‑entrepreneurs continue quant à lui d’augmenter de façon soutenue (+8,2 %) pour atteindre plus de 2,0 millions. Le nombre total de non-salariés non agricoles a augmenté de 1,8 million par rapport à fin 2008, à la veille de la mise en place du statut de micro-entrepren"
+    },
+    {
+      "id": "insee-publications:1373a1e0fee591ed",
+      "title": "Les changements environnementaux inquiètent, mais les pratiques quotidiennes ne sont pas guidées par l’écologie",
+      "url": "https://www.insee.fr/fr/statistiques/9013289",
+      "source": "insee-publications",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "En 2025, en France métropolitaine, une personne sur dix cite l’environnement comme premier enjeu pour le pays parmi sept propositions. La préoccupation pour l’environnement augmente avec le diplôme, le revenu et la satisfaction dans la vie. Quatre personnes sur dix se déclarent très inquiètes des effets du dérèglement climatique. Cette inquiétude est plus marquée dans les zones urbaines denses, pour les plus diplômés et pour les femmes.Pour protéger l’environnement, près de neuf personnes sur di"
+    },
+    {
+      "id": "insee-publications:1b61dfa8f1cc9e51",
+      "title": "Rapport du Groupe de travail sur le thème « Mieux comprendre et mesurer la grande pauvreté » - Second Volet",
+      "url": "https://www.insee.fr/fr/statistiques/9013173",
+      "source": "insee-publications",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "insee-publications:ab14521978fe5c66",
+      "title": "Le compte des services marchands en 2025",
+      "url": "https://www.insee.fr/fr/statistiques/9010939",
+      "source": "insee-publications",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "En 2025, la croissance de la valeur ajoutée (VA) des services marchands non financiers ralentit en volume (+1,3 %, après +2,1 % en 2024). Elle demeure néanmoins le principal soutien de la croissance de l’économie. Après trois années de hausse, la part des services marchands dans l’économie française se stabilise à un niveau élevé (36,8 % en valeur après 36,9 %).Dans la plupart des activités des services marchands, la production ralentit en 2025, dans un contexte de moindre dynamisme de la consom"
+    },
+    {
+      "id": "insee-publications:f384e90a46a26783",
+      "title": "Les services marchands en 2025",
+      "url": "https://www.insee.fr/fr/statistiques/9011710",
+      "source": "insee-publications",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "insee-publications:bc388c8670575424",
+      "title": "La situation du commerce en 2025 (éd. juin)",
+      "url": "https://www.insee.fr/fr/statistiques/9004484",
+      "source": "insee-publications",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "insee-publications:644b6f79c4175724",
+      "title": "Economie et Statistique / Economics and Statistics no 549 - 2025",
+      "url": "https://www.insee.fr/fr/statistiques/9008717",
+      "source": "insee-publications",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "insee-publications:e4c7783a5caa2376",
+      "title": "Le compte du commerce en 2025",
+      "url": "https://www.insee.fr/fr/statistiques/9008999",
+      "source": "insee-publications",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "En 2025, en France, les ventes des secteurs commerciaux évoluent de façon contrastée, dans un contexte de ralentissement de l’économie. Dans le commerce de gros, les ventes diminuent de nouveau mais plus faiblement qu’en 2024. C’est notamment le cas pour celles des grossistes en combustibles et en produits pour la construction, tandis que celles des grossistes en produits agricoles bruts se redressent. Dans le commerce de détail en magasin, les ventes accélèrent dans un contexte de nouveau ralen"
+    },
+    {
+      "id": "insee-publications:9b056b80e429fdf0",
+      "title": "Comptes nationaux",
+      "url": "https://www.insee.fr/fr/statistiques/8071406",
+      "source": "insee-publications",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "Cet espace recense les publications de la comptabilité nationale, représentation globale détaillée et chiffrée de l’activité économique de la France. Son principal agrégat est le produit intérieur brut (PIB). Elle se décline en comptes annuels, trimestriels et thématiques, ainsi qu’en comptes « augmentés » qui visent à produire des analyses « au-delà du PIB », dans les dimensions environnementale (comptes carbone) et sociale (inégalités et redistribution avec les comptes par catégories de ménage"
+    },
+    {
+      "id": "insee-publications:491da85c12a0642b",
+      "title": "La consommation des ménages en 2025",
+      "url": "https://www.insee.fr/fr/statistiques/9006503",
+      "source": "insee-publications",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "En 2025, la dépense de consommation finale des ménages ralentit en volume (+0,4 %, après +0,8 % en 2024), malgré des prix qui augmentent nettement moins que l’année précédente (+0,8 % après +2,2 %). L’année 2025 est marquée par un ralentissement net des prix de la dépense de consommation : les prix diminuent pour l’énergie (-3,0 % après +12,4 %) et les carburants (-4,4 % après -4,6 %) ; ils ralentissent pour les produits alimentaires (+1,1 % après +1,3 %) et pour les restaurants et les services "
+    },
+    {
+      "id": "insee-publications:5d4462dd5fd29533",
+      "title": "Transmission des chocs de coûts agricoles dans les prix de vente des industriels de l’agroalimentaire",
+      "url": "https://www.insee.fr/fr/statistiques/9006898",
+      "source": "insee-publications",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "insee-publications:73b88933e7854f56",
+      "title": "Obtenir son diplôme améliore les chances d’accéder aux postes les plus qualifiés",
+      "url": "https://www.insee.fr/fr/statistiques/9003866",
+      "source": "insee-publications",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "Parmi les jeunes entrés en sixième en 2007 sortis de formation initiale et ayant atteint l’année terminale du niveau de formation le plus élevé qu’ils aient préparé, 81 % ont obtenu leur diplôme. Par comparaison avec les jeunes qui ont abandonné au cours de l’année terminale, l’obtention du plus haut diplôme tenté permet, à l’âge de 26-27 ans, un meilleur accès à l’emploi pour les diplômés de grande école et du baccalauréat professionnel. Néanmoins, il n’y a pas de différence significative pour "
+    },
+    {
+      "id": "insee-publications:32da725f85ecbe23",
+      "title": "Projections de population à l’horizon 2070 : une population plus âgée qu’en 2026, et probablement moins nombreuse",
+      "url": "https://www.insee.fr/fr/statistiques/9004289",
+      "source": "insee-publications",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "En 2070, si les tendances démographiques récentes se prolongeaient, la France compterait 65,9 millions d’habitants, soit 3,2 millions de moins qu’en 2026. La population augmenterait légèrement jusqu’en 2037 pour atteindre 69,8 millions d’habitants. Cette croissance démographique tiendrait exclusivement au solde migratoire, le solde naturel devenant négatif à partir de 2025. À partir de l’année 2037, le solde migratoire ne compenserait plus le déficit naturel et la population commencerait donc à "
+    },
+    {
+      "id": "insee-publications:b47055a687c20433",
+      "title": "Flux migratoires",
+      "url": "https://www.insee.fr/fr/statistiques/8998082",
+      "source": "insee-publications",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "En 2024, 438 000 personnes sont arrivées en France. Parmi elles, 85 000 sont nées en France, 40 000 sont nées françaises à l’étranger et 313 000 sont immigrées. Les entrées sur le territoire sont en baisse en 2024 comme en 2023. Elles retrouvent leur niveau de 2019, après quatre années marquées par la crise sanitaire et la guerre en Ukraine. Les personnes immigrées entrées en 2024 vivent en majorité au sein d’une famille. Certaines d’entre elles arrivent en couple, d’autres rejoignent un conjoin"
+    },
+    {
+      "id": "senat-presse:12e5864c9e8febc5",
+      "title": "�lections s�natoriales : soir�e �lectorale le dimanche 27 septembre 2026 de 17h � 23h",
+      "url": "https://www.senat.fr//salle-de-presse/communiques-de-presse/presse/17-09-2026/elections-senatoriales-soiree-electorale-le-dimanche-27-septembre-2026-de-17h-a-23h.html",
+      "source": "senat-presse",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "Communiqu� de presse du 17/09/2026"
+    },
+    {
+      "id": "senat-presse:78122df53a70c8b6",
+      "title": "Journ�es europ�ennes du patrimoine 2026 - Th�me � Patrimoine en p�ril : raviver, r�sister, r�imaginer �",
+      "url": "https://www.senat.fr//salle-de-presse/communiques-de-presse/presse/14-09-2026/journees-europeennes-du-patrimoine-2026-themes-patrimoine-en-peril-raviver-resister-reimaginer.html",
+      "source": "senat-presse",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "Communiqu� de presse du 14/09/2026"
+    },
+    {
+      "id": "senat-presse:65bc27fbf61ff40d",
+      "title": "Annonces du Gouvernement : La d�l�gation aux Entreprises est enfin entendue !",
+      "url": "https://www.senat.fr//salle-de-presse/communiques-de-presse/presse/10-09-2026/annonces-du-gouvernement-la-delegation-aux-entreprises-est-enfin-entendue.html",
+      "source": "senat-presse",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "Communiqu� de presse du 10/09/2026"
+    },
+    {
+      "id": "senat-presse:f6832e19fbd090c1",
+      "title": "Consigne pour recyclage des bouteilles plastiques : le Gouvernement entend enfin le S�nat et les collectivit�s !",
+      "url": "https://www.senat.fr//salle-de-presse/communiques-de-presse/presse/07-09-2026/consigne-pour-recyclage-des-bouteilles-plastiques-le-gouvernement-entend-enfin-le-senat-et-les-collectivites.html",
+      "source": "senat-presse",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "Communiqu� de presse du 07/09/2026"
+    },
+    {
+      "id": "senat-presse:c1e145fb5a1fcf6b",
+      "title": "Hommage du Pr�sident du S�nat suite au d�c�s de Fran�ois Patriat, s�nateur de la C�te-d'Or, Pr�sident du groupe Rassemblement des d�mocrates, progressistes et ind�pendants du S�nat",
+      "url": "https://www.senat.fr//salle-de-presse/communiques-de-presse/presse/19-08-2026/hommage-president-senat-suite-deces-francois-patriat-senateur-cote-dor-president-groupe-rassemblement-des-democrates-progressistes-independants-du-senat.html",
+      "source": "senat-presse",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "Communiqu� de presse du 19/08/2026"
+    },
+    {
+      "id": "info-gouv:564d3e9f21738faf",
+      "title": "France 2030 : 109 lauréats récompensés lors de la cérémonie 2026 des Concours d’innovation de l’Etat",
+      "url": "https://www.info.gouv.fr/actualite/france-2030-109-laureats-recompenses-lors-de-la-ceremonie-2026-des-concours-d-innovation-de-l-etat",
+      "source": "info-gouv",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "Le mercredi 16 septembre 2026 à Paris, s’est tenue la Cérémonie de remise des prix des lauréats des Concours d’innovation de l’État en présence de Anne Le Henanff, ministre chargée de l’Intelligence artificielle et du Numérique, Bruno Bonnell, secrétaire général pour l’investissement en charge de France 2030. Placée sous le signe de l’accélération de la souveraineté technologique et des transitions écologique et numérique, cette cérémonie a mis à l’honneur les 109 lauréats de l’édition 2026 des "
+    },
+    {
+      "id": "info-gouv:da1eb54802db2c9a",
+      "title": "Fête du sport : rendez-vous le 14 septembre partout en France",
+      "url": "https://www.info.gouv.fr/actualite/fete-du-sport-rendez-vous-le-14-septembre-partout-en-france",
+      "source": "info-gouv",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "Cette deuxième édition est le point d’orgue de « Septembre bouge », un mois consacré à la promotion de l’activité physique et sportive."
+    },
+    {
+      "id": "info-gouv:6d65c8c4cc5f4d6d",
+      "title": "Les Journées européennes du patrimoine 2026",
+      "url": "https://www.info.gouv.fr/actualite/les-journees-europeennes-du-patrimoine-2026",
+      "source": "info-gouv",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "Les Journées européennes du patrimoine 2026 se tiennent les samedi 19 et dimanche 20 septembre. De Paris à Albi, en passant par Giverny, Marseille, Metz et Lyon, voici une sélection de six lieux pour profiter de ce rendez-vous culturel incontournable."
+    },
+    {
+      "id": "info-gouv:d799c06efbd3ceec",
+      "title": "Pourquoi les élections sénatoriales sont-elles importantes ?",
+      "url": "https://www.info.gouv.fr/actualite/pourquoi-les-elections-senatoriales-sont-elles-importantes",
+      "source": "info-gouv",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "Le 27 septembre 2026, 178 sièges de sénateurs seront renouvelés. Le scrutin concerne une partie des départements et plusieurs territoires ultramarins."
+    },
+    {
+      "id": "info-gouv:7b2f13c60542bf7c",
+      "title": "Élection présidentielle 2027",
+      "url": "https://www.info.gouv.fr/actualite/election-presidentielle-2027",
+      "source": "info-gouv",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "Les 18 avril et 2 mai 2027, les Français éliront le président de la République. Dates, candidats, vote et déroulement : voici ce qu’il faut connaître."
+    },
+    {
+      "id": "info-gouv:9aafddca803898da",
+      "title": "Sommet international sur l'espace : ce qu'il faut savoir",
+      "url": "https://www.info.gouv.fr/actualite/sommet-international-sur-l-espace-ce-qu-il-faut-savoir",
+      "source": "info-gouv",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "Les 9 et 10 septembre 2026, la France accueille à Paris le premier Sommet international sur l'espace. Près de 120 délégations étrangères, des chefs d'État et de gouvernement, des scientifiques, des astronautes et des acteurs industriels sont réunis."
+    },
+    {
+      "id": "info-gouv:fb0cd812305fa53d",
+      "title": "Handicap : la CNH 2026 fixe le cap pour les trois prochaines années",
+      "url": "https://www.info.gouv.fr/actualite/handicap-la-cnh-2026-fixe-le-cap-pour-les-trois-prochaines-annees",
+      "source": "info-gouv",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "La 7e Conférence nationale du handicap, le 4 septembre 2026, a présenté 16 engagements pour « une société pleinement accessible »."
+    },
+    {
+      "id": "info-gouv:ec632781dea69a07",
+      "title": "Sécheresse 2026 : plus d'un milliard d'euros d'aides pour les agriculteurs",
+      "url": "https://www.info.gouv.fr/actualite/secheresse-2026-plus-d-1-milliard-d-euros-d-aides-pour-les-agriculteurs",
+      "source": "info-gouv",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "Canicule, sécheresse, incendies : le Gouvernement débloque plus d'un milliard d'euros pour indemniser les agriculteurs et relancer la production agricole."
+    },
+    {
+      "id": "info-gouv:a1133d69d1085d5f",
+      "title": "France 2030 : lancement d’un programme de recherche sur le nucléaire de fission",
+      "url": "https://www.info.gouv.fr/actualite/france-2030-lancement-d-un-programme-de-recherche-sur-le-nucleaire-de-fission",
+      "source": "info-gouv",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "Bâtir une industrie nucléaire décarbonée, plus sûre et plus polyvalente est un défi crucial pour les années à venir. C’est pourquoi un nouveau programme de recherche ambitieux est lancé ce 4 septembre sur la thématique « Science amont nucléaire de fission ». Inscrit dans la volonté d’accompagner la transition énergétique, il est piloté par le CNRS et porté par l’Agence de programme Énergies décarbonées coordonnée par le CEA. Son ambition ? Consolider les connaissances scientifiques indispensable"
+    },
+    {
+      "id": "info-gouv:ee8aaad89e7c6de2",
+      "title": "Agora : addictions, quand la consommation devient enjeu de société",
+      "url": "https://www.info.gouv.fr/actualite/agora-addictions-quand-la-consommation-devient-enjeu-de-societe",
+      "source": "info-gouv",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "VIDÉO. Quels sont les mécanismes de l’addiction ? Quelles sont les idées reçues autour de la drogue ? Quels sont les liens entre usage individuel et effets collectifs ? Experts et témoins croisent leurs regards pour mieux appréhender la complexité du narcotrafic et de son impact sociétal."
+    },
+    {
+      "id": "info-gouv:a4fe623886bd5f1f",
+      "title": "Retraites : de nouveaux droits liés à la parentalité",
+      "url": "https://www.info.gouv.fr/actualite/retraites-de-nouveaux-droits-lies-a-la-parentalite",
+      "source": "info-gouv",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "Depuis le 1er septembre 2026, de nouvelles règles améliorent la prise en compte de la parentalité dans le calcul de la retraite."
+    },
+    {
+      "id": "info-gouv:8fbee0106169808e",
+      "title": "Trois ans après la conférence nationale du handicap de 2023 : accélérer la transformation et garantir l’effectivité des droits",
+      "url": "https://www.info.gouv.fr/actualite/contribution-du-cncph-a-la-conference-nationale-du-handicap-du-4-septembre-2026-trois-ans-apres-la-conference-nationale-du-handicap-de-2023-accelerer-la-transformation-et-garantir-l-effectivite-des-droits",
+      "source": "info-gouv",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "Contribution du CNCPH à la Conférence nationale du handicap du 4 septembre 2026."
+    },
+    {
+      "id": "info-gouv:0852e2cc836a5a0c",
+      "title": "La refonte d’education.gouv.fr : quand le DSFR transforme l’écosystème numérique de l’Éducation nationale",
+      "url": "https://www.info.gouv.fr/actualite/la-refonte-d-education-gouv-fr-quand-le-dsfr-transforme-l-ecosysteme-numerique-de-l-education-nationale",
+      "source": "info-gouv",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "Retour d’expérience avec Gilles Devisy adjoint à la directrice de la communication des ministères en charge de l’Éducation nationale, de l’enseignement supérieur de la recherche, et du sport, de la jeunesse et de la vie associative, et Joris Aubrespin-Marsal, chef du bureau de la communication numérique au ministère de l’Éducation nationale."
+    },
+    {
+      "id": "info-gouv:86e2fdc5d56f5110",
+      "title": "Septembre bouge, pour une rentrée sportive",
+      "url": "https://www.info.gouv.fr/actualite/septembre-bouge-un-mois-pour-adopter-le-sport",
+      "source": "info-gouv",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "Du 1er au 30 septembre 2026, la première édition de « Septembre bouge » invite chacun à pratiquer davantage d’activité physique et sportive."
+    },
+    {
+      "id": "info-gouv:c88d30d26aa68f10",
+      "title": "Tout ce qu’il faut savoir sur l’élection présidentielle",
+      "url": "https://www.info.gouv.fr/actualite/tout-ce-qu-il-faut-savoir-sur-l-election-presidentielle",
+      "source": "info-gouv",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "FAQ. Dates, listes électorales, vote… Les réponses à vos questions sur l’élection présidentielle de 2027."
+    },
+    {
+      "id": "info-gouv:d493ceafb0966a57",
+      "title": "Et si l’IA votait à votre place ?",
+      "url": "https://www.info.gouv.fr/actualite/et-si-l-ia-votait-a-votre-place",
+      "source": "info-gouv",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "Imaginez un monde où une intelligence artificielle, nourrie des programmes politiques et de votre profil personnel, décide à votre place pour qui voter. Derrière cet exercice de politique-fiction, une question se pose : comment l’État peut-il agir pour maintenir un débat public éclairé ?"
+    },
+    {
+      "id": "info-gouv:b0671a4b082b3ddb",
+      "title": "Comment voter à la présidentielle 2027 ?",
+      "url": "https://www.info.gouv.fr/actualite/comment-voter-a-la-presidentielle-2027",
+      "source": "info-gouv",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "Inscription sur les listes électorales, justificatifs à présenter ou vote par procuration… Voici ce qu’il faut savoir pour voter à l’élection présidentielle."
+    },
+    {
+      "id": "info-gouv:165ac43ef716f970",
+      "title": "Visite de Sébastien Lecornu à Mayotte",
+      "url": "https://www.info.gouv.fr/actualite/sebastien-lecornu-en-visite-a-mayotte",
+      "source": "info-gouv",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "VIDÉOS. Le Premier ministre, accompagné d’une partie du Gouvernement, est en déplacement à Mayotte un an après le lancement du plan quinquennal pour refonder l’archipel."
+    },
+    {
+      "id": "info-gouv:58753386d768f3f3",
+      "title": "Ce qui change en septembre 2026",
+      "url": "https://www.info.gouv.fr/actualite/ce-qui-change-en-septembre-2026",
+      "source": "info-gouv",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "Arrêts de travail, PFAS, véhicules électriques... Voici ce qui change en septembre 2026."
+    },
+    {
+      "id": "info-gouv:b4ace47d43500c2f",
+      "title": "Interdiction des téléphones portables au lycée : ce que dit la loi",
+      "url": "https://www.info.gouv.fr/actualite/interdiction-des-telephones-portables-au-lycee-ce-que-dit-la-loi",
+      "source": "info-gouv",
+      "fetchedAt": "2026-09-18T09:59:56.063Z",
+      "summary": "Dès la rentrée scolaire 2026-2027, les téléphones portables seront interdits au lycée, comme c'est déjà le cas dans les collèges."
+    },
+    {
+      "id": "ecb-press:a72d127df9e3b0b6",
+      "title": "ECB Consumer Expectations Survey results – August 2026",
+      "url": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr260918~295b3ab978.en.html",
+      "source": "ecb-press",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "ecb-press:a7c4f63cd0812660",
+      "title": "Boris Vujčić: Interview with Reuters",
+      "url": "https://www.ecb.europa.eu//press/inter/date/2026/html/ecb.in260918~33f023fe26.en.html",
+      "source": "ecb-press",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "ecb-press:17c03b52a3a4bbf1",
+      "title": "ECB wage tracker at 2.7% in H1 2027, pointing to a modest uptick in negotiated wage growth",
+      "url": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr260916~7bc58ebef4.en.html",
+      "source": "ecb-press",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "ecb-press:7b8fa3f60eb78572",
+      "title": "Christine Lagarde: A new age of capital: growth, sovereignty and AI",
+      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp260914_2~a3f0efbee4.en.html",
+      "source": "ecb-press",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "ecb-press:8fb4195678b38b41",
+      "title": "Piero Cipollone: The future of euro cash: trusted today, designed for tomorrow",
+      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp260914_1~91d3436449.en.html",
+      "source": "ecb-press",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "ecb-press:0c63a348b89c1618",
+      "title": "Isabel Schnabel: Macroeconomic, fiscal and financial stability in a shock-prone world",
+      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp260914~0ffd556bc8.en.pdf",
+      "source": "ecb-press",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "ecb-press:76adce73964d19ca",
+      "title": "Christine Lagarde: Interview with Ouest-France",
+      "url": "https://www.ecb.europa.eu//press/inter/date/2026/html/ecb.in260912~3cc706f4d6.en.html",
+      "source": "ecb-press",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "ecb-press:5be1ea74ec93f170",
+      "title": "Christine Lagarde: Europe seen from Normandy",
+      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp260912~fafa4b35b0.en.html",
+      "source": "ecb-press",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "ecb-press:4bcb03f9fc5b071a",
+      "title": "Philip R. Lane: Outlook for the euro area economy",
+      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp260911~a4d6526f00.en.pdf",
+      "source": "ecb-press",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "ecb-press:be201a2718ffe02a",
+      "title": "Christine Lagarde, Boris Vujčić: Monetary policy statement (with Q&A)",
+      "url": "https://www.ecb.europa.eu//press/press_conference/monetary-policy-statement/2026/html/ecb.is260910~6a45359cfc.en.html",
+      "source": "ecb-press",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "ecb-press:aed55a1ac7cde35a",
+      "title": "Monetary policy decisions",
+      "url": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.mp260910~314e508016.en.html",
+      "source": "ecb-press",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "ecb-press:e06f790f81fd2b10",
+      "title": "Christine Lagarde: The choice facing Europeans",
+      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp260909~59a07e6f05.en.html",
+      "source": "ecb-press",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "ecb-press:adeaf5e68bb52a87",
+      "title": "Frank Elderson: Fireside chat",
+      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp260908~3652aa828f.en.html",
+      "source": "ecb-press",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "ecb-press:a0ad98811d32b35c",
+      "title": "Philip R. Lane: Diversity at the European Central Bank",
+      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp260904~7b9257099b.en.pdf",
+      "source": "ecb-press",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "ecb-press:6e0a4fca78404268",
+      "title": "Boris Vujčić: Listening to households: expectations, behaviour and monetary policy",
+      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp260901~bb28f33f54.en.html",
+      "source": "ecb-press",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "economie-presse:f9cc1e1cf46bb42d",
+      "title": "Le Gouvernement actualise ses prévisions de croissance et d'inflation pour 2026 et 2027",
+      "url": "https://presse.economie.gouv.fr/le-gouvernement-actualise-ses-previsions-de-croissance-et-dinflation-pour-2026-et-2027/",
+      "source": "economie-presse",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "economie-presse:4b8f80dae643c571",
+      "title": "NAR - Déplacement de Roland Lescure à Dublin dans le cadre de la réunion de l'Eurogroupe et de la réunion informelle ECOFIN, vendredi 18 et samedi 19 septembre 2026",
+      "url": "https://presse.economie.gouv.fr/nar-deplacement-de-roland-lescure-a-dublin-dans-le-cadre-de-la-reunion-de-leurogroupe-et-de-la-reunion-informelle-ecofin-vendredi-18-et-samedi-19-septembre-2026/",
+      "source": "economie-presse",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "economie-presse:8b3cec94b2d80691",
+      "title": "NAR - Déplacement de Stéphanie Rist, Philippe Baptiste et Sébastien Martin à l'Institut du Cerveau à l'Hôpital de la Pitié Salpétrière, vendredi 18 septembre 2026",
+      "url": "https://presse.economie.gouv.fr/nar-deplacement-de-stephanie-rist-philippe-baptiste-et-sebastien-martin-a-linstitut-du-cerveau-a-lhopital-de-la-pitie-salpetriere-vendredi-18-septembre-2026/",
+      "source": "economie-presse",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "economie-presse:be11c421b63e7a38",
+      "title": "IP - « Made in Europe » : l'heure du choix",
+      "url": "https://presse.economie.gouv.fr/ip-made-in-europe-lheure-du-choix/",
+      "source": "economie-presse",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "economie-presse:3ebcb26338769110",
+      "title": "100 territoires d'électrification : présentation des lauréats",
+      "url": "https://presse.economie.gouv.fr/100-territoires-delectrification-presentation-des-laureats/",
+      "source": "economie-presse",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "economie-presse:a93fbd0a4e4f4b2f",
+      "title": "Enjeux économiques de l'adaptation au changement climatique : coût de la non-adaptation et effets économiques de l'adaptation",
+      "url": "https://presse.economie.gouv.fr/note-enjeux-economiques-de-ladaptation-au-changement-climatique-cout-de-la-non-adaptation-et-effets-economiques-de-ladaptation/",
+      "source": "economie-presse",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "economie-presse:f3edea2f0a1247ca",
+      "title": "Journées européennes du patrimoine 2026 - venez découvrir Bercy",
+      "url": "https://presse.economie.gouv.fr/journees-europeennes-du-patrimoine-2026-venez-decouvrir-bercy/",
+      "source": "economie-presse",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "economie-presse:9d483431daa66d47",
+      "title": "Discours de Serge Papin à l'occassion de la 48e édition du salon IFTM, mardi 15 septembre 2026",
+      "url": "https://presse.economie.gouv.fr/discours-de-serge-papin-a-loccassion-de-la-48e-edition-du-salon-iftm-mardi-15-septembre-2026/",
+      "source": "economie-presse",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "economie-presse:3a97ba84e89b709a",
+      "title": "Discours de Serge Papin à l'occasion de la 6ème édition du Comité Stratégique du Tourisme Outre-mer, lundi 14 septembre 2026",
+      "url": "https://presse.economie.gouv.fr/discours-de-serge-papin-a-loccasion-de-la-6eme-edition-du-comite-strategique-du-tourisme-outre-mer-lundi-14-septembre-2026/",
+      "source": "economie-presse",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "economie-presse:3d6a5813a5681d65",
+      "title": "Discours de Serge Papin lors de son déplacement en Vendée à l'occasion des 90 ans des congés payés",
+      "url": "https://presse.economie.gouv.fr/discours-de-serge-papin-lors-de-son-deplacement-en-vendee-a-loccasion-des-90-ans-des-conges-payes/",
+      "source": "economie-presse",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "economie-presse:b44a35d63d94056a",
+      "title": "Plan du site",
+      "url": "https://presse.economie.gouv.fr/plan-de-la-salle-de-presse",
+      "source": "economie-presse",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "economie-presse:d4602ccc5601c1ea",
+      "title": "Accessibilité : partiellement conforme",
+      "url": "https://presse.economie.gouv.fr/accessibilite",
+      "source": "economie-presse",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "economie-presse:1c9716b722630e11",
+      "title": "Mentions légales",
+      "url": "https://presse.economie.gouv.fr/mentions-legales",
+      "source": "economie-presse",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "economie-presse:cecbf8f3e5edef81",
+      "title": "Données personnelles",
+      "url": "https://presse.economie.gouv.fr/politique-de-confidentialite",
+      "source": "economie-presse",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "bdf-actualites:09b6171bf4007b93",
+      "title": "L’Importance d’être Constant : Bâtir un marché bancaire européen plus simple et plus compétitif",
+      "url": "https://www.banque-france.fr/fr/interventions-gouverneur/limportance-detre-constant-batir-un-marche-bancaire-europeen-plus-simple-et-plus-competitif",
+      "source": "bdf-actualites",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "bdf-actualites:e5ba1d7b6e64800c",
+      "title": "Ouest-France : « Nous avons subi des chocs spécifiques à l’économie française »",
+      "url": "https://www.banque-france.fr/fr/interventions-gouverneur/ouest-france-nous-avons-subi-des-chocs-specifiques-leconomie-francaise",
+      "source": "bdf-actualites",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "bdf-actualites:a829f7f7ba8cd3c8",
+      "title": "Enquête mensuelle de conjoncture à début septembre 2026",
+      "url": "https://www.banque-france.fr/fr/actualites/enquete-mensuelle-de-conjoncture-debut-septembre-2026",
+      "source": "bdf-actualites",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "bdf-actualites:d08e079753a02723",
+      "title": "Projections macroéconomiques intermédiaires – Septembre 2026",
+      "url": "https://www.banque-france.fr/fr/actualites/projections-macroeconomiques-intermediaires-septembre-2026",
+      "source": "bdf-actualites",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "bdf-actualites:c99ac81c4e32c3c4",
+      "title": "JEP 2026 : Ensemble Dialoguons revient dans un format inédit pour une 3e saison !",
+      "url": "https://www.banque-france.fr/fr/actualites/jep-2026-ensemble-dialoguons-revient-dans-un-format-inedit-pour-une-3e-saison",
+      "source": "bdf-actualites",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "bdf-actualites:a8e3e0e6f58d5c02",
+      "title": "RTL : « L’annulation de la dette est illégale, dangereuse et inutile »",
+      "url": "https://www.banque-france.fr/fr/interventions-gouverneur/rtl-lannulation-de-la-dette-est-illegale-dangereuse-et-inutile",
+      "source": "bdf-actualites",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "bdf-actualites:e40434d0373240a2",
+      "title": "Le cadre bancaire européen est solide. Donnons-lui les moyens de répondre aux défis d’aujourd’hui",
+      "url": "https://www.banque-france.fr/fr/interventions-gouverneur/le-cadre-bancaire-europeen-est-solide-donnons-lui-les-moyens-de-repondre-aux-defis-daujourdhui",
+      "source": "bdf-actualites",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "bdf-actualites:a0279173646cf719",
+      "title": "Les fonds de titrisation français en 2025 : croissance et perspectives",
+      "url": "https://www.banque-france.fr/fr/actualites/les-fonds-de-titrisation-francais-en-2025-croissance-et-perspectives",
+      "source": "bdf-actualites",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "bdf-actualites:cbd0d661c09ce147",
+      "title": "Rapport de l'Observatoire de la sécurité des moyens de paiement 2025",
+      "url": "https://www.banque-france.fr/fr/actualites/rapport-de-lobservatoire-de-la-securite-des-moyens-de-paiement-2025",
+      "source": "bdf-actualites",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "bdf-actualites:cd24126ab4e22ef3",
+      "title": "La crise de 1929",
+      "url": "https://www.banque-france.fr/fr/actualites/la-crise-de-1929",
+      "source": "bdf-actualites",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "bdf-actualites:9f629426e1a6a06d",
+      "title": "Intelligence artificielle : les nouvelles frontières du risque",
+      "url": "https://www.banque-france.fr/fr/interventions-gouverneur/intelligence-artificielle-les-nouvelles-frontieres-du-risque",
+      "source": "bdf-actualites",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    },
+    {
+      "id": "bdf-actualites:cbbe4dcb9d7de67b",
+      "title": "Cybersécurité : le secteur financier face aux risques de dépendance",
+      "url": "https://www.banque-france.fr/fr/interventions-gouverneur/cybersecurite-le-secteur-financier-face-aux-risques-de-dependance",
+      "source": "bdf-actualites",
+      "fetchedAt": "2026-09-18T09:59:56.063Z"
+    }
+  ]
+}

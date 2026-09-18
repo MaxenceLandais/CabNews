@@ -55,3 +55,15 @@ Les routines Paris **06:00 / 12:00 / 16:00** (Grok Bot) mettent à jour le conte
 | Push GitHub fiable | Grok Bot |
 | Privé ↔ public temporaire | Grok Bot |
 | MAJ éditoriales 3×/jour | Grok Bot (routines) |
+
+## Source inbox (open feeds → Bot MAJ)
+
+Avant chaque MAJ Paris (**06 / 12 / 16**), l’Action [`cabnews-inbox`](../.github/workflows/cabnews-inbox.yml) collecte des flux ouverts (Insee, Sénat, info.gouv, BCE, Bercy HTML, BdF `data-href`, …) dans `inbox/sources/`.
+
+- **Pas de LLM** dans Actions — collecte mécanique uniquement.
+- Bot lit d’abord **`inbox/sources/LATEST.json`** (détail : [`INBOX-SOURCES.md`](./INBOX-SOURCES.md)).
+- Horaires Action (CEST) ≈ **05:45 / 11:45 / 15:45** Paris (`cron` UTC `45 3,9,13 * * *` ; en CET ~1h plus tôt).
+- Commits inbox uniquement, message avec `[skip ci]`, pour ne pas boucler ni republier Vercel pour du brut.
+
+Local : `npm run inbox:fetch`.
+
