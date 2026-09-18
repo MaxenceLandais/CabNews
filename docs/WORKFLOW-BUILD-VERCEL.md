@@ -1,4 +1,4 @@
-# CabNews — workflow Grok Build + GitHub + Vercel
+# CabNews — workflow Grok Build + GitHub + Vercel + Grok Bot
 
 ## Principe
 
@@ -6,29 +6,52 @@
 
 - Live auto : https://cabnews.vercel.app/ (Vercel redéploie à chaque push sur `main`)
 - Preview Grok Build (optionnel) : https://cabnews.grok.me/ (republish manuel seulement)
+- Repo : **privé** par défaut (Jeanne en collaboratrice). Public seulement pendant une fenêtre courte de sync Build.
 
-## Développer avec Grok Build
+## Processus qui marche (validé 2026-09-18)
 
-### Début de session — sync
+Grok Build ne lit pas correctement le repo **privé** (404) et ne **pousse** pas de façon fiable (« pas d’écriture »), même avec l’app GitHub Grok installée. Le chemin stable est :
 
-Coller dans Grok Build :
+1. **Grok Bot** : passe le repo en **public** (fenêtre courte).
+2. **Grok Build** : **sync seul** depuis `main` (pas de features dans le même prompt).
+3. **Grok Build** : développement UI / features.
+4. **Toi** : télécharge le **zip** du projet Build → envoie-le à **Grok Bot** (chat ou Drive CabNews).
+5. **Grok Bot** : pousse sur `main` → Vercel met à jour https://cabnews.vercel.app/
+6. **Grok Bot** : remet le repo en **privé**.
+
+Ne compte **pas** sur « Push depuis Build » pour l’instant.
+
+### Prompt sync (Build) — après passage en public
 
 ```
-Synchronise entièrement ce projet depuis le dépôt GitHub https://github.com/MaxenceLandais/CabNews, branche main. Remplace le code local par le contenu à jour du repo (y compris src/data). Confirme le dernier commit synchronisé, puis on continue le développement.
+Synchronise entièrement ce projet depuis le dépôt GitHub https://github.com/MaxenceLandais/CabNews, branche main. Remplace le code local par le contenu à jour du repo (y compris src/data). Confirme le dernier commit synchronisé, puis STOP. Ne développe rien encore.
 ```
 
-### Fin de session — push
+### Ensuite — features (Build, prompt séparé)
+
+Un second tour pour l’UI / produit. Ne pas combiner sync + features + push.
+
+### Fin de session — zip → Bot
+
+Exporter / télécharger le projet depuis Build, l’envoyer à Grok Bot avec :
 
 ```
-Push tous les changements de cette session vers https://github.com/MaxenceLandais/CabNews sur la branche main. Ne touche pas aux fichiers de données éditoriales (src/data/events.ts, refreshes.ts, sources.ts) sauf si on les a explicitement modifiés ensemble. Résume les fichiers poussés et le SHA du commit.
+Voici le zip Build de la session CabNews. Pousse sur MaxenceLandais/CabNews main, vérifie le SHA, puis remets le repo en privé.
 ```
-
-### Après le push
-
-Vercel déploie tout seul en quelques minutes. Vérifier https://cabnews.vercel.app/ — pas besoin de republier `cabnews.grok.me` pour le live partagé.
 
 ## Contenu éditorial (MAJ 3×/jour)
 
-Les routines Paris **06:00 / 12:00 / 16:00** mettent à jour le contenu et poussent sur `main`. Elles touchent surtout `src/data/*`.
+Les routines Paris **06:00 / 12:00 / 16:00** (Grok Bot) mettent à jour le contenu et poussent sur `main` **même si le repo est privé**. Elles touchent surtout `src/data/*` (et éventuellement `horizon.ts` selon le modèle).
 
-Évite de laisser Build et le repo diverger longtemps : chaque grosse session Build commence par un sync et finit par un push.
+Évite qu’un zip Build écrase une MAJ toute fraîche : synchronise Build juste après une MAJ, ou dis à Bot de fusionner avec prudence si une MAJ est passée pendant la session Build.
+
+## Qui fait quoi
+
+| Rôle | Qui |
+|------|-----|
+| Source de vérité | GitHub `main` |
+| Live | Vercel → cabnews.vercel.app |
+| UI / mobile / PWA | Grok Build (puis zip → Bot) |
+| Push GitHub fiable | Grok Bot |
+| Privé ↔ public temporaire | Grok Bot |
+| MAJ éditoriales 3×/jour | Grok Bot (routines) |
