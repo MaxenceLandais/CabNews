@@ -2,6 +2,37 @@ import type { CrawlRefresh } from "./types";
 
 export const CRAWLS: CrawlRefresh[] = [
   {
+    id: "crawl-14",
+    date: "2026-09-18",
+    time: "16:40",
+    summary:
+      "Quatorzième passe, vendredi 16h. Vega : Macron sort (G7 énergie, aides adaptées, plan infrastructures critiques) ; marchés ~16h40 CAC ~8 060 (−1,5 %) / Brent ~100 $ / Orange −5,9 % ; gazole record 2,39 € ; Insee TIC/IA 18 %, logements T2 −1,0 %, agri +4,7 % ; Lescure Dublin (windfall) ; sénatoriales soirée 27/09.",
+    sourcesCrawled: 146,
+    added: [
+      "evt-insee-tic-ia-0918",
+      "evt-insee-logements-t2-0918",
+      "evt-insee-agriculture-2025-0918",
+      "evt-insee-zfe-parc-0918",
+      "evt-carburant-pompe-0918",
+    ],
+    revised: [
+      "evt-elysee-vega-0918",
+      "evt-macron-partis-0918",
+      "evt-marches-vendredi-digestion-0918",
+      "evt-marches-vendredi-0918",
+      "evt-lescure-dublin-0918",
+      "evt-senatoriales-0927",
+      "evt-carburant-ruptures-0916",
+    ],
+    highlights: [
+      "Vega : Macron sort — G7 énergie « prochaines semaines », stocks stratégiques, saisine Commission gaz ; aides carburant « évaluées/adaptées » ; plan protection infrastructures critiques (hybride russe).",
+      "Marchés ~16h40 : CAC ~8 060 (−1,5 % vs 8 186,93) ; Brent ~100 $ ; Orange −5,9 % (MS sous-pondérer) ; OAT 4,48 % (matin).",
+      "Pompe : gazole record 2,39 €/l (AFP) ; SP95-E10 ~2,16–2,17 € — au-dessus du pic 2022.",
+      "Insee densifié : IA 18 % (+8 pts) ; logements T2 −1,0 % ; agri 2025 +4,7 % ; ZFE verdissement parc.",
+      "Dublin : Lescure prudent sur taxe windfall UE ; sénatoriales 27/09 soirée Sénat 17h–23h.",
+    ],
+  },
+  {
     id: "crawl-13",
     date: "2026-09-18",
     time: "12:15",
