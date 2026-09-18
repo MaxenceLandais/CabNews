@@ -2,6 +2,35 @@ import type { CrawlRefresh } from "./types";
 
 export const CRAWLS: CrawlRefresh[] = [
   {
+    id: "crawl-11",
+    date: "2026-09-18",
+    time: "06:15",
+    summary:
+      "Onzième passe, vendredi matin. Jour J Élysée 10h30 (salle Vega) ; Lecornu Figaro ~54 Md€ / CDM 1er oct. ; AFT indexées 2,5 Md€ adjugées ; pêcheurs deal Chabaud (aides indexées) ; CAC clôture jeudi 8 186 (+0,57 %), Brent ~104 $ ; Dati « exercé comme avocate ».",
+    sourcesCrawled: 94,
+    added: [
+      "evt-marches-vendredi-0918",
+      "evt-sodexo-jpm-0917",
+      "evt-eurobio-retrait-0917",
+    ],
+    revised: [
+      "evt-macron-partis-0918",
+      "evt-lecornu-seminaire-0917",
+      "evt-dati-ghosn-0916",
+      "evt-pecheurs-chabaud-0917",
+      "evt-carburant-ruptures-0916",
+      "evt-aft-jeu-0917",
+      "evt-marches-jeudi-0917",
+    ],
+    highlights: [
+      "Élysée 10h30 : candidats/chefs de parti (salle Vega) — sécurité/énergie ; Bardella & Bompard représentent Le Pen / Mélenchon.",
+      "PLF 2027 : Lecornu ~54 Md€ d'effort (Figaro) ; CDM 1er octobre ; ni 49.3 ni ordonnances si pas d'obstruction.",
+      "AFT : OATei 2,10 % 03/2037 — 2,5 Md€ adjugés, demande 4,969 Md€, TMP 2,29 % (règlement 21/09).",
+      "Pêcheurs : barrages levés après 6 h Chabaud ; aides suivront les cours + PTZ trésorerie.",
+      "Marchés : CAC jeudi +0,57 % à 8 186,93 ; Brent ~104,08 $ ; brief vendredi sous digestion Fed / pétrole.",
+    ],
+  },
+  {
     id: "crawl-10",
     date: "2026-09-17",
     time: "16:20",
