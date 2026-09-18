@@ -33,10 +33,9 @@ export function SourcesView() {
 
   return (
     <div className="flex flex-col gap-8">
-      <PageHeader title="Journal de crawl & sources">
-        Toutes les URL utilisées pour le tableau de bord de la semaine. Réactualisé à chaque passe.
-        Officiel d’abord, presse en recoupement. Seeking Alpha : titres publics, corps payant — on
-        déduit l’entreprise à suivre.
+      <PageHeader title="Sources & méthode">
+        Chaque URL utilisée pour le brief. Officiel d’abord, presse en recoupement. Seeking Alpha :
+        titres publics, corps payant — on déduit l’entreprise à suivre.
       </PageHeader>
 
       <section>
@@ -67,12 +66,12 @@ export function SourcesView() {
       </section>
 
       <section>
-        <h2 className="font-serif text-2xl tracking-tight">Passes de la semaine</h2>
+        <h2 className="font-serif text-2xl tracking-tight">Éditions de la semaine</h2>
         <ol className="mt-4 grid gap-4">
-          {CRAWLS.map((c, i) => (
+          {CRAWLS.map((c) => (
             <li key={c.id} className="rounded-xl bg-surface p-5 shadow-[var(--shadow-border)]">
               <p className="font-mono text-xs tracking-wider text-accent uppercase">
-                Crawl n°{CRAWLS.length - i} · {c.date} · {c.time}
+                {c.date} · {c.time} (Paris)
               </p>
               <p className="mt-2 text-sm leading-relaxed">{c.summary}</p>
               <p className="mt-2 font-mono text-xs text-subtle tabular-nums">
@@ -125,7 +124,7 @@ export function SourcesView() {
                 <th className="px-4 py-3 font-medium">Type</th>
                 <th className="px-4 py-3 font-medium">Pays</th>
                 <th className="px-4 py-3 font-medium">Utilisée pour</th>
-                <th className="px-4 py-3 font-medium">Crawl</th>
+                <th className="px-4 py-3 font-medium">Vu le</th>
               </tr>
             </thead>
             <tbody>

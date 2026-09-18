@@ -7,7 +7,7 @@ import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import { QueryProvider } from "@/components/query-provider";
 import appCss from "../styles.css?url";
 
-const APP_NAME = "Cabinet";
+const APP_NAME = "Cab News";
 
 function Rehydrate() {
   useEffect(() => {
@@ -25,7 +25,7 @@ export const Route = createRootRoute({
       {
         name: "description",
         content:
-          "Prévision éditoriale, horizon glissant 8 jours. Promesses, signaux, nominations, dataviz, fuites, notes.",
+          "Rédaction économique. Prévisions, promesses, signaux, nominations — sourcés et datés.",
       },
       { name: "theme-color", content: "#0c0b0a" },
     ],

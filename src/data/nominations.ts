@@ -199,7 +199,7 @@ export const NOMINATIONS: NominationItem[] = [
     role: "Gérants, DG, liquidateurs — ETI",
     organization: "Annonces légales",
     sector: "eti",
-    whyItMatters: "Les paywalls ratent les nominations. BODACC et JORF sont la source. À crawler chaque jour ouvré.",
+    whyItMatters: "Les paywalls ratent les nominations. BODACC et JORF sont la source. À relire chaque jour ouvré.",
     source: "BODACC",
     sources: [
       { label: "BODACC", url: "https://www.bodacc.fr/" },

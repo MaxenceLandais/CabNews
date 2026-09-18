@@ -1,14 +1,17 @@
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { Bookmark, ScanSearch, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { EVENTS, PROMISES } from "@/data/catalog";
 import { kindLabel, sectorLabel, type EventItem } from "@/data/types";
 import { anticipate } from "@/lib/anticipate";
+import { listMyFollows, upsertFollow } from "@/lib/newsroom";
+import { useNewsroom } from "@/lib/use-newsroom";
 import { useCabinet } from "@/lib/store";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
+import { SourceLinks } from "@/components/source-links";
 
 const CONF: Record<EventItem["confidence"], string> = {
   confirme: "Confirmé",
@@ -24,9 +27,21 @@ export function EventDetail() {
   const notes = useCabinet((s) => s.notes);
   const setNote = useCabinet((s) => s.setNote);
   const forecasts = useCabinet((s) => s.forecasts);
+  const { user } = useNewsroom();
+  const qc = useQueryClient();
   const [ai, setAi] = useState<string | null>(null);
+  const [anticipation, setAnticipation] = useState("");
 
   const event = EVENTS.find((e) => e.id === id) ?? forecasts.find((e) => e.id === id);
+
+  const follows = useQuery({
+    queryKey: ["my-follows", user?.id],
+    queryFn: () => listMyFollows(),
+    enabled: Boolean(user),
+  });
+  const followed = Boolean(user)
+    ? (follows.data ?? []).some((f) => f.eventId === id && f.kind === "suivi")
+    : starred.includes(id ?? "");
 
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
@@ -47,7 +62,6 @@ export function EventDetail() {
             `Date : ${event.date}${event.time ? " " + event.time : ""}`,
             `Secteurs : ${event.sectors.map(sectorLabel).join(", ")}`,
             `Confiance : ${CONF[event.confidence]}`,
-            `Source : ${event.source ?? "n/a"}`,
             event.lede,
             event.bullets.map((b) => `- ${b}`).join("\n"),
             `Pourquoi : ${event.whyItMatters}`,
@@ -59,6 +73,30 @@ export function EventDetail() {
     onSuccess: (res) => {
       if (res.ok) setAi(res.text);
       else setAi(`Impossible d’anticiper : ${res.error}`);
+    },
+  });
+
+  const followMut = useMutation({
+    mutationFn: async () => {
+      if (!event) return;
+      if (user) {
+        await upsertFollow({ data: { eventId: event.id, kind: "suivi", remove: followed } });
+      }
+      toggleStar(event.id);
+    },
+    onSuccess: () => void qc.invalidateQueries({ queryKey: ["my-follows"] }),
+  });
+
+  const anticipateMut = useMutation({
+    mutationFn: async () => {
+      if (!event || !user) return;
+      await upsertFollow({
+        data: { eventId: event.id, kind: "anticipation", note: anticipation.trim() || notes[event.id] || "" },
+      });
+    },
+    onSuccess: () => {
+      void qc.invalidateQueries({ queryKey: ["my-follows"] });
+      setAnticipation("");
     },
   });
 
@@ -114,11 +152,11 @@ export function EventDetail() {
           <div className="flex flex-wrap gap-2">
             <Button
               type="button"
-              variant={starred.includes(event.id) ? "default" : "secondary"}
-              onClick={() => toggleStar(event.id)}
+              variant={followed ? "default" : "secondary"}
+              onClick={() => followMut.mutate()}
             >
-              <Bookmark className={cn("size-4", starred.includes(event.id) && "fill-current")} />
-              {starred.includes(event.id) ? "Suivi" : "Suivre"}
+              <Bookmark className={cn("size-4", followed && "fill-current")} />
+              {followed ? "Suivi" : "Suivre"}
             </Button>
             <Button
               type="button"
@@ -161,26 +199,7 @@ export function EventDetail() {
 
           <section>
             <h3 className="text-xs font-medium tracking-wider text-muted uppercase">Sources</h3>
-            {event.sources?.length ? (
-              <ul className="mt-2 space-y-1">
-                {event.sources.map((s) => (
-                  <li key={s.url}>
-                    <a
-                      href={s.url}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-sm text-fg underline-offset-4 hover:underline"
-                    >
-                      {s.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            ) : event.source ? (
-              <p className="mt-2 text-sm text-muted">Source : {event.source}</p>
-            ) : (
-              <p className="mt-2 text-sm text-subtle">Source à recouper — pas de lien officiel daté.</p>
-            )}
+            <SourceLinks item={event} className="mt-2" />
           </section>
 
           {related.length ? (
@@ -193,6 +212,7 @@ export function EventDetail() {
                       {p.actor} — {p.pledge}
                     </p>
                     <p className="mt-1 text-xs text-muted">{p.checkpoint}</p>
+                    <SourceLinks item={p} compact className="mt-1" />
                   </li>
                 ))}
               </ul>
@@ -208,6 +228,27 @@ export function EventDetail() {
               onChange={(e) => setNote(event.id, e.target.value)}
             />
           </section>
+
+          {user ? (
+            <section>
+              <h3 className="text-xs font-medium tracking-wider text-muted uppercase">Envoyer en anticipation</h3>
+              <Textarea
+                className="mt-2 min-h-20"
+                placeholder="Ce que vous anticipez — horizon, chiffre, risque."
+                value={anticipation}
+                onChange={(e) => setAnticipation(e.target.value)}
+              />
+              <Button
+                type="button"
+                variant="secondary"
+                className="mt-2"
+                disabled={anticipateMut.isPending}
+                onClick={() => anticipateMut.mutate()}
+              >
+                {anticipateMut.isPending ? "Envoi…" : "Classer dans mon espace"}
+              </Button>
+            </section>
+          ) : null}
 
           {ai ? (
             <div className="rounded-lg border border-line bg-elevated p-4">

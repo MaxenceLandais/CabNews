@@ -10,6 +10,7 @@ import { daysUntil } from "@/lib/week";
 import { Badge } from "@/components/ui/badge";
 import { PageHeader } from "@/components/page-header";
 import { SectorBar } from "@/components/sector-bar";
+import { SourceLinks } from "@/components/source-links";
 
 const SCOPE: Record<NominationItem["scope"], string> = {
   france: "France · grand groupe",
@@ -78,22 +79,7 @@ export function NominationsView() {
                 </p>
                 {n.previous ? <p className="mt-1 text-xs text-subtle">Précédent : {n.previous}</p> : null}
                 <p className="mt-3 text-sm leading-relaxed">{n.whyItMatters}</p>
-                {n.sources?.length ? (
-                  <ul className="mt-3 flex flex-wrap gap-x-3">
-                    {n.sources.map((s) => (
-                      <li key={s.url}>
-                        <a
-                          href={s.url}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="text-xs text-muted underline-offset-4 hover:text-fg hover:underline"
-                        >
-                          {s.label}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                ) : null}
+                <SourceLinks item={n} compact className="mt-3" />
               </li>
             );
           })}

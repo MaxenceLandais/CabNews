@@ -116,7 +116,7 @@ export const HORIZON: EventItem[] = [
       { label: "Les Échos", url: "https://www.lesechos.fr/tech-medias/intelligence-artificielle/video-qui-est-chapsvision-la-societe-qui-va-remplacer-palantir-a-la-dgsi-2238001" },
     ],
     entities: ["ChapsVision", "Olivier Dellenbach", "DGSI", "Palantir"],
-    why: "Nom manqué dans les crawls précédents. On le pose en suivi permanent.",
+    why: "Nom manqué dans les éditions précédentes. On le pose en suivi permanent.",
     flash: true,
   }),
   e({
@@ -503,7 +503,7 @@ export const HORIZON: EventItem[] = [
     sources: [FG, FG_INFO, { label: "Wavestone — congrès", url: "https://www.wavestone.com/fr/event/congres-france-gaz-2026/" }],
     location: "ASIEM, 6 rue Albert de Lapparent, 75007 Paris",
     entities: ["France gaz", "CRE", "GRTgaz"],
-    why: "Manqué au crawl précédent. C’est le rendez-vous gaz de l’année, la veille de Bercy industrie.",
+    why: "Manqué à l’édition précédente. C’est le rendez-vous gaz de l’année, la veille de Bercy industrie.",
     flash: true,
   }),
   e({
@@ -945,7 +945,7 @@ export const HORIZON: EventItem[] = [
     id: "evt-plf-fuites-0925",
     date: "2026-09-25",
     title: "PLF 2027 : fuites de fin de semaine — 54 Md€, CFA, PAC, carburant",
-    lede: "CDM 1er oct. Ce vendredi, les arbitrages fuient. Les coller dans Mes Notes si le crawl les rate.",
+    lede: "CDM 1er oct. Ce vendredi, les arbitrages fuient. Les coller dans Mes Notes si la veille les rate.",
     kind: "political",
     sectors: ["budget", "energy", "education"],
     importance: "haute",

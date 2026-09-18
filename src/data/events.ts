@@ -1411,7 +1411,7 @@ export const EVENTS: EventItem[] = [
     date: "2026-09-16",
     time: "20:00",
     title: "Fed : +25 pb à 3,75–4,00 % — Warsh unanime, autre hike possible fin 2026",
-    lede: "Décision livrée. Première hausse US depuis 2023. Le crawl-7 anticipait le geste ; le matin du 17 digère le ton et le dot plot.",
+    lede: "Décision livrée. Première hausse US depuis 2023. La veille anticipait le geste ; le matin du 17 digère le ton et le dot plot.",
     bullets: [
       "FOMC 12–0 : +25 pb, fed funds 3,75–4,00 % ; communiqué 20h Paris, conf. Kevin Warsh 20h30.",
       "SEP : inflation PCE 3,7 % 2026 ; médiane fed funds fin 2026 à 4,1 % (fourchette 4,00–4,25 %) — ~90 % de probabilité d’un nouveau +25 pb d’ici fin d’année (CME FedWatch).",

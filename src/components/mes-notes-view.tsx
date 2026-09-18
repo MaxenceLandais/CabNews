@@ -32,9 +32,9 @@ export function MesNotesView() {
   return (
     <div className="flex flex-col gap-8">
       <PageHeader title="Mes Notes">
-        Un paragraphe. Un bouton. CabNews classe le jour, le secteur, et pose la puce dans Prévisions
-        (À venir). Copie ce que le crawl a manqué — agenda, nomination, visite. On retient les noms et
-        les sites pour les récurrences suivantes.
+        Un paragraphe. Un bouton. Cab News classe le jour, le secteur, et pose la puce dans
+        Prévisions. Collez ce qu’un agenda, une nomination ou une visite a laissé passer. Les noms
+        et les sites restent pour les récurrences suivantes.
       </PageHeader>
 
       <form

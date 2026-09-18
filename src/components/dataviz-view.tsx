@@ -16,6 +16,7 @@ import {
 import { VIZ } from "@/data/catalog";
 import type { VizProposal } from "@/data/types";
 import { PageHeader } from "@/components/page-header";
+import { SourceLinks } from "@/components/source-links";
 
 const STROKES = [
   "var(--color-accent)",
@@ -52,20 +53,7 @@ function VizCard({ viz, index }: { viz: VizProposal; index: number }) {
         <Chart viz={viz} />
       </div>
       <p className="mt-3 text-xs leading-relaxed text-subtle">{viz.note}</p>
-      <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-1">
-        {viz.sources.map((s) => (
-          <li key={s.url}>
-            <a
-              href={s.url}
-              target="_blank"
-              rel="noreferrer"
-              className="text-xs text-muted underline-offset-4 hover:text-fg hover:underline"
-            >
-              {s.label}
-            </a>
-          </li>
-        ))}
-      </ul>
+      <SourceLinks sources={viz.sources} compact className="mt-3" />
     </article>
   );
 }

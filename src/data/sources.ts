@@ -112,6 +112,13 @@ export const SOURCES: SourceEntry[] = [
   { id: "s-boj", name: "Bank of Japan", url: "https://www.boj.or.jp/en/", kind: "officiel", country: "Japon", usedFor: "Politique monétaire", lastCrawl: "2026-09-18" },
   { id: "s-valeo", name: "Valeo", url: "https://www.valeo.com/", kind: "corporate", country: "France", usedFor: "Usine drones AuRA, Harmattan, actionnariat salarié", lastCrawl: "2026-09-18" },
   { id: "s-chaps", name: "ChapsVision", url: "https://www.chapsvision.com/", kind: "corporate", country: "France", usedFor: "ArgonOS, DGSI, souveraineté data", lastCrawl: "2026-09-18" },
+  { id: "s-afp", name: "AFP", url: "https://www.afp.com/fr", kind: "presse", country: "France", usedFor: "Fils, agendas, recoupement", lastCrawl: "2026-09-18" },
+  { id: "s-reuters", name: "Reuters", url: "https://www.reuters.com/", kind: "presse", country: "International", usedFor: "Fils marchés, énergie, corporate", lastCrawl: "2026-09-18" },
+  { id: "s-bloomberg", name: "Bloomberg", url: "https://www.bloomberg.com/", kind: "presse", country: "États-Unis", usedFor: "Marchés, commodités, nominations", lastCrawl: "2026-09-18" },
+  { id: "s-lesechos", name: "Les Echos", url: "https://www.lesechos.fr/", kind: "presse", country: "France", usedFor: "Éco française, entreprises, Bercy", lastCrawl: "2026-09-18" },
+  { id: "s-lemonde", name: "Le Monde", url: "https://www.lemonde.fr/", kind: "presse", country: "France", usedFor: "Politique, international, économie", lastCrawl: "2026-09-18" },
+  { id: "s-figaro", name: "Le Figaro", url: "https://www.lefigaro.fr/", kind: "presse", country: "France", usedFor: "Politique, entreprises", lastCrawl: "2026-09-18" },
+  { id: "s-ft", name: "Financial Times", url: "https://www.ft.com/", kind: "presse", country: "International", usedFor: "Macro, M&A, banques", lastCrawl: "2026-09-18" },
 
 ];
 

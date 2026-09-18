@@ -13,13 +13,17 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AnniversairesRouteImport } from './routes/anniversaires'
 import { Route as CarnetRouteImport } from './routes/carnet'
 import { Route as DatavizRouteImport } from './routes/dataviz'
+import { Route as EquipeRouteImport } from './routes/equipe'
+import { Route as EspaceRouteImport } from './routes/espace'
 import { Route as FuitesRouteImport } from './routes/fuites'
+import { Route as LoginRouteImport } from './routes/login'
 import { Route as NominationsRouteImport } from './routes/nominations'
 import { Route as NotesRouteImport } from './routes/notes'
 import { Route as PromessesRouteImport } from './routes/promesses'
 import { Route as PublicationsRouteImport } from './routes/publications'
 import { Route as SignauxRouteImport } from './routes/signaux'
 import { Route as SourcesRouteImport } from './routes/sources'
+import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -41,9 +45,24 @@ const DatavizRoute = DatavizRouteImport.update({
   path: '/dataviz',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EquipeRoute = EquipeRouteImport.update({
+  id: '/equipe',
+  path: '/equipe',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EspaceRoute = EspaceRouteImport.update({
+  id: '/espace',
+  path: '/espace',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const FuitesRoute = FuitesRouteImport.update({
   id: '/fuites',
   path: '/fuites',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
   getParentRoute: () => rootRouteImport,
 } as any)
 const NominationsRoute = NominationsRouteImport.update({
@@ -76,32 +95,45 @@ const SourcesRoute = SourcesRouteImport.update({
   path: '/sources',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
+  id: '/api/auth/$',
+  path: '/api/auth/$',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/anniversaires': typeof AnniversairesRoute
   '/carnet': typeof CarnetRoute
   '/dataviz': typeof DatavizRoute
+  '/equipe': typeof EquipeRoute
+  '/espace': typeof EspaceRoute
   '/fuites': typeof FuitesRoute
+  '/login': typeof LoginRoute
   '/nominations': typeof NominationsRoute
   '/notes': typeof NotesRoute
   '/promesses': typeof PromessesRoute
   '/publications': typeof PublicationsRoute
   '/signaux': typeof SignauxRoute
   '/sources': typeof SourcesRoute
+  '/api/auth/$': typeof ApiAuthSplatRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/anniversaires': typeof AnniversairesRoute
   '/carnet': typeof CarnetRoute
   '/dataviz': typeof DatavizRoute
+  '/equipe': typeof EquipeRoute
+  '/espace': typeof EspaceRoute
   '/fuites': typeof FuitesRoute
+  '/login': typeof LoginRoute
   '/nominations': typeof NominationsRoute
   '/notes': typeof NotesRoute
   '/promesses': typeof PromessesRoute
   '/publications': typeof PublicationsRoute
   '/signaux': typeof SignauxRoute
   '/sources': typeof SourcesRoute
+  '/api/auth/$': typeof ApiAuthSplatRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -109,13 +141,17 @@ export interface FileRoutesById {
   '/anniversaires': typeof AnniversairesRoute
   '/carnet': typeof CarnetRoute
   '/dataviz': typeof DatavizRoute
+  '/equipe': typeof EquipeRoute
+  '/espace': typeof EspaceRoute
   '/fuites': typeof FuitesRoute
+  '/login': typeof LoginRoute
   '/nominations': typeof NominationsRoute
   '/notes': typeof NotesRoute
   '/promesses': typeof PromessesRoute
   '/publications': typeof PublicationsRoute
   '/signaux': typeof SignauxRoute
   '/sources': typeof SourcesRoute
+  '/api/auth/$': typeof ApiAuthSplatRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -124,39 +160,51 @@ export interface FileRouteTypes {
     | '/anniversaires'
     | '/carnet'
     | '/dataviz'
+    | '/equipe'
+    | '/espace'
     | '/fuites'
+    | '/login'
     | '/nominations'
     | '/notes'
     | '/promesses'
     | '/publications'
     | '/signaux'
     | '/sources'
+    | '/api/auth/$'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/anniversaires'
     | '/carnet'
     | '/dataviz'
+    | '/equipe'
+    | '/espace'
     | '/fuites'
+    | '/login'
     | '/nominations'
     | '/notes'
     | '/promesses'
     | '/publications'
     | '/signaux'
     | '/sources'
+    | '/api/auth/$'
   id:
     | '__root__'
     | '/'
     | '/anniversaires'
     | '/carnet'
     | '/dataviz'
+    | '/equipe'
+    | '/espace'
     | '/fuites'
+    | '/login'
     | '/nominations'
     | '/notes'
     | '/promesses'
     | '/publications'
     | '/signaux'
     | '/sources'
+    | '/api/auth/$'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -164,13 +212,17 @@ export interface RootRouteChildren {
   AnniversairesRoute: typeof AnniversairesRoute
   CarnetRoute: typeof CarnetRoute
   DatavizRoute: typeof DatavizRoute
+  EquipeRoute: typeof EquipeRoute
+  EspaceRoute: typeof EspaceRoute
   FuitesRoute: typeof FuitesRoute
+  LoginRoute: typeof LoginRoute
   NominationsRoute: typeof NominationsRoute
   NotesRoute: typeof NotesRoute
   PromessesRoute: typeof PromessesRoute
   PublicationsRoute: typeof PublicationsRoute
   SignauxRoute: typeof SignauxRoute
   SourcesRoute: typeof SourcesRoute
+  ApiAuthSplatRoute: typeof ApiAuthSplatRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -203,11 +255,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DatavizRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/equipe': {
+      id: '/equipe'
+      path: '/equipe'
+      fullPath: '/equipe'
+      preLoaderRoute: typeof EquipeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/espace': {
+      id: '/espace'
+      path: '/espace'
+      fullPath: '/espace'
+      preLoaderRoute: typeof EspaceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/fuites': {
       id: '/fuites'
       path: '/fuites'
       fullPath: '/fuites'
       preLoaderRoute: typeof FuitesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/nominations': {
@@ -252,6 +325,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SourcesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/auth/$': {
+      id: '/api/auth/$'
+      path: '/api/auth/$'
+      fullPath: '/api/auth/$'
+      preLoaderRoute: typeof ApiAuthSplatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -260,13 +340,17 @@ const rootRouteChildren: RootRouteChildren = {
   AnniversairesRoute: AnniversairesRoute,
   CarnetRoute: CarnetRoute,
   DatavizRoute: DatavizRoute,
+  EquipeRoute: EquipeRoute,
+  EspaceRoute: EspaceRoute,
   FuitesRoute: FuitesRoute,
+  LoginRoute: LoginRoute,
   NominationsRoute: NominationsRoute,
   NotesRoute: NotesRoute,
   PromessesRoute: PromessesRoute,
   PublicationsRoute: PublicationsRoute,
   SignauxRoute: SignauxRoute,
   SourcesRoute: SourcesRoute,
+  ApiAuthSplatRoute: ApiAuthSplatRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

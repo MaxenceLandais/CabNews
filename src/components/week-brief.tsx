@@ -22,6 +22,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { EventDetail } from "@/components/event-detail";
 import { SectorBar } from "@/components/sector-bar";
+import { SourceLinks } from "@/components/source-links";
 
 export function WeekBrief() {
   const days = useMemo(() => editorialWeekDays(), []);
@@ -93,9 +94,9 @@ export function WeekBrief() {
 
   function copyBrief() {
     const lines: string[] = [
-      `Cabinet — brief ${start ? format(start, "d MMM", { locale: fr }) : ""} → ${end ? format(end, "d MMM yyyy", { locale: fr }) : ""}`,
+      `Cab News — brief ${start ? format(start, "d MMM", { locale: fr }) : ""} → ${end ? format(end, "d MMM yyyy", { locale: fr }) : ""}`,
       desk ? `Bureau : ${desk}` : "Tous les bureaux",
-      `${LAST_CRAWL.id} · ${LAST_CRAWL.date} ${LAST_CRAWL.time}`,
+      `Édition du ${LAST_CRAWL.date} · ${LAST_CRAWL.time}`,
       "",
     ];
     for (const iso of isos) {
@@ -337,24 +338,12 @@ function DaySection({
                       {extra.length ? `Aussi : ${extra.map(sectorLabel).join(" · ")} · ` : ""}
                       {e.entities.slice(0, 2).join(", ")}
                     </p>
-                    {e.sources?.length ? (
-                      <p className="mt-2 flex flex-wrap gap-x-3 gap-y-1">
-                        {e.sources.map((s) => (
-                          <a
-                            key={s.url}
-                            href={s.url}
-                            target="_blank"
-                            rel="noreferrer"
-                            onClick={(ev) => ev.stopPropagation()}
-                            className="text-xs text-muted underline-offset-4 hover:text-fg hover:underline"
-                          >
-                            {s.label}
-                          </a>
-                        ))}
-                      </p>
-                    ) : e.source ? (
-                      <p className="mt-2 text-xs text-subtle">Source : {e.source}</p>
-                    ) : null}
+                    <SourceLinks
+                      item={e}
+                      compact
+                      className="mt-2"
+                      onNavigate={(ev) => ev.stopPropagation()}
+                    />
                   </div>
                 </button>
               </li>
@@ -377,7 +366,7 @@ function FlashRail({ onOpen }: { onOpen: (id: string) => void }) {
   return (
     <section className="rounded-xl bg-surface p-5 shadow-[var(--shadow-border)]">
       <h2 className="font-serif text-lg tracking-tight">Dernière minute</h2>
-      <p className="mt-1 text-xs text-muted">Ajouts du crawl — même filtre bureau.</p>
+      <p className="mt-1 text-xs text-muted">Dernière édition — même filtre bureau.</p>
       <ul className="mt-4 space-y-3">
         {flashes.map((e) => (
           <li key={e.id}>
@@ -388,6 +377,7 @@ function FlashRail({ onOpen }: { onOpen: (id: string) => void }) {
               </p>
               <p className="mt-0.5 text-sm leading-snug">{e.title}</p>
             </button>
+            <SourceLinks item={e} compact className="mt-1" />
           </li>
         ))}
       </ul>

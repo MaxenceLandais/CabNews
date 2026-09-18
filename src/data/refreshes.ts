@@ -6,7 +6,7 @@ export const CRAWLS: CrawlRefresh[] = [
     date: "2026-09-18",
     time: "09:20",
     summary:
-      "Douzième passe. Horizon glissant 18–25 sept. (8 jours). Manqués rattrapés : Bercy Made in Europe 22/09, France gaz ASIEM, visite ArcelorMittal, Valeo drones AuRA 24/09, leasing PAC, ChapsVision. Agendas AN/Sénat. Crawl US/CN/RU/IN/JP traduit. Sources cliquables. Mes Notes.",
+      "Édition du matin. Horizon 18–25 sept. (8 jours). Rattrapés : Bercy Made in Europe 22/09, France gaz ASIEM, visite ArcelorMittal, Valeo drones AuRA 24/09, leasing PAC, ChapsVision. Agendas AN/Sénat. Veille US/CN/RU/IN/JP traduite. Sources cliquables. Mes Notes.",
     sourcesCrawled: 128,
     added: [
       "evt-bercy-made-in-europe-0922",

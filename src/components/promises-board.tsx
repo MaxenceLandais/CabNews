@@ -8,6 +8,7 @@ import { daysUntil } from "@/lib/week";
 import { Badge } from "@/components/ui/badge";
 import { PageHeader } from "@/components/page-header";
 import { SectorBar } from "@/components/sector-bar";
+import { SourceLinks } from "@/components/source-links";
 
 const STATUS: Record<PromiseStatus, { label: string; variant: "haute" | "ok" | "warn" | "moyenne" | "veille" }> = {
   manque: { label: "Non tenue", variant: "haute" },
@@ -63,25 +64,9 @@ export function PromisesBoard() {
                   {p.checkpoint}
                 </p>
                 <p className="mt-3 text-xs text-subtle">
-                  Promis le {format(new Date(`${p.pledgedOn}T12:00:00`), "d MMM yyyy", { locale: fr })} ·{" "}
-                  {p.source}
+                  Promis le {format(new Date(`${p.pledgedOn}T12:00:00`), "d MMM yyyy", { locale: fr })}
                 </p>
-                {p.sources?.length ? (
-                  <ul className="mt-2 flex flex-wrap gap-x-3 gap-y-1">
-                    {p.sources.map((s) => (
-                      <li key={s.url}>
-                        <a
-                          href={s.url}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="text-xs text-muted underline-offset-4 hover:text-fg hover:underline"
-                        >
-                          {s.label}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                ) : null}
+                <SourceLinks item={p} compact className="mt-2" />
               </li>
             );
           })}

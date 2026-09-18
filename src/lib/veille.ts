@@ -1,6 +1,7 @@
 import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
 import { SECTORS, type SectorId } from "@/data/types";
+import { authMiddleware } from "@/lib/auth/middleware";
 
 const sectorIds = SECTORS.map((s) => s.id) as [SectorId, ...SectorId[]];
 
@@ -35,7 +36,9 @@ function asIso(value: unknown): string {
   return new Date().toISOString();
 }
 
-export const listLessons = createServerFn({ method: "POST" }).handler(async () => {
+export const listLessons = createServerFn({ method: "POST" })
+  .middleware([authMiddleware])
+  .handler(async () => {
   const { getSql } = await import("@/lib/db");
   const sql = await getSql();
   const rows = await sql<{
@@ -66,6 +69,7 @@ export const listLessons = createServerFn({ method: "POST" }).handler(async () =
 });
 
 export const addLesson = createServerFn({ method: "POST" })
+  .middleware([authMiddleware])
   .validator((input: unknown) => lessonSchema.parse(input))
   .handler(async ({ data }) => {
     const { getSql } = await import("@/lib/db");

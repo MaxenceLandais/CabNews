@@ -10,6 +10,7 @@ import { daysUntil } from "@/lib/week";
 import { Badge } from "@/components/ui/badge";
 import { PageHeader } from "@/components/page-header";
 import { SectorBar } from "@/components/sector-bar";
+import { SourceLinks } from "@/components/source-links";
 
 export function PublicationsView() {
   const sectors = useCabinet((s) => s.sectors);
@@ -79,21 +80,7 @@ export function PublicationsView() {
                   <td className="max-w-xs px-4 py-3 align-top text-muted">
                     {p.whyItMatters}
                     {p.previous ? <p className="mt-1 text-xs text-subtle">{p.previous}</p> : null}
-                    {p.sources?.length ? (
-                      <p className="mt-1">
-                        {p.sources.map((s) => (
-                          <a
-                            key={s.url}
-                            href={s.url}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="mr-2 text-xs underline-offset-4 hover:text-fg hover:underline"
-                          >
-                            {s.label}
-                          </a>
-                        ))}
-                      </p>
-                    ) : null}
+                    <SourceLinks item={p} compact className="mt-1" />
                   </td>
                 </tr>
               );

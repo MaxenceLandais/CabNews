@@ -5,6 +5,7 @@ import { useCabinet } from "@/lib/store";
 import { Badge } from "@/components/ui/badge";
 import { PageHeader } from "@/components/page-header";
 import { SectorBar } from "@/components/sector-bar";
+import { SourceLinks } from "@/components/source-links";
 
 const RISK: Record<WeakSignalItem["risk"], { label: string; variant: "haute" | "warn" | "moyenne" | "veille" }> = {
   faillite: { label: "Proche d’une faillite", variant: "haute" },
@@ -59,9 +60,8 @@ export function SignalsView() {
                   <span className="text-muted">À surveiller — </span>
                   {s.watch}
                 </p>
-                <p className="mt-3 text-xs text-subtle">
-                  {s.entities.join(" · ")} · {s.source}
-                </p>
+                <p className="mt-3 text-xs text-subtle">{s.entities.join(" · ")}</p>
+                <SourceLinks item={s} compact className="mt-2" />
               </li>
             );
           })}

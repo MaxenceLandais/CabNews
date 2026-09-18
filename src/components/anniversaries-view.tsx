@@ -8,6 +8,7 @@ import { daysUntil } from "@/lib/week";
 import { Badge } from "@/components/ui/badge";
 import { PageHeader } from "@/components/page-header";
 import { SectorBar } from "@/components/sector-bar";
+import { SourceLinks } from "@/components/source-links";
 
 const KIND: Record<(typeof ANNIVERSARIES)[number]["kind"], string> = {
   creation: "Création",
@@ -54,6 +55,7 @@ export function AnniversariesView() {
                 <h2 className="mt-3 font-serif text-xl leading-snug tracking-tight">{a.title}</h2>
                 <p className="mt-2 text-sm leading-relaxed">{a.angle}</p>
                 <p className="mt-3 text-xs text-subtle">{a.entities.join(" · ")}</p>
+                <SourceLinks item={a} compact className="mt-2" />
               </article>
             </li>
           );
