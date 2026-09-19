@@ -49,14 +49,30 @@ const FG_INFO: SourceRef = { label: "France gaz — infos pratiques", url: "http
 
 export const HORIZON: EventItem[] = [
 
+  e({
+    id: "evt-gilets-national-1017",
+    date: "2026-10-17",
+    title: "Gilets jaunes : journée nationale annoncée (après Marseille ~30 le 19/09)",
+    lede: "Date nationale pointée par les organisateurs PACA après le bilan faible de Marseille. Thermomètre social à coller — pas inventer les effectifs.",
+    bullets: ["Suite Bandol / Estaque / Vieux-Port (~30).", "Croiser intersyndicale FP 29/09 et Matignon aides."],
+    kind: "deadline",
+    sectors: ["budget", "energy", "public-finance"],
+    importance: "moyenne",
+    confidence: "recurrence",
+    sources: [
+      { label: "France 3 — national 17/10", url: "https://france3-regions.franceinfo.fr/provence-alpes-cote-d-azur/bouches-du-rhone/marseille/gilets-jaunes-une-trentaine-de-personnes-sur-le-vieux-port-a-marseille-le-mouvement-peine-a-mobiliser-contre-la-vie-chere-3419747.html" },
+    ],
+    entities: ["Gilets jaunes"],
+  }),
+
 
 
   e({
     id: "evt-wsj-weekend-0919",
     date: "2026-09-19",
     title: "Traduit de l’anglais (WSJ / CNBC) : UST 10 ans >5 %, pétrole, dollar",
-    lede: "UST 10 ans >5 % ; Brent ~104,7 $ (clôture ven.). Paris lundi traduit ça + OAT 4,57 % / spread 104 pb, pas seulement Ormuz.",
-    bullets: ["Brent autour de 104–105 $ : frappes houthis Riyad (nuit ven.–sam.) à croiser UKMTO.", "Titres Seeking Alpha France : déduire les noms CAC à rappeler lundi sous gap 8 065."],
+    lede: "UST 10 ans >5 % ; Brent ~104–105 $ (clôture ven.) + signal oléoduc Est-Ouest en redémarrage. Paris lundi = OAT 4,57 % / spread 104 pb + Matignon aides.",
+    bullets: ["Oléoduc Yanbu : ~½ capacité sous jours, plein ~6 semaines — futures dimanche.", "Seeking Alpha France : noms CAC sous gap 8 065."],
     kind: "macro",
     sectors: ["usa", "marches", "energy"],
     importance: "moyenne",

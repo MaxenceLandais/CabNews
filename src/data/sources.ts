@@ -2,7 +2,7 @@ import type { SourceEntry } from "./types";
 
 export const SOURCES: SourceEntry[] = [
   { id: "s-insee", name: "Insee — calendrier et statistiques", url: "https://www.insee.fr/fr/information/2830163", kind: "officiel", country: "France", usedFor: "Note de conjoncture, IPC, ICT, créations, confiance, logements, loyers, BTP", lastCrawl: "2026-09-19" },
-  { id: "s-bdf", name: "Banque de France — statistiques", url: "https://www.banque-france.fr/statistiques", kind: "officiel", country: "France", usedFor: "MBS, fonds, anticipations d’inflation, crédit habitat, défaillances, enquête de conjoncture", lastCrawl: "2026-09-19" },
+  { id: "s-bdf", name: "Banque de France — statistiques", url: "https://www.banque-france.fr/statistiques", kind: "officiel", country: "France", usedFor: "MBS, Moulin Ouest-France (chocs FR), anticipations, crédit habitat, défaillances, conjoncture", lastCrawl: "2026-09-19" },
   { id: "s-bdf-def", name: "Banque de France — défaillances", url: "https://www.banque-france.fr/statistiques/defaillances-dentreprises", kind: "officiel", country: "France", usedFor: "Signaux faibles ETI / auto / commerce ; dataviz n°3", lastCrawl: "2026-09-19" },
   { id: "s-aft", name: "Agence France Trésor", url: "https://www.aft.gouv.fr/", kind: "officiel", country: "France", usedFor: "Calendrier d’émissions, résultats d’adjudications, OAT 10 ans", lastCrawl: "2026-09-19" },
   { id: "s-aft-cal", name: "AFT — calendrier indicatif", url: "https://www.aft.gouv.fr/fr/calendrier-indicatif-emissions", kind: "agenda", country: "France", usedFor: "Chaque jeudi d’adjudication", lastCrawl: "2026-09-19" },
@@ -65,7 +65,7 @@ export const SOURCES: SourceEntry[] = [
   { id: "s-ti", name: "Transparency International CPI", url: "https://www.transparency.org/en/cpi", kind: "institut", country: "International", usedFor: "Classement corruption, janvier", lastCrawl: "2026-09-19" },
   { id: "s-acea", name: "ACEA", url: "https://www.acea.auto/", kind: "institut", country: "UE", usedFor: "Immatriculations Europe, mix carburant", lastCrawl: "2026-09-19" },
   { id: "s-bundesbank", name: "Bundesbank", url: "https://www.bundesbank.de/en", kind: "officiel", country: "Allemagne", usedFor: "Bund 10 ans, dataviz n°2", lastCrawl: "2026-09-19" },
-  { id: "s-euronext", name: "Euronext Paris", url: "https://www.euronext.com/fr/markets/paris", kind: "marche", country: "France", usedFor: "Clôture 18/09 CAC 8 065 / OAT spread 104 pb ; week-end fermé", lastCrawl: "2026-09-19" },
+  { id: "s-euronext", name: "Euronext Paris", url: "https://www.euronext.com/fr/markets/paris", kind: "marche", country: "France", usedFor: "Clôture 18/09 CAC 8 065 / OAT spread 104 pb ; week-end fermé ; futures dimanche", lastCrawl: "2026-09-19" },
   { id: "s-ukraine", name: "Présidence ukrainienne", url: "https://www.president.gov.ua/en", kind: "agenda", country: "Ukraine", usedFor: "Visite Shmyhal, reconstruction", lastCrawl: "2026-09-19" },
   { id: "s-dassault", name: "Dassault Aviation", url: "https://www.dassault-aviation.com/fr/", kind: "corporate", country: "France", usedFor: "VORTEX, F5, 110 ans", lastCrawl: "2026-09-19" },
   { id: "s-safran", name: "Safran — finance", url: "https://www.safran-group.com/fr/finance", kind: "corporate", country: "France", usedFor: "Promesse moteurs, Gifas", lastCrawl: "2026-09-19" },
@@ -112,6 +112,7 @@ export const SOURCES: SourceEntry[] = [
   { id: "s-boj", name: "Bank of Japan", url: "https://www.boj.or.jp/en/", kind: "officiel", country: "Japon", usedFor: "Politique monétaire", lastCrawl: "2026-09-19" },
   { id: "s-valeo", name: "Valeo", url: "https://www.valeo.com/", kind: "corporate", country: "France", usedFor: "Usine drones AuRA, Harmattan, actionnariat salarié", lastCrawl: "2026-09-19" },
   { id: "s-chaps", name: "ChapsVision", url: "https://www.chapsvision.com/", kind: "corporate", country: "France", usedFor: "ArgonOS, DGSI, souveraineté data", lastCrawl: "2026-09-19" },
+  { id: "s-france3", name: "France 3 régions", url: "https://france3-regions.franceinfo.fr/", kind: "presse", country: "France", usedFor: "Bilan Marseille GJ 19/09 (~30), vie chère régionale", lastCrawl: "2026-09-19" },
   { id: "s-afp", name: "AFP", url: "https://www.afp.com/fr", kind: "presse", country: "France", usedFor: "Fils, agendas, recoupement", lastCrawl: "2026-09-19" },
   { id: "s-reuters", name: "Reuters", url: "https://www.reuters.com/", kind: "presse", country: "International", usedFor: "Fils marchés, énergie, corporate", lastCrawl: "2026-09-19" },
   { id: "s-bloomberg", name: "Bloomberg", url: "https://www.bloomberg.com/", kind: "presse", country: "États-Unis", usedFor: "Marchés, commodités, nominations", lastCrawl: "2026-09-19" },

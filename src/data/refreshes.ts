@@ -2,6 +2,36 @@ import type { CrawlRefresh } from "./types";
 
 export const CRAWLS: CrawlRefresh[] = [
   {
+    id: "crawl-17",
+    date: "2026-09-19",
+    time: "16:05",
+    summary:
+      "Dix-septième passe, samedi 16h. Bilan Marseille GJ ~30 (France 3) — national 17/10 ; oleoduc Est-Ouest en redémarrage progressif ; catch-up Moulin Ouest-France (chocs FR + trajectoire déficit) ; Bercy 100 territoires électrification. Marchés toujours fermés (CAC 8 065 / OAT 4,57 % / spread ~104 pb). Matignon aides lundi inchangé.",
+    sourcesCrawled: 162,
+    added: [
+      "evt-gilets-marseille-bilan-0919",
+      "evt-moulin-ouestfrance-0916",
+      "evt-oleoduc-yanbu-restore-0919",
+      "evt-bercy-100-territoires-0919",
+      "evt-gilets-national-1017",
+    ],
+    revised: [
+      "evt-gilets-jaunes-spectre-0916",
+      "evt-bfmtv-gros-rouleurs-0919",
+      "evt-marches-weekend-0919",
+      "evt-reunion-aides-matignon-0921",
+      "evt-wsj-weekend-0919",
+      "evt-lescure-dublin-0918",
+    ],
+    highlights: [
+      "Marseille Vieux-Port : ~30 gilets jaunes (France 3) — mobilisation faible ; journée nationale 17/10.",
+      "Oléoduc Est-Ouest : Riyad vise ~½ capacité sous jours, restauration complète ~6 semaines — ancrage Brent week-end.",
+      "Moulin (Ouest-France) : PIB 0,4 % / chocs aéro + canicule ; demande une inflexion crédible du déficit face à OAT 4,57 %.",
+      "Bercy : lauréats « 100 territoires d’électrification » — signal exécution avant Made in Europe mardi.",
+      "Agenda inchangé : Matignon aides 21/09 ; FP 29/09 ; sénatoriales 27/09 ; ECOFIN windfall 9/10.",
+    ],
+  },
+  {
     id: "crawl-16",
     date: "2026-09-19",
     time: "12:10",
