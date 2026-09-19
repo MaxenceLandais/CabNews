@@ -35,7 +35,7 @@ function e(opts: {
     entities: opts.entities,
     whyItMatters: opts.why ?? opts.lede,
     followUp: opts.follow,
-    addedOn: "2026-09-18",
+    addedOn: "2026-09-19",
     flash: opts.flash,
   };
 }
@@ -48,220 +48,14 @@ const FG: SourceRef = { label: "France gaz — congrès 22/09", url: "https://ww
 const FG_INFO: SourceRef = { label: "France gaz — infos pratiques", url: "https://www.francegaz.fr/evenement-congres-du-gaz-2026/infos-pratiques/" };
 
 export const HORIZON: EventItem[] = [
-  e({
-    id: "evt-elysee-vega-0918",
-    date: "2026-09-18",
-    time: "10:30",
-    title: "Élysée Vega : Macron sort — G7 énergie, aides adaptées, plan infrastructures critiques",
-    lede: "Huis clos tenu. Sortie publique : traiter les causes avant de dépenser ; G7 énergie « prochaines semaines » ; saisine Commission sur le gaz ; plan protection face à l’hybride russe.",
-    bullets: [
-      "Carburants : aides « évaluées » et « adaptées » — pas de nouveau chèque annoncé à 16h ; gazole record 2,39 €/l.",
-      "G7 énergie : coordination stocks + option libération stocks stratégiques ; France « au bon niveau » diesel/gaz pour l’hiver.",
-      "Ukraine / Russie : plan de protection des infrastructures critiques (drones, cyber, BITD) demandé au gouvernement.",
-      "Rôle « garant » jusqu’à la présidentielle — d’autres formats Vega « autant que nécessaire ».",
-    ],
-    kind: "political",
-    sectors: ["energy", "budget", "defense"],
-    importance: "haute",
-    sources: [
-      { label: "Centre Presse / pool — sortie Macron 18/09", url: "https://www.centrepresseaveyron.fr/2026/09/18/contexte-international-carburants-presidentielle-ce-quil-faut-retenir-de-la-prise-de-parole-demmanuel-macron-ce-vendredi-18-septembre-13557508.php" },
-      { label: "France 24 — candidats / carburants", url: "https://www.france24.com/fr/france/20260918-macron-r%C3%A9unit-les-candidats-%C3%A0-sa-succession-pour-%C3%A9voquer-les-prix-des-carburants" },
-      { label: "Élysée — agenda", url: "https://www.elysee.fr/emmanuel-macron/agenda" },
-    ],
-    location: "Palais de l’Élysée, salle Vega",
-    entities: ["Emmanuel Macron", "Sébastien Lecornu", "Jordan Bardella", "Manuel Bompard"],
-    why: "Sortie Vega = cadre énergie/PLF du week-end. France gaz mardi et Made in Europe se lisent sous G7 stocks.",
-    follow: "Coller réactions partis + détail saisine Commission ; croiser Dublin windfall.",
-    flash: true,
-  }),
-  e({
-    id: "evt-insee-creations-live-0918",
-    date: "2026-09-18",
-    time: "08:45",
-    title: "Insee : créations d’entreprises août, emploi localisé T2, prix logements",
-    lede: "Triple publication. TPE, carte du chômage, pierre — le matin même de Vega.",
-    bullets: ["Chômage T2 déjà à 8,3 %.", "Prix logements = transmission du crédit, pas un indice de prestige."],
-    kind: "publication",
-    sectors: ["eti", "immobilier", "industry"],
-    importance: "haute",
-    sources: [{ label: "Insee — calendrier", url: "https://www.insee.fr/fr/information/2830163" }],
-    entities: ["Insee"],
-  }),
-  e({
-    id: "evt-marches-vendredi-digestion-0918",
-    date: "2026-09-18",
-    time: "16:40",
-    title: "Marchés ~16h40 : CAC ~8 060 (−1,5 %) — Brent ~100 $ ; Orange −5,9 %",
-    lede: "Quasi-clôture (17h35). Digestion BoJ + budget 54 Md€ + Vega. Pétrole sous 101 $ ; dette FR toujours au centre (OAT 4,48 % matin).",
-    bullets: [
-      "CAC ~8 060–8 070 (−1,4 à −1,5 % vs clôture jeudi 8 186,93) — Boursorama ~8 060 (−1,54 %) / Yahoo ~8 070.",
-      "Brent ~100 $ (Yahoo) ; matin AFP 102,49 $ (−2,22 %). WTI ~98 $.",
-      "Orange ~15,02 € (−5,9 %) après MS sous-pondérer (obj. 15 €) ; spread OAT/Bund ~98 pb (matin).",
-      "AFT OATei 2,5 Md€ — règlement lundi 21. Clôture officielle Euronext à coller dès 17h35.",
-    ],
-    kind: "macro",
-    sectors: ["marches", "public-finance", "energy", "telecoms"],
-    importance: "haute",
-    sources: [
-      { label: "Boursorama — CAC / Orange 18/09", url: "https://www.boursorama.com/bourse/actualites/les-marches-europeens-sous-pression-orange-decroche-a-paris-13f7eaffb40e312186a34bc73d130de2" },
-      { label: "Capital/AFP — CAC / OAT / Brent", url: "https://www.capital.fr/entreprises-marches/cac-40-la-bourse-de-paris-recule-le-marche-actions-scrute-les-taux-et-le-budget-francais-1530256" },
-      { label: "Euronext Paris", url: "https://www.euronext.com/fr/markets/paris" },
-    ],
-    entities: ["CAC 40", "Brent", "Orange", "OAT", "Morgan Stanley"],
-    why: "Brief 16h : actions rouges, pétrole en reflux, Orange = micro du jour. Canal unique énergie + PLF.",
-    follow: "Coller clôture Euronext 17h35 + futures US du week-end.",
-    flash: true,
-  }),
 
-  e({
-    id: "evt-carburant-pompe-0918",
-    date: "2026-09-18",
-    title: "Pompe : gazole record 2,39 €/l — SP95-E10 ~2,16–2,17 €",
-    lede: "Nouveau plus haut national (AFP / prix-carburants.gouv). Au-dessus du pic d’avril 2026 (~2,38 €). Plus de 700 stations >2,50 €.",
-    bullets: [
-      "Gazole moyen ~2,388–2,39 €/l ; SP95-E10 ~2,16–2,17 € (au-dessus du pic juin 2022 à 2,11 €).",
-      "Cadre Vega : aides « adaptées », pas de nouveau dispositif chiffré à 16h — filet 31/12 toujours en place.",
-      "Thermomètre social avant intersyndicale FP du 29 et France gaz mardi.",
-    ],
-    kind: "macro",
-    sectors: ["energy", "auto", "budget"],
-    importance: "haute",
-    sources: [
-      { label: "RTL/AFP — gazole >2,39 €", url: "https://www.rtl.fr/actu/economie-consommation/le-prix-du-gazole-atteint-un-nouveau-record-il-depasse-les-2-39-euros-le-litre-en-moyenne-7900673738" },
-      { label: "20 Minutes — record gazole", url: "https://www.20minutes.fr/societe/4246421-20260918-prix-carburant-tarif-gazole-bat-nouveau-record-france" },
-      { label: "prix-carburants.gouv.fr", url: "https://www.prix-carburants.gouv.fr/" },
-    ],
-    entities: ["TotalEnergies", "AFP", "Sébastien Lecornu"],
-    why: "Le chiffre pompe du vendredi. Tout brief énergie/PLF part de là.",
-    flash: true,
-  }),
-  e({
-    id: "evt-insee-tic-ia-0918",
-    date: "2026-09-18",
-    title: "Insee TIC 2025 : 18 % des entreprises utilisent l’IA (+8 pts)",
-    lede: "Insee Première n°2120. Triplement depuis 2023 (6 % → 18 %). UE à 20 %. 58 % chez les 250 salariés+ ; 59 % en information-communication.",
-    bullets: [
-      "Utilisatrices = 66 % du CA et 59 % de l’emploi du champ (hors agri/finance).",
-      "Freins non-usagers : pas d’utilité 71 % ; manque d’expertise 54 %. Même frein chez la moitié des usagers.",
-      "Bureau Tech/IA : angle adoption PME vs ETI — croiser ChapsVision / Mistral.",
-    ],
-    kind: "publication",
-    sectors: ["ia", "tech", "eti"],
-    importance: "haute",
-    sources: [
-      { label: "Insee Première — TIC/IA 2025", url: "https://www.insee.fr/fr/statistiques/9025878" },
-    ],
-    entities: ["Insee"],
-    why: "Chiffre IA officiel du jour. Densifie le bureau Tech sans Seeking Alpha.",
-  }),
-  e({
-    id: "evt-insee-logements-t2-0918",
-    date: "2026-09-18",
-    title: "Insee : logements T2 −1,0 % ; loyers +0,2 % (avr.–juil.) ; emploi salarié quasi stable",
-    lede: "Pierre en baisse. Anciens −1,0 % ; neufs quasi stables (−0,1 %). Loyers +0,2 % / +1,6 % sur un an. Emploi salarié −0,1 % T2.",
-    bullets: [
-      "Logements anciens France −1,0 % T2 (CVS) ; −0,8 % sur un an.",
-      "Loyers hors charges : +0,2 % avr.–juil. ; secteur libre +0,9 % / social +2,9 % sur un an.",
-      "Emploi salarié : −0,1 % T2 national ; stable ou quasi stable dans la moitié des régions.",
-    ],
-    kind: "publication",
-    sectors: ["immobilier", "public-finance", "eti"],
-    importance: "moyenne",
-    sources: [
-      { label: "Insee — logements T2 2026", url: "https://www.insee.fr/fr/statistiques/9050027" },
-      { label: "Insee — loyers avr.–juil. 2026", url: "https://www.insee.fr/fr/statistiques/9050041" },
-      { label: "Insee — emploi salarié régional T2", url: "https://www.insee.fr/fr/statistiques/9053037" },
-    ],
-    entities: ["Insee"],
-    why: "Trio pierre / loyers / emploi du vendredi. Utile HCSF et brief ETI.",
-  }),
-  e({
-    id: "evt-insee-agriculture-2025-0918",
-    date: "2026-09-18",
-    title: "Insee : compte provisoire agriculture 2025 — production +4,7 %",
-    lede: "Rebond volumes + prix, sans effacer 2024. Végétale +3,9 % en volume ; prix végétaux −2,3 % (valeur +1,6 %).",
-    bullets: [
-      "Vin et céréales en net rebond après la très mauvaise année 2024.",
-      "À croiser avec aides carburant agri (15 c€/l jusqu’au 31/12) et FranceAgriMer.",
-    ],
-    kind: "publication",
-    sectors: ["agriculture", "energy"],
-    importance: "moyenne",
-    sources: [
-      { label: "Insee — compte provisoire agriculture 2025", url: "https://www.insee.fr/fr/statistiques/9018334" },
-      { label: "Insee — L’agriculture en 2025", url: "https://www.insee.fr/fr/statistiques/9019175" },
-    ],
-    entities: ["Insee", "Agreste"],
-    why: "Signal agri officiel. Relie pompe / PLF / filière.",
-  }),
-  e({
-    id: "evt-insee-zfe-parc-0918",
-    date: "2026-09-18",
-    title: "Insee : ZFE — verdissement du parc auto, effet encore faible vs tendance",
-    lede: "Neuf ZFE jusqu’en 2023. Crit’Air 1 + électriques +88,4 % sur cinq ans dans les zones — mais l’obsolescence tendancielle domine.",
-    bullets: [
-      "Effet ZFE réel mais secondaire face au renouvellement naturel du parc.",
-      "Angle auto / industrie : CBAM, Made in Europe mardi, mix VE CCFA.",
-    ],
-    kind: "publication",
-    sectors: ["auto", "energy", "industry"],
-    importance: "veille",
-    sources: [
-      { label: "Insee — ZFE et verdissement du parc", url: "https://www.insee.fr/fr/statistiques/9031856" },
-    ],
-    entities: ["Insee", "ZFE"],
-    why: "Signal faible auto/régulation. Utile avant Bercy Made in Europe.",
-  }),
 
-  e({
-    id: "evt-chapsvision-suivi-0918",
-    date: "2026-09-18",
-    title: "ChapsVision (Chatvision) : l’entreprise française à suivre — DGSI, ArgonOS, Europe",
-    lede: "Alternative Palantir. ~200 M€ de CA, 2 000 clients. Lecornu : « pas de nouvelles dépendances stratégiques dans le numérique ». Lescure : déploiement DGSI « plusieurs mois ».",
-    bullets: [
-      "Fondateur Olivier Dellenbach ; DG Silvano Sansoni — discussions « tous les États européens », BfV allemand, Ukraine.",
-      "Ce n’est pas une start-up de salon : c’est un nom de souveraineté, à coller au bureau Tech / IA / Défense.",
-    ],
-    kind: "signal",
-    sectors: ["ia", "tech", "defense"],
-    importance: "haute",
-    confidence: "confirme",
-    sources: [
-      { label: "BFMTV — ChapsVision / DGSI", url: "https://www.bfmtv.com/tech/cybersecurite/200-millions-de-chiffres-d-affaires-2-000-clients-et-desormais-un-de-plus-la-dgsi-qui-est-chaps-vision-l-entreprise-francaise-specialisee-dans-l-ia-appelee-a-remplacer-le-geant-americain-palantir_AN-202606160557.html" },
-      { label: "Les Échos", url: "https://www.lesechos.fr/tech-medias/intelligence-artificielle/video-qui-est-chapsvision-la-societe-qui-va-remplacer-palantir-a-la-dgsi-2238001" },
-    ],
-    entities: ["ChapsVision", "Olivier Dellenbach", "DGSI", "Palantir"],
-    why: "Nom manqué dans les éditions précédentes. On le pose en suivi permanent.",
-    flash: true,
-  }),
-  e({
-    id: "evt-pac-leasing-signal-0918",
-    date: "2026-09-18",
-    title: "Signal faible : le leasing des pompes à chaleur se décide encore à Matignon",
-    lede: "Après les voitures, le « leasing social » PAC — 25 000 ménages modestes, mensualité ≤ facture gaz. L’appel à projets a été lancé ; l’arbitrage budgétaire 2027 n’est pas clos.",
-    bullets: [
-      "DGEC : zéro reste à charge visé. Agrément CEE des modèles au 1er sept. 2026, préférence européenne.",
-      "Filiale EDF + installateurs + industriels PAC FR/EU. Un non du PLF tuerait la filière plus vite qu’un décret.",
-    ],
-    kind: "signal",
-    sectors: ["energy", "industry", "budget"],
-    importance: "haute",
-    confidence: "scenario",
-    sources: [
-      { label: "Les Échos — leasing social PAC", url: "https://www.lesechos.fr/industrie-services/energie-environnement/plan-delectrification-apres-les-voitures-le-gouvernement-inaugure-le-leasing-social-de-pompes-a-chaleur-2241077" },
-      { label: "Bercy — PAC production européenne", url: "https://presse.economie.gouv.fr/?p=169103" },
-      { label: "Synasav — agrément CEE", url: "https://synasav.fr/actualites-synasav/detail/cee-et-pompes-a-chaleur-un-nouveau-point-de-vigilance-des-septembre-2026" },
-    ],
-    entities: ["DGEC", "EDF", "Sébastien Martin"],
-    why: "Signal faible demandé. Ce n’est pas un communiqué, c’est une décision de gouvernement encore ouverte.",
-    flash: true,
-  }),
 
   e({
     id: "evt-wsj-weekend-0919",
     date: "2026-09-19",
-    title: "Traduit de l’anglais (WSJ / CNBC) : ce que Wall Street emporte dans le week-end",
-    lede: "Futures, pétrole, dollar. Paris lundi n’invente rien — elle traduit la clôture US de vendredi et les dépêches du Golfe.",
+    title: "Traduit de l’anglais (WSJ / CNBC) : UST 10 ans >5 %, pétrole, dollar",
+    lede: "UST 10 ans repasse 5 % ; Brent ~105 $. Paris lundi traduit ça + le spread OAT, pas seulement Ormuz.",
     bullets: ["Brent autour de 104 $ : chaque flash UKMTO recale le gazole lundi.", "Titres Seeking Alpha France : déduire les noms CAC à rappeler lundi."],
     kind: "macro",
     sectors: ["usa", "marches", "energy"],
@@ -270,8 +64,8 @@ export const HORIZON: EventItem[] = [
     sources: [
       { label: "WSJ", url: "https://www.wsj.com/" },
       { label: "CNBC", url: "https://www.cnbc.com/" },
-      { label: "Seeking Alpha France", url: "https://seekingalpha.com/market-outlook/global-investing/analysis/france" },
-    ],
+      { label: "Seeking Alpha France", url: "https://seekingalpha.com/market-outlook/global-investing/analysis/france" }
+],
     entities: ["WSJ", "Fed"],
   }),
   e({
@@ -298,8 +92,8 @@ export const HORIZON: EventItem[] = [
     confidence: "recurrence",
     sources: [
       { label: "Caixin Global", url: "https://www.caixinglobal.com/" },
-      { label: "NBS Chine", url: "https://www.stats.gov.cn/english/" },
-    ],
+      { label: "NBS Chine", url: "https://www.stats.gov.cn/english/" }
+],
     entities: ["NBS", "PBOC", "BYD"],
   }),
   e({
@@ -314,8 +108,8 @@ export const HORIZON: EventItem[] = [
     sources: [
       { label: "TASS", url: "https://tass.com/" },
       { label: "UKMTO", url: "https://www.ukmto.org/" },
-      { label: "Lloyd's List", url: "https://www.lloydslist.com/" },
-    ],
+      { label: "Lloyd's List", url: "https://www.lloydslist.com/" }
+],
     entities: ["TASS", "UKMTO"],
   }),
   e({
@@ -340,8 +134,8 @@ export const HORIZON: EventItem[] = [
     confidence: "recurrence",
     sources: [
       { label: "Economic Times", url: "https://economictimes.indiatimes.com/" },
-      { label: "Reserve Bank of India", url: "https://www.rbi.org.in/" },
-    ],
+      { label: "Reserve Bank of India", url: "https://www.rbi.org.in/" }
+],
     entities: ["RBI", "Economic Times"],
   }),
   e({
@@ -358,8 +152,8 @@ export const HORIZON: EventItem[] = [
   e({
     id: "evt-medias-dimanche-prep-0919",
     date: "2026-09-19",
-    title: "Médias : journaux du dimanche — énergie, PLF, Made in Europe",
-    lede: "Les unes de dimanche écrivent lundi. Relire Vega, 54 Md€, Bercy mardi.",
+    title: "Médias : journaux du dimanche — OAT, aides, Made in Europe",
+    lede: "Unes : spread 104 pb, Papin gros rouleurs, 54 Md€. Relire avant Matignon lundi et Bercy mardi.",
     kind: "publication",
     sectors: ["medias", "budget"],
     confidence: "recurrence",
@@ -378,8 +172,8 @@ export const HORIZON: EventItem[] = [
     confidence: "recurrence",
     sources: [
       { label: "franceinfo", url: "https://www.franceinfo.fr/" },
-      FG,
-    ],
+      FG
+],
     entities: ["Lecornu", "France gaz"],
   }),
   e({
@@ -402,8 +196,8 @@ export const HORIZON: EventItem[] = [
     sectors: ["agriculture", "ukraine"],
     sources: [
       { label: "FAO Food Price Index", url: "https://www.fao.org/worldfoodsituation/foodpricesindex/en/" },
-      { label: "FranceAgriMer", url: "https://www.franceagrimer.fr/" },
-    ],
+      { label: "FranceAgriMer", url: "https://www.franceagrimer.fr/" }
+],
     entities: ["FAO", "FranceAgriMer"],
   }),
   e({
@@ -416,8 +210,8 @@ export const HORIZON: EventItem[] = [
     confidence: "recurrence",
     sources: [
       { label: "BODACC", url: "https://www.bodacc.fr/" },
-      { label: "Journal officiel", url: "https://www.journal-officiel.gouv.fr/" },
-    ],
+      { label: "Journal officiel", url: "https://www.journal-officiel.gouv.fr/" }
+],
     entities: ["BODACC", "JORF"],
     why: "Les nominations n’attendent pas un communiqué RH. Elles sortent aux annonces légales.",
   }),
@@ -441,8 +235,8 @@ export const HORIZON: EventItem[] = [
     confidence: "recurrence",
     sources: [
       { label: "DEPP", url: "https://www.education.gouv.fr/" },
-      { label: "OCDE PISA", url: "https://www.oecd.org/pisa/" },
-    ],
+      { label: "OCDE PISA", url: "https://www.oecd.org/pisa/" }
+],
     entities: ["DEPP", "OCDE"],
   }),
   e({
@@ -454,8 +248,8 @@ export const HORIZON: EventItem[] = [
     sectors: ["immobilier", "banking"],
     sources: [
       { label: "HCSF", url: "https://www.economie.gouv.fr/hcsf" },
-      { label: "Banque de France", url: "https://www.banque-france.fr/statistiques" },
-    ],
+      { label: "Banque de France", url: "https://www.banque-france.fr/statistiques" }
+],
     entities: ["HCSF", "Notaires"],
   }),
   e({
@@ -468,8 +262,8 @@ export const HORIZON: EventItem[] = [
     confidence: "recurrence",
     sources: [
       { label: "CNES", url: "https://cnes.fr/fr" },
-      { label: "ESA", url: "https://www.esa.int/" },
-    ],
+      { label: "ESA", url: "https://www.esa.int/" }
+],
     entities: ["CNES", "ESA"],
   }),
 
@@ -484,15 +278,15 @@ export const HORIZON: EventItem[] = [
     importance: "haute",
     sources: [
       { label: "AFT", url: "https://www.aft.gouv.fr/" },
-      { label: "AFT — calendrier", url: "https://www.aft.gouv.fr/fr/calendrier-indicatif-emissions" },
-    ],
+      { label: "AFT — calendrier", url: "https://www.aft.gouv.fr/fr/calendrier-indicatif-emissions" }
+],
     entities: ["AFT"],
   }),
   e({
     id: "evt-an-lundi-0921",
     date: "2026-09-21",
     title: "Assemblée nationale : ordre du jour — finances, industrie, énergie",
-    lede: "Textes en cours d’étude. Lundi pose la semaine de Bercy (mardi) et du Conseil compétitivité (jeudi).",
+    lede: "Lundi : Matignon aides carburant le matin, puis semaine Bercy (mardi) / Conseil compétitivité (jeudi).",
     bullets: ["Commission des finances : PLF 2027, effort ~54 Md€.", "Commission des affaires économiques : Made in Europe, CBAM acier."],
     kind: "political",
     sectors: ["budget", "industry", "energy"],
@@ -518,8 +312,8 @@ export const HORIZON: EventItem[] = [
   e({
     id: "evt-cac-lundi-0921",
     date: "2026-09-21",
-    title: "CAC : ouverture après Vega, Fed, pétrole",
-    lede: "Ce que la salle Vega n’a pas dit se lira dans le gap. Auto, luxe, énergie.",
+    title: "CAC : ouverture sous OAT 4,57 % / spread 104 pb",
+    lede: "Clôture ven. 8 065 (−1,49 %). Le gap lundi traduit taux FR + aides Matignon + pétrole >100 $.",
     kind: "macro",
     sectors: ["marches", "auto", "energy"],
     importance: "haute",
@@ -556,8 +350,8 @@ export const HORIZON: EventItem[] = [
     sectors: ["telecoms", "ma"],
     sources: [
       { label: "ARCEP", url: "https://www.arcep.fr/" },
-      { label: "Orange finance", url: "https://www.orange.com/fr/investisseurs" },
-    ],
+      { label: "Orange finance", url: "https://www.orange.com/fr/investisseurs" }
+],
     entities: ["SFR", "ARCEP", "Orange"],
   }),
   e({
@@ -569,8 +363,8 @@ export const HORIZON: EventItem[] = [
     sectors: ["pharma", "sante"],
     sources: [
       { label: "EMA CHMP", url: "https://www.ema.europa.eu/en/committees/chmp" },
-      { label: "Sanofi presse", url: "https://www.sanofi.com/fr/actualites" },
-    ],
+      { label: "Sanofi presse", url: "https://www.sanofi.com/fr/actualites" }
+],
     entities: ["EMA", "Sanofi"],
   }),
   e({
@@ -582,8 +376,8 @@ export const HORIZON: EventItem[] = [
     sectors: ["retail"],
     sources: [
       { label: "LSA", url: "https://www.lsa-conso.fr/" },
-      { label: "Ania", url: "https://www.ania.net/" },
-    ],
+      { label: "Ania", url: "https://www.ania.net/" }
+],
     entities: ["Ania", "Carrefour"],
   }),
   e({
@@ -596,8 +390,8 @@ export const HORIZON: EventItem[] = [
     importance: "haute",
     sources: [
       { label: "Ministère des Armées", url: "https://www.defense.gouv.fr/" },
-      { label: "Usine Nouvelle — Eurenco", url: "https://www.usinenouvelle.com/" },
-    ],
+      { label: "Usine Nouvelle — Eurenco", url: "https://www.usinenouvelle.com/" }
+],
     entities: ["DGA", "Eurenco", "Valeo"],
   }),
 
@@ -611,8 +405,8 @@ export const HORIZON: EventItem[] = [
       "Inscriptions presse / pouvoirs publics via contact@francegaz.fr. Tarif 384 € TTC sinon.",
       "CP du 8 sept. : 330 à 460 Md€ d’économies via gaz renouvelables / bas carbone à 2050.",
       "Post-Vega : saisine Commission gaz + G7 stocks — qui à l’ASIEM reprend le récit « cuves remplies » ?",
-      "À coller : tarifs, infrastructures, biométhane. Linguistique de la promesse vs aides adaptées.",
-    ],
+      "À coller : tarifs, infrastructures, biométhane. Linguistique de la promesse vs aides adaptées."
+],
     kind: "meeting",
     sectors: ["energy", "industry", "public-finance"],
     importance: "haute",
@@ -630,8 +424,8 @@ export const HORIZON: EventItem[] = [
     bullets: [
       "Industeel Le Creusot : coulée continue 52 M€ (dont 12 M€ France 2030), inaugurée avec Sébastien Martin.",
       "Arcelor × China Oriental : acier électrique, phase 1 juin 2027. Moeve × Arcelor : plateforme low-carbon.",
-      "Kryvyi Rih : attaques. Le nom France ne se lit pas sans l’Ukraine.",
-    ],
+      "Kryvyi Rih : attaques. Le nom France ne se lit pas sans l’Ukraine."
+],
     kind: "visit",
     sectors: ["industry", "energy", "ukraine"],
     importance: "haute",
@@ -639,8 +433,8 @@ export const HORIZON: EventItem[] = [
     sources: [
       { label: "Usine Nouvelle — ArcelorMittal", url: "https://www.usinenouvelle.com/metallurgie-siderurgie/arcelormittal/" },
       { label: "GMK Center", url: "https://gmk.center/en/tag/arcelormittal-en/" },
-      { label: "ArcelorMittal", url: "https://corporate.arcelormittal.com/" },
-    ],
+      { label: "ArcelorMittal", url: "https://corporate.arcelormittal.com/" }
+],
     entities: ["ArcelorMittal", "Sébastien Martin"],
     why: "Manqué. Une visite de site sidérurgique le 22/09, le jour où Bercy parle Made in Europe.",
     follow: "Confirmer le site (Fos / Dunkerque / Mardyck / Creusot) auprès du groupe et de la préfecture.",
@@ -656,8 +450,8 @@ export const HORIZON: EventItem[] = [
       "Intervenants : Louis Gallois, Patrick Martin (Medef), Pierre Jouvet, Hosuk Lee-Makiyama (ECIPE), Thomas Grjebine (HCSP).",
       "Industrie : Adèle Naudy-Chambaut (Schneider), Philipp Offenberg (Siemens Energy), Julian Schorpp (ThyssenKrupp), Andreas Jahn (PME DE), Mathieu Galarin (Bayer Pharma FR).",
       "Christophe Périllat, DG Valeo, est dans la salle — 48 h avant l’usine drones AuRA.",
-      "Cadre post-Vega / Dublin : souveraineté sous contrainte énergie + éventuelle taxe windfall — angle Martin.",
-    ],
+      "Cadre post-Vega / Dublin : souveraineté sous contrainte énergie + éventuelle taxe windfall — angle Martin."
+],
     kind: "meeting",
     sectors: ["industry", "auto", "energy"],
     importance: "haute",
@@ -699,8 +493,8 @@ export const HORIZON: EventItem[] = [
     sectors: ["industry", "chine"],
     sources: [
       { label: "Commission européenne — CBAM", url: "https://taxation-customs.ec.europa.eu/" },
-      { label: "Usine Nouvelle — Arcelor", url: "https://www.usinenouvelle.com/metallurgie-siderurgie/arcelormittal/" },
-    ],
+      { label: "Usine Nouvelle — Arcelor", url: "https://www.usinenouvelle.com/metallurgie-siderurgie/arcelormittal/" }
+],
     entities: ["ArcelorMittal", "Commission européenne"],
   }),
   e({
@@ -745,8 +539,8 @@ export const HORIZON: EventItem[] = [
     confidence: "recurrence",
     sources: [
       { label: "Federal Reserve", url: "https://www.federalreserve.gov/" },
-      { label: "WSJ", url: "https://www.wsj.com/" },
-    ],
+      { label: "WSJ", url: "https://www.wsj.com/" }
+],
     entities: ["Fed"],
   }),
   e({
@@ -758,8 +552,8 @@ export const HORIZON: EventItem[] = [
     sectors: ["education", "budget"],
     sources: [
       { label: "Gouvernement", url: "https://www.gouvernement.fr/" },
-      AN,
-    ],
+      AN
+],
     entities: ["Lecornu", "CFA"],
   }),
 
@@ -808,8 +602,8 @@ export const HORIZON: EventItem[] = [
     importance: "haute",
     sources: [
       { label: "La Tribune — Valeo drones", url: "https://www.latribune.fr/article/transports/automobile/92349721923436/drones-de-defense-data-centers-humanoides-l-equipementier-automobile-valeo-cherche-sa-croissance-de-demain" },
-      { label: "Reuters / MarketScreener", url: "https://www.marketscreener.com/news/france-s-drone-production-shifts-from-policy-ambition-to-factory-floor-ce7f50dfd18bf52c" },
-    ],
+      { label: "Reuters / MarketScreener", url: "https://www.marketscreener.com/news/france-s-drone-production-shifts-from-policy-ambition-to-factory-floor-ce7f50dfd18bf52c" }
+],
     entities: ["Valeo", "Christophe Périllat", "Harmattan AI"],
   }),
   e({
@@ -821,8 +615,8 @@ export const HORIZON: EventItem[] = [
     sectors: ["immobilier", "banking"],
     sources: [
       { label: "HCSF", url: "https://www.economie.gouv.fr/hcsf" },
-      { label: "Banque de France", url: "https://www.banque-france.fr/statistiques" },
-    ],
+      { label: "Banque de France", url: "https://www.banque-france.fr/statistiques" }
+],
     entities: ["HCSF"],
   }),
   e({
@@ -834,8 +628,8 @@ export const HORIZON: EventItem[] = [
     sectors: ["tech", "ia"],
     sources: [
       { label: "Capgemini investisseurs", url: "https://investors.capgemini.com/fr/" },
-      { label: "Les Échos — ChapsVision", url: "https://www.lesechos.fr/tech-medias/intelligence-artificielle/video-qui-est-chapsvision-la-societe-qui-va-remplacer-palantir-a-la-dgsi-2238001" },
-    ],
+      { label: "Les Échos — ChapsVision", url: "https://www.lesechos.fr/tech-medias/intelligence-artificielle/video-qui-est-chapsvision-la-societe-qui-va-remplacer-palantir-a-la-dgsi-2238001" }
+],
     entities: ["Capgemini", "ChapsVision"],
   }),
   e({
@@ -847,8 +641,8 @@ export const HORIZON: EventItem[] = [
     sectors: ["agriculture"],
     sources: [
       { label: "Agreste", url: "https://agreste.agriculture.gouv.fr/" },
-      { label: "FranceAgriMer", url: "https://www.franceagrimer.fr/" },
-    ],
+      { label: "FranceAgriMer", url: "https://www.franceagrimer.fr/" }
+],
     entities: ["Agreste", "FranceAgriMer"],
   }),
   e({
@@ -892,16 +686,16 @@ export const HORIZON: EventItem[] = [
       "Périllat, fin juillet : « Why now? Because the need is now. Why in France? Sovereignty. »",
       "Premier contrat drones ; relais de croissance avec les data centers, alors que l’auto ne paie plus la croissance.",
       "Comparatif : Schaeffler produit Delair ; Renault × Turgis Gaillard ; Eurenco les têtes à Sorgues.",
-      "J-2 Made in Europe : ce que Périllat dit mardi à Bercy se photographie jeudi en AuRA.",
-    ],
+      "J-2 Made in Europe : ce que Périllat dit mardi à Bercy se photographie jeudi en AuRA."
+],
     kind: "visit",
     sectors: ["auto", "defense", "industry"],
     importance: "haute",
     sources: [
       { label: "La Tribune — Valeo drones", url: "https://www.latribune.fr/article/transports/automobile/92349721923436/drones-de-defense-data-centers-humanoides-l-equipementier-automobile-valeo-cherche-sa-croissance-de-demain" },
       { label: "Reuters — France drone factories", url: "https://www.marketscreener.com/news/france-s-drone-production-shifts-from-policy-ambition-to-factory-floor-ce7f50dfd18bf52c" },
-      { label: "Valeo", url: "https://www.valeo.com/" },
-    ],
+      { label: "Valeo", url: "https://www.valeo.com/" }
+],
     location: "Auvergne-Rhône-Alpes",
     entities: ["Valeo", "Christophe Périllat", "Harmattan AI", "Dassault"],
     why: "Manqué. C’est le papier industrie-défense du jeudi, 48 h après que Périllat était à Bercy.",
@@ -917,8 +711,8 @@ export const HORIZON: EventItem[] = [
     importance: "haute",
     sources: [
       BERCY,
-      { label: "Conseil de l’UE", url: "https://www.consilium.europa.eu/fr/" },
-    ],
+      { label: "Conseil de l’UE", url: "https://www.consilium.europa.eu/fr/" }
+],
     location: "Bruxelles",
     entities: ["Conseil UE", "Sébastien Martin"],
   }),
@@ -933,8 +727,8 @@ export const HORIZON: EventItem[] = [
     importance: "haute",
     sources: [
       { label: "Insee — confiance", url: "https://www.insee.fr/fr/statistiques" },
-      { label: "ARCEP", url: "https://www.arcep.fr/" },
-    ],
+      { label: "ARCEP", url: "https://www.arcep.fr/" }
+],
     entities: ["SFR", "Insee"],
   }),
   e({
@@ -947,8 +741,8 @@ export const HORIZON: EventItem[] = [
     importance: "haute",
     confidence: "recurrence",
     sources: [
-      { label: "AFT — calendrier", url: "https://www.aft.gouv.fr/fr/calendrier-indicatif-emissions" },
-    ],
+      { label: "AFT — calendrier", url: "https://www.aft.gouv.fr/fr/calendrier-indicatif-emissions" }
+],
     entities: ["AFT"],
   }),
   e({
@@ -981,8 +775,8 @@ export const HORIZON: EventItem[] = [
     sectors: ["defense", "aero", "ma"],
     sources: [
       { label: "La Tribune", url: "https://www.latribune.fr/" },
-      { label: "Dassault Aviation", url: "https://www.dassault-aviation.com/fr/" },
-    ],
+      { label: "Dassault Aviation", url: "https://www.dassault-aviation.com/fr/" }
+],
     entities: ["Harmattan AI", "Dassault", "Valeo"],
   }),
   e({
@@ -994,8 +788,8 @@ export const HORIZON: EventItem[] = [
     sectors: ["banking", "marches"],
     sources: [
       { label: "AFT", url: "https://www.aft.gouv.fr/" },
-      { label: "BNP Paribas", url: "https://invest.bnpparibas/fr" },
-    ],
+      { label: "BNP Paribas", url: "https://invest.bnpparibas/fr" }
+],
     entities: ["AFT", "BNP Paribas"],
   }),
   e({
@@ -1017,8 +811,8 @@ export const HORIZON: EventItem[] = [
     sectors: ["ukraine", "defense"],
     sources: [
       { label: "Présidence ukrainienne", url: "https://www.president.gov.ua/en" },
-      { label: "Reuters drones FR", url: "https://www.marketscreener.com/news/france-s-drone-production-shifts-from-policy-ambition-to-factory-floor-ce7f50dfd18bf52c" },
-    ],
+      { label: "Reuters drones FR", url: "https://www.marketscreener.com/news/france-s-drone-production-shifts-from-policy-ambition-to-factory-floor-ce7f50dfd18bf52c" }
+],
     entities: ["Ukraine", "Valeo"],
   }),
   e({
@@ -1030,8 +824,8 @@ export const HORIZON: EventItem[] = [
     sectors: ["education"],
     sources: [
       { label: "DEPP", url: "https://www.education.gouv.fr/" },
-      { label: "DARES", url: "https://dares.travail-gouv.fr/" },
-    ],
+      { label: "DARES", url: "https://dares.travail-gouv.fr/" }
+],
     entities: ["DEPP", "DARES"],
   }),
   e({
@@ -1043,8 +837,8 @@ export const HORIZON: EventItem[] = [
     sectors: ["eti", "auto"],
     sources: [
       { label: "Banque de France — défaillances", url: "https://www.banque-france.fr/statistiques/defaillances-dentreprises" },
-      { label: "Bpifrance Le Lab", url: "https://lelab.bpifrance.fr/" },
-    ],
+      { label: "Bpifrance Le Lab", url: "https://lelab.bpifrance.fr/" }
+],
     entities: ["Bpifrance", "Banque de France"],
   }),
 
@@ -1070,8 +864,8 @@ export const HORIZON: EventItem[] = [
     confidence: "scenario",
     sources: [
       { label: "Vie publique", url: "https://www.vie-publique.fr/" },
-      { label: "Gouvernement", url: "https://www.gouvernement.fr/" },
-    ],
+      { label: "Gouvernement", url: "https://www.gouvernement.fr/" }
+],
     entities: ["Lecornu", "Bercy"],
   }),
   e({
@@ -1104,8 +898,8 @@ export const HORIZON: EventItem[] = [
     sectors: ["energy", "budget", "industry"],
     confidence: "scenario",
     sources: [
-      { label: "Les Échos — leasing PAC", url: "https://www.lesechos.fr/industrie-services/energie-environnement/plan-delectrification-apres-les-voitures-le-gouvernement-inaugure-le-leasing-social-de-pompes-a-chaleur-2241077" },
-    ],
+      { label: "Les Échos — leasing PAC", url: "https://www.lesechos.fr/industrie-services/energie-environnement/plan-delectrification-apres-les-voitures-le-gouvernement-inaugure-le-leasing-social-de-pompes-a-chaleur-2241077" }
+],
     entities: ["DGEC", "Bercy"],
   }),
   e({
@@ -1128,8 +922,8 @@ export const HORIZON: EventItem[] = [
     confidence: "recurrence",
     sources: [
       { label: "BODACC", url: "https://www.bodacc.fr/" },
-      { label: "JORF", url: "https://www.journal-officiel.gouv.fr/" },
-    ],
+      { label: "JORF", url: "https://www.journal-officiel.gouv.fr/" }
+],
     entities: ["BODACC"],
   }),
   e({
@@ -1142,8 +936,8 @@ export const HORIZON: EventItem[] = [
     confidence: "recurrence",
     sources: [
       { label: "BLS", url: "https://www.bls.gov/cpi/" },
-      { label: "Federal Reserve", url: "https://www.federalreserve.gov/" },
-    ],
+      { label: "Federal Reserve", url: "https://www.federalreserve.gov/" }
+],
     entities: ["BLS", "Fed"],
   }),
   e({
@@ -1188,8 +982,8 @@ export const HORIZON: EventItem[] = [
     sectors: ["retail", "medias"],
     sources: [
       { label: "Insee", url: "https://www.insee.fr/fr/statistiques" },
-      { label: "LSA", url: "https://www.lsa-conso.fr/" },
-    ],
+      { label: "LSA", url: "https://www.lsa-conso.fr/" }
+],
     entities: ["Insee", "LSA"],
   }),
   e({
@@ -1202,5 +996,5 @@ export const HORIZON: EventItem[] = [
     confidence: "recurrence",
     sources: [{ label: "CNES", url: "https://cnes.fr/fr" }],
     entities: ["CNES"],
-  }),
+  })
 ];

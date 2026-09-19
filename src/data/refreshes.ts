@@ -2,6 +2,34 @@ import type { CrawlRefresh } from "./types";
 
 export const CRAWLS: CrawlRefresh[] = [
   {
+    id: "crawl-15",
+    date: "2026-09-19",
+    time: "06:05",
+    summary:
+      "Quinzième passe, samedi 06h. Clôture ven. : CAC 8 065 (−1,49 %), OAT 4,57 %, spread FR/DE ~104 pb (plus haut depuis 2012) ; Papin prolonge « gros rouleurs » au-delà du 30/09 (modalités lundi Matignon) ; Insee rural carburant ; Dublin ECOFIN J2 ; horizon glissé 19–25.",
+    sourcesCrawled: 152,
+    added: [
+      "evt-papin-gros-rouleurs-0918",
+      "evt-insee-carburant-rural-0919",
+      "evt-reunion-aides-matignon-0921",
+    ],
+    revised: [
+      "evt-marches-vendredi-0918",
+      "evt-carburant-pompe-0918",
+      "evt-lescure-dublin-0918",
+      "evt-macron-partis-0918",
+      "evt-gilets-jaunes-spectre-0916",
+      "evt-lecornu-seminaire-0917",
+    ],
+    highlights: [
+      "Clôture 18 : CAC 8 065,02 (−1,49 %) ; OAT 4,57 % ; spread FR/DE ~104 pb — première fois >100 pb depuis 2012 ; Orange −5,8 % ; Brent ~104,7 $.",
+      "Papin (TF1) : aide 100 € « gros rouleurs » prolongée au-delà du 30/09 ; réunion Lecornu lundi pour les modalités (1,5 M / ~3 M éligibles).",
+      "Insee Première : 10,6 % des ménages véhiculés consacrent >1 mois de revenus au carburant (rural 13,5 %) — sous prix 2026, ~22 %.",
+      "Dublin J2 : Lescure bilatérales Harris/Domański + 2ᵉ session ECOFIN — windfall toujours sans texte Commission.",
+      "Horizon glissé : évacuation 18/09 ; densifié 19–25 (Matignon aides, France gaz, Made in Europe, Valeo, SFR/Insee).",
+    ],
+  },
+  {
     id: "crawl-14",
     date: "2026-09-18",
     time: "16:40",
