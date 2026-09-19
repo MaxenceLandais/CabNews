@@ -2,6 +2,36 @@ import type { CrawlRefresh } from "./types";
 
 export const CRAWLS: CrawlRefresh[] = [
   {
+    id: "crawl-16",
+    date: "2026-09-19",
+    time: "12:10",
+    summary:
+      "Seizième passe, samedi midi. ECOFIN Dublin J2 clos : Harris presse la Commission pour des « nouvelles réflexions » windfall d’ici ECOFIN 9/10 ; Dombrovskis sans texte UE ; Lescure reste prudent. BFMTV : pistes étendre ou revaloriser la prime « gros rouleurs » avant Matignon lundi. Marchés fermés — clôture ven. CAC 8 065 / OAT 4,57 % / spread ~104 pb. Contraste fiscal ES/PT/DE vs aides ciblées FR.",
+    sourcesCrawled: 157,
+    added: [
+      "evt-bfmtv-gros-rouleurs-0919",
+      "evt-ecofin-windfall-1009",
+      "evt-marches-weekend-0919",
+      "evt-europe-fiscalite-pompe-0919",
+    ],
+    revised: [
+      "evt-lescure-dublin-0918",
+      "evt-reunion-aides-matignon-0921",
+      "evt-papin-gros-rouleurs-0918",
+      "evt-carburant-pompe-0918",
+      "evt-macron-partis-0918",
+      "evt-marches-vendredi-0918",
+      "evt-gilets-jaunes-spectre-0916",
+    ],
+    highlights: [
+      "Dublin J2 : présidence IE demande à la Commission des « nouvelles réflexions » windfall avant ECOFIN Luxembourg 9/10 ; Dombrovskis écarte pour l’instant une initiative paneuropéenne ; Lescure refuse le one-size-fits-all.",
+      "BFMTV (10h04) : Matignon étudie étendre ou augmenter la prime 100 € « gros rouleurs » ; guichet nominal 30/09 ; Bregeon confirme un filet « nouveau » possible au 1er/10.",
+      "Marchés week-end : Euronext fermé — référence = clôture ven. CAC 8 065,02 (−1,49 %), OAT 4,57 %, spread FR/DE ~104 pb, Brent ~104,7 $.",
+      "Pompe : gazole frôle 2,40 € ven. soir ; ~700 stations >2,50 € ; rassemblement « vie chère » revendiqué gilets jaunes à Marseille samedi 10h.",
+      "Europe : ES TVA 10 %, PT ISP −23 c€, DE rabais fiscal 1er/10 — contraste avec la ligne FR d’aides ciblées (pas de baisse de taxes généralisée).",
+    ],
+  },
+  {
     id: "crawl-15",
     date: "2026-09-19",
     time: "06:05",
